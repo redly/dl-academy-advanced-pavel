@@ -1,0 +1,39 @@
+{
+  "name": "dl-academy-advanced-pavel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Education repository for Advanced Course",
+  "author": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp serve",
+    "lint:editorconfig": "editorconfig-checker",
+    "lint:stylelint": "stylelint \"src/scss/**/*.{css,scss,sass}\"",
+    "test": "npm run lint:editorconfig && npm run lint:stylelint"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.27.3",
+    "browserify": "^17.0.0",
+    "cssnano": "^5.0.6",
+    "del": "^6.0.0",
+    "editorconfig-checker": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-uglify": "^3.0.2",
+    "path": "^0.12.7",
+    "postcss": "^8.3.5",
+    "sass": "^1.35.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-scss": "^3.19.0"
+  },
+  "dependencies": {}
+}
