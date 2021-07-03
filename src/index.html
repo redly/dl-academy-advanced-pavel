@@ -13,133 +13,134 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
-            <div class="header-logo">
+        <div class="header__container container">
+            <div class="header__logo logo">
                 <img src="img/icons/logo.svg" alt="DLK company logo">
             </div>
-            <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li>
+
+            <nav class="header__header-nav header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
                         <a href="blog.html">Blog</a>
                     </li>
-                    <li>
+                    <li class="header-nav__item">
                         <a href="catalog.html">Catalog</a>
                     </li>
-                    <li>
+                    <li class="header-nav__item">
                         <a href="#popup">About Us</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="header-aside">
-                <form class="search">
-                    <input class="search-input" type="search" placeholder="Search...">
-                    <button class="search-button" type="submit">
+            <div class="header__header-aside header-aside">
+                <form class="header-aside__aside-search aside-search">
+                    <input class="aside-search__input" type="search" placeholder="Search...">
+                    <button class="aside-search__button" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
 
-                <a class="header-contacts" href="contact-us.html">Contact Us</a>
+                <a class="header-aside__contacts-link" href="contact-us.html">Contact Us</a>
             </div>
         </div>
     </header>
     <main>
         <div class="container">
             <div class="slider">
-                <div class="slider-slide" id="slide-1">
-                    <div class="slider-slide-wrapper">
-                        <div class="slider-counter">01</div>
+                <div class="slider__slide slide" id="slide-1">
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">01</div>
 
-                        <div class="slider-slide-info">
-                            <h2 class="slider-slide-title">The ooh noo collection</h2>
-                            <div class="slider-slide-description">
+                        <div class="slide__info slide-info">
+                            <h2 class="slide-info__title">The ooh noo collection</h2>
+                            <div class="slide-info__description">
                                 <p>Designed in Slovenia</p>
                             </div>
-                            <a class="btn">Explore now</a>
+                            <a class="slider-info__btn btn">Explore now</a>
                         </div>
 
-                        <div class="slider-slide-img">
+                        <div class="slide__img">
                             <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
                         </div>
                     </div>
                 </div>
 
-                <div class="slider-slide slider-slide-second" id="slide-2" hidden>
-                    <div class="slider-slide-wrapper">
-                        <div class="slider-counter">02</div>
+                <div class="slider__slide slide slide--bg--green" id="slide-2" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">02</div>
 
-                        <div class="slider-slide-info">
-                            <h2 class="slider-slide-title">A summer's breeze collection</h2>
-                            <div class="slider-slide-description">
+                        <div class="slide__info slide-info">
+                            <h2 class="slide-info__title">A summer's breeze collection</h2>
+                            <div class="slide-info__description">
                                 <p>Designed in Slovenia</p>
                             </div>
-                            <a class="btn">Explore now</a>
+                            <a class="slide-info__btn btn">Explore now</a>
                         </div>
 
-                        <div class="slider-slide-img">
+                        <div class="slide__img">
                             <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
                         </div>
                     </div>
                 </div>
 
-                <div class="slider-slide slider-slide-third" id="slide-3" hidden>
-                    <div class="slider-slide-wrapper">
-                        <div class="slider-counter">03</div>
+                <div class="slider__slide slide slide--bg--violet" id="slide-3" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">03</div>
 
-                        <div class="slider-slide-info">
-                            <h2 class="slider-slide-title">The Keepers of sleep collection</h2>
-                            <div class="slider-slide-description">
+                        <div class="slide__info slide-info">
+                            <h2 class="slide-info__title">The Keepers of sleep collection</h2>
+                            <div class="slide-info__description">
                                 <p>Designed in Slovenia</p>
                             </div>
-                            <a class="btn">Explore now</a>
+                            <a class="slide-info__btn btn">Explore now</a>
                         </div>
 
-                        <div class="slider-slide-img">
+                        <div class="slide__img">
                             <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
                         </div>
                     </div>
                 </div>
 
-                <div class="slider-slide slider-slide-fourth" id="slide-4" hidden>
-                    <div class="slider-slide-wrapper">
-                        <div class="slider-counter">04</div>
+                <div class="slider__slide slide slide--bg--pink" id="slide-4" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">04</div>
 
-                        <div class="slider-slide-info">
-                            <h2 class="slider-slide-title">The Pets collection</h2>
-                            <div class="slider-slide-description">
+                        <div class="slide__info slide-info">
+                            <h2 class="slide-info__title">The Pets collection</h2>
+                            <div class="slide-info__description">
                                 <p>Designed in Slovenia</p>
                             </div>
-                            <a class="btn">Explore now</a>
+                            <a class="slide-info__btn btn">Explore now</a>
                         </div>
 
-                        <div class="slider-slide-img">
+                        <div class="slide__img">
                             <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
                         </div>
                     </div>
                 </div>
 
-                <div class="slider-notification">
+                <div class="slider__notification">
                     Free (continental) USA shipping on all orders of $100 USD or more!
                 </div>
 
-                <ul class="slider-nav">
-                    <li class="slider-nav-item">
-                        <a class="slider-nav-btn is-active" href="#slide-1">
+                <ul class="slider__nav slider-nav">
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn slider-nav__btn--active" href="#slide-1">
                             <span class="visually-hidden">Go to slide 01</span>
                         </a>
                     </li>
-                    <li class="slider-nav-item">
-                        <a class="slider-nav-btn" href="#slide-2">
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-2">
                             <span class="visually-hidden">Go to slide 02</span>
                         </a>
                     </li>
-                    <li class="slider-nav-item">
-                        <a class="slider-nav-btn" href="#slide-3">
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-3">
                             <span class="visually-hidden">Go to slide 03</span>
                         </a>
                     </li>
-                    <li class="slider-nav-item">
-                        <a class="slider-nav-btn" href="#slide-4">
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-4">
                             <span class="visually-hidden">Go to slide 04</span>
                         </a>
                     </li>
