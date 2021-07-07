@@ -25,3 +25,72 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.title-h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 49px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-h2,
+.title-h2 a {
+    color: #1e0606;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 47px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-h3 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 31px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.btn {
+    @include btn-reset;
+
+    display: inline-flex;
+    align-items: center;
+    vertical-align: top;
+    background: #000;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    min-height: 40px;
+    max-width: 280px;
+    padding: 9px 22px;
+
+    /*
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    */
+
+    &:hover {
+        background: #c29974;
+    }
+
+    &:active {
+        background: #c29974;
+        opacity: 0.5;
+    }
+
+    &:disabled {
+        opacity: 0.2;
+    }
+}

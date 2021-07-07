@@ -14,49 +14,47 @@
 <body>
     <header class="header">
         <div class="header__container container">
-            <div class="header__logo logo">
-                <img src="img/icons/logo.svg" alt="DLK company logo">
+            <div class="header-logo">
+                <img src="img/svg/logo.svg" alt="DLK company logo">
             </div>
 
-            <nav class="header__header-nav header-nav">
+            <nav class="header-nav">
                 <ul class="header-nav__list">
                     <li class="header-nav__item">
-                        <a href="blog.html">Blog</a>
+                        <a class="header-nav__link" href="blog.html">Blog</a>
                     </li>
                     <li class="header-nav__item">
-                        <a href="catalog.html">Catalog</a>
+                        <a class="header-nav__link" href="catalog.html">Catalog</a>
                     </li>
                     <li class="header-nav__item">
-                        <a href="#popup">About Us</a>
+                        <a class="header-nav__link" href="#popup">About Us</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="header__header-aside header-aside">
-                <form class="header-aside__aside-search aside-search">
-                    <input class="aside-search__input" type="search" placeholder="Search...">
-                    <button class="aside-search__button" type="submit">
+            <div class="header-search">
+                <form class="header-search__form">
+                    <input class="header-search__input" type="search" placeholder="Search...">
+                    <button class="header-search__button" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
 
-                <a class="header-aside__contacts-link" href="contact-us.html">Contact Us</a>
+                <a class="header__contacts-link" href="contact-us.html">Contact Us</a>
             </div>
         </div>
     </header>
     <main>
         <div class="container">
             <div class="slider">
-                <div class="slider__slide slide" id="slide-1">
+                <div class="slide" id="slide-1">
                     <div class="slide__wrapper">
                         <div class="slide__counter">01</div>
 
-                        <div class="slide__info slide-info">
-                            <h2 class="slide-info__title">The ooh noo collection</h2>
-                            <div class="slide-info__description">
-                                <p>Designed in Slovenia</p>
-                            </div>
-                            <a class="slider-info__btn btn">Explore now</a>
+                        <div class="slide__info">
+                            <h2 class="slide__title">The ooh noo collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -65,16 +63,14 @@
                     </div>
                 </div>
 
-                <div class="slider__slide slide slide--bg--green" id="slide-2" hidden>
+                <div class="slide slide--bg--green" id="slide-2" hidden>
                     <div class="slide__wrapper">
                         <div class="slide__counter">02</div>
 
-                        <div class="slide__info slide-info">
-                            <h2 class="slide-info__title">A summer's breeze collection</h2>
-                            <div class="slide-info__description">
-                                <p>Designed in Slovenia</p>
-                            </div>
-                            <a class="slide-info__btn btn">Explore now</a>
+                        <div class="slide__info">
+                            <h2 class="slide__title">A summer's breeze collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -83,16 +79,14 @@
                     </div>
                 </div>
 
-                <div class="slider__slide slide slide--bg--violet" id="slide-3" hidden>
+                <div class="slide slide--bg--violet" id="slide-3" hidden>
                     <div class="slide__wrapper">
                         <div class="slide__counter">03</div>
 
-                        <div class="slide__info slide-info">
-                            <h2 class="slide-info__title">The Keepers of sleep collection</h2>
-                            <div class="slide-info__description">
-                                <p>Designed in Slovenia</p>
-                            </div>
-                            <a class="slide-info__btn btn">Explore now</a>
+                        <div class="slide__info">
+                            <h2 class="slide__title">The Keepers of sleep collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -101,16 +95,14 @@
                     </div>
                 </div>
 
-                <div class="slider__slide slide slide--bg--pink" id="slide-4" hidden>
+                <div class="slide slide--bg--pink" id="slide-4" hidden>
                     <div class="slide__wrapper">
                         <div class="slide__counter">04</div>
 
-                        <div class="slide__info slide-info">
-                            <h2 class="slide-info__title">The Pets collection</h2>
-                            <div class="slide-info__description">
-                                <p>Designed in Slovenia</p>
-                            </div>
-                            <a class="slide-info__btn btn">Explore now</a>
+                        <div class="slide__info">
+                            <h2 class="slide__title">The Pets collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -123,9 +115,9 @@
                     Free (continental) USA shipping on all orders of $100 USD or more!
                 </div>
 
-                <ul class="slider__nav slider-nav">
+                <ul class="slider-nav">
                     <li class="slider-nav__item">
-                        <a class="slider-nav__btn slider-nav__btn--active" href="#slide-1">
+                        <a class="slider-nav__btn slider-nav__btn--is-active" href="#slide-1">
                             <span class="visually-hidden">Go to slide 01</span>
                         </a>
                     </li>
@@ -444,6 +436,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>

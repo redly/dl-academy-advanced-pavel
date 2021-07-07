@@ -1,13 +1,16 @@
-/*
-    Тут нужно будет задать mixins
+/* Сброс стилей списков */
 
-    Хороший пример миксина для сброса стилей списков
+@mixin no-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    @mixin no-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+/* Сброс стандартной стилизации кнопок */
 
-    Нужно написать еще один для сброса стандартной стилизации кнопок
-*/
+@mixin btn-reset {
+    border: none;
+    border-radius: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
