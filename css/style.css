@@ -11,19 +11,8 @@
     $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     $font-family-base: "Open Sans", $font-family-sans-serif;
 */
-/*
-    Тут нужно будет задать mixins
-
-    Хороший пример миксина для сброса стилей списков
-
-    @mixin no-list {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    Нужно написать еще один для сброса стандартной стилизации кнопок
-*/
+/* Сброс стилей списков */
+/* Сброс стандартной стилизации кнопок */
 /*
     Import vendor libraries
 */
@@ -421,6 +410,73 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.title-h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title-h2,
+.title-h2 a {
+  color: #1e0606;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 47px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title-h3 {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: top;
+  background: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  min-height: 40px;
+  max-width: 280px;
+  padding: 9px 22px;
+  /*
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  */
+}
+.btn:hover {
+  background: #c29974;
+}
+.btn:active {
+  background: #c29974;
+  opacity: 0.5;
+}
+.btn:disabled {
+  opacity: 0.2;
+}
+
 /*
     Import all other blocks
 */
@@ -428,4 +484,192 @@ body {
   padding: 0 20px;
   margin: 0 auto;
   max-width: 1220px;
+}
+
+.header {
+  padding: 50px 0 40px;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.header__contacts-link {
+  color: #1e0606;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header-logo {
+  text-decoration: none;
+  height: 52px;
+  margin-right: 30px;
+}
+
+.header-nav {
+  margin-left: 20px;
+}
+.header-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+.header-nav__item {
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+.header-nav__link {
+  color: #1e0606;
+  text-decoration: none;
+}
+
+.header-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+.header-search__form {
+  margin-right: 24px;
+}
+.header-search__input {
+  display: none;
+}
+.header-search__button {
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  background: url("../img/svg/icon-search.svg") no-repeat 50% 50%;
+  box-sizing: border-box;
+  padding: 0;
+  position: relative;
+  height: 18px;
+  width: 17px;
+  top: -3px;
+}
+
+a.header-logo:hover,
+.header-nav__list a:hover,
+.header-search__button:hover,
+.header__contacts-link:hover:not(.header__contacts-link--not-active) {
+  opacity: 0.5;
+}
+
+a.header-logo:active,
+.header-nav__list a:active,
+.header-search__button:active,
+.header__contacts-link:active:not(.header__contacts-link--not-active) {
+  opacity: 0.2;
+}
+
+.slider {
+  margin: 0 0 45px;
+  position: relative;
+}
+.slider__notification {
+  background: #c29974;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.slide {
+  background: #eee4db;
+  box-shadow: inset 0 89px #fff;
+  height: 500px;
+  width: 100%;
+}
+.slide__wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.slide__counter {
+  color: rgba(30, 6, 6, 0.05);
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 73px;
+  margin: 106px 22px 0 28px;
+}
+.slide__info {
+  margin: 178px 5px 0 22px;
+}
+.slide__title {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 44px;
+  text-transform: uppercase;
+  max-width: 307px;
+  margin: 0 0 20px;
+}
+.slide__description {
+  display: block;
+  font-family: "Crimson Text", serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 25px;
+  margin: 0 0 20px;
+}
+.slide__img {
+  height: 461px;
+}
+.slide__img img {
+  max-width: 100%;
+}
+.slide--bg--green {
+  background: #daedde;
+}
+.slide--bg--violet {
+  background: #dfdaed;
+}
+.slide--bg--pink {
+  background: #eddada;
+}
+
+.slider-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 190px;
+  left: 31px;
+}
+.slider-nav__item {
+  line-height: 0;
+}
+.slider-nav__btn {
+  display: inline-flex;
+  background: #d6cac2;
+  border: none;
+  border-top: 3px;
+  border-radius: 0;
+  cursor: pointer;
+  width: 31px;
+  min-height: 3px;
+  margin: 0 0 11px;
+}
+.slider-nav__btn--is-active {
+  background: rgba(30, 6, 6, 0.6);
+}
+.slider-nav__btn:hover {
+  background: rgba(30, 6, 6, 0.6);
 }
