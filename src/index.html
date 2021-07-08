@@ -6,13 +6,437 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>DLK - Design Life Kids</title>
 </head>
 <body>
-    <div class="container">
-        DLK - Design Life Kids
+    <header class="header">
+        <div class="header__container container">
+            <div class="header-logo">
+                <img src="img/svg/logo.svg" alt="DLK company logo">
+            </div>
+
+            <nav class="header-nav">
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="catalog.html">Catalog</a>
+                    </li>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="#popup">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-search">
+                <form class="header-search__form">
+                    <input class="header-search__input" type="search" placeholder="Search...">
+                    <button class="header-search__button" type="submit">
+                        <span class="visually-hidden">Search</span>
+                    </button>
+                </form>
+
+                <a class="header__contacts-link" href="contact-us.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="slider">
+                <div class="slide" id="slide-1">
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">01</div>
+
+                        <div class="slide__info">
+                            <h2 class="slide__title">The ooh noo collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
+                        </div>
+
+                        <div class="slide__img">
+                            <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide slide--bg--green" id="slide-2" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">02</div>
+
+                        <div class="slide__info">
+                            <h2 class="slide__title">A summer's breeze collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
+                        </div>
+
+                        <div class="slide__img">
+                            <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide slide--bg--violet" id="slide-3" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">03</div>
+
+                        <div class="slide__info">
+                            <h2 class="slide__title">The Keepers of sleep collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
+                        </div>
+
+                        <div class="slide__img">
+                            <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide slide--bg--pink" id="slide-4" hidden>
+                    <div class="slide__wrapper">
+                        <div class="slide__counter">04</div>
+
+                        <div class="slide__info">
+                            <h2 class="slide__title">The Pets collection</h2>
+                            <p class="slide__description">Designed in Slovenia</p>
+                            <a class="btn">Explore now</a>
+                        </div>
+
+                        <div class="slide__img">
+                            <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider__notification">
+                    Free (continental) USA shipping on all orders of $100 USD or more!
+                </div>
+
+                <ul class="slider-nav">
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn slider-nav__btn--is-active" href="#slide-1">
+                            <span class="visually-hidden">Go to slide 01</span>
+                        </a>
+                    </li>
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-2">
+                            <span class="visually-hidden">Go to slide 02</span>
+                        </a>
+                    </li>
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-3">
+                            <span class="visually-hidden">Go to slide 03</span>
+                        </a>
+                    </li>
+                    <li class="slider-nav__item">
+                        <a class="slider-nav__btn" href="#slide-4">
+                            <span class="visually-hidden">Go to slide 04</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="categories">
+            <div class="container categories-container">
+                <h2 class="title-h2 categories-title">
+                    <a href="catalog.html">Category Products</a>
+                </h2>
+                <ul class="products-list">
+                    <li class="products-list-item">
+                        <a href="#" class="products-list-item-wrapper bg-green">
+                            <img src="img/apparel.png" alt="Apparel Kids">
+                            <h3 class="title-h3">Apparel Kids</h3>
+                        </a>
+                    </li>
+                    <li class="products-list-item">
+                        <a href="#" class="products-list-item-wrapper bg-orange">
+                            <img src="img/shop.png" alt="Holiday shop">
+                            <h3 class="title-h3">Holiday shop</h3>
+                        </a>
+                    </li>
+                    <li class="products-list-item">
+                        <a href="toys.html" class="products-list-item-wrapper bg-yellow">
+                            <img src="img/toys.png" alt="Toys">
+                            <h3 class="title-h3">Toys</h3>
+                        </a>
+                    </li>
+                    <li class="products-list-item">
+                        <a href="#" class="products-list-item-wrapper bg-violet">
+                            <img src="img/access.png" alt="Accessories">
+                            <h3 class="title-h3">Accessories</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div class="products-nav">
+                    <div class="products-nav-btns">
+                        <button type="button" class="products-nav-btn products-nav-btn-prev">
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button type="button" class="products-nav-btn products-nav-btn-next">
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <p class="products-nav-text">
+                        Modern finds for the modern home. Curated goods by unique designers around the world
+                        from fashion to furniture for kids and adults.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="delivery">
+            <div class="container delivery-container">
+                <div class="delivery-img">
+                    <img src="img/imagewoman.jpg" alt="Picture with woman">
+                </div>
+                <div class="delivery-aside">
+                    <h2 class="title-h2 delivery-title">Delivery</h2>
+                    <ul class="delivery-list">
+                        <li>
+                            <a class="delivery-list-item-active" href="#">Delivery</a>
+                        </li>
+                        <li>
+                            <a href="#">Guarantee</a>
+                        </li>
+                        <li>
+                            <a href="#">Credit</a>
+                        </li>
+                    </ul>
+                    <p>
+                        Some days i feel like i've been working on dlk my entire life and there are other days
+                        that i am completely shocked that four years have flown by. It's simply magical.
+                    </p>
+                    <p>
+                        What started as an outlet to deal  with the traumatic loss of my husband,
+                        dlk has now become a truly happy place for me and i have you and
+                        all of the beautiful designers that we work with to thank!
+                    </p>
+                    <a class="learn-more-btn btn" href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="container partners-container">
+                <h2>
+                    <span class="visually-hidden">Partners</span>
+                </h2>
+                <div class="partners-list-wrapper">
+                    <ul class="partners-list">
+                        <li>
+                            <a href="https://corp.mail.ru">
+                                <img src="img/mail.png" alt="Mail Group Company">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com">
+                                <img src="img/apple.png" alt="Apple Company">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://eltex-co.ru">
+                                <img src="img/eltex.png" alt="Eltex Company">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.owox.ru">
+                                <img src="img/owox.png" alt="Owox Company">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-bottom">
+            <div class="container main-bottom-container">
+                <div class="dlk-aside-container main-bottom-col">
+                    <h2 class="title-h2 dlk-aside-title main-bottom-title">Design Life Kids</h2>
+                    <h3 class="dlk-aside-subtitle">About Us</h3>
+                    <p class="main-bottom-text">
+                        Some days i feel like i've been working on dlk my entire life and there are other days that
+                        i am completely shocked that four years have flown by. It's simply magical.
+                    </p>
+                    <a class="dlk-aside-btn btn" href="#">Buy Now</a>
+                </div>
+
+                <div class="contacts-aside-container main-bottom-col">
+                    <h2 class="title-h2 contacts-aside-title main-bottom-title">Contacts</h2>
+                    <p class="main-bottom-text">
+                        Some days i feel like i've been working on dlk my entire life and there are other days that
+                        i am completely shocked that four years have flown by. It's simply magical.
+                    </p>
+
+                    <div class="contacts-aside-map">
+                        <img src="img/contacts-map.png" alt="Map">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-container">
+            <section class="footer-col">
+                <h4 class="footer-col-title">Navigation</h4>
+                <ul class="footer-col-list">
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">Design Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Featured On</a>
+                    </li>
+                    <li>
+                        <a href="#">2018 Holiday Catalog</a>
+                    </li>
+                    <li>
+                        <a href="#">Shop By Designer</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-col">
+                <h4 class="footer-col-title">Customer Information</h4>
+                <ul class="footer-col-list">
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Sale Exclusions</a>
+                    </li>
+                    <li>
+                        <a href="#">Shipping & Returns</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Search</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="footer-col">
+                <h4 class="footer-col-title">Connect</h4>
+                <div class="footer-col-container">
+                    <form class="footer-mail-form">
+                        <input class="footer-mail-input" type="email" placeholder="Email">
+                        <button class="footer-mail-btn btn" type="submit">Join</button>
+                    </form>
+                    <div class="footer-socials-container">
+                        <ul class="footer-socials-list">
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/facebook.svg" alt="Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/twitter.svg" alt="Twitter">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/pinterest.svg" alt="Pinterest">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/instagram.svg" alt="Instagram">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container footer-bottom">
+            <div class="footer-bottom-wrapper">
+                <div class="footer-bottom-col">
+                    <form class="star-rating">
+                        <fieldset class="star-rating-fieldset">
+                            <legend class="star-rating-title">Company Rating</legend>
+                            <div class="star-rating-container">
+                                <input class="star-rating-input" type="radio" name="stars" area-label="very bad" value="1" checked>
+                                <input class="star-rating-input" type="radio" name="stars" area-label="bad" value="2">
+                                <input class="star-rating-input" type="radio" name="stars" area-label="normal" value="3">
+                                <input class="star-rating-input" type="radio" name="stars" area-label="good" value="4">
+                                <input class="star-rating-input" type="radio" name="stars" area-label="excellent" value="5">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="footer-bottom-col">
+                    Copyright © 2018 Dlk • Design Life Kids
+                </div>
+
+                <div class="footer-bottom-col">
+                    <a href="#">Web Design — Direct Line Academy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="popup" id="popup">
+        <div class="popup-body container">
+            <div class="popup-content">
+                <div class="contact-us-form-wrapper">
+                    <form class="contact-us-form">
+                        <div class="contact-us-group">
+                            <label class="contact-us-label" for="name">Name</label>
+                            <input class="contact-us-field" type="text" id="name" placeholder="Ivan Ivanov">
+                        </div>
+
+                        <div class="contact-us-row">
+                            <div class="contact-us-group contact-us-input-tel">
+                                <label class="contact-us-label" for="phone">Phone</label>
+                                <input class="contact-us-field" type="tel" id="phone">
+                            </div>
+
+                            <div class="contact-us-group">
+                                <label class="contact-us-label" for="email">Email</label>
+                                <input class="contact-us-field" type="email" id="email">
+                            </div>
+                        </div>
+
+                        <div class="contact-us-group">
+                            <label class="contact-us-label" for="message">Message</label>
+                            <textarea class="contact-us-field contact-us-textarea" id="message"></textarea>
+                        </div>
+
+                        <div class="contact-us-group contact-us-checkbox">
+                            <input class="contact-us-field custom-checkbox" type="checkbox" id="consent" checked>
+                            <label class="contact-us-label" for="consent">
+                                By clicking on the button, you consent to the processing
+                                of your personal data
+                            </label>
+                        </div>
+
+                        <input class="submit-button btn" type="submit" value="Submit">
+                    </form>
+                </div>
+
+                <a href="#" class="popup-close">
+                    <img src="img/icons/popup-close.svg" alt="Close window">
+                </a>
+            </div>
+        </div>
     </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
