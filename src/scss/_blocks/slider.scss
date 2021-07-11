@@ -43,7 +43,7 @@
 
     &__title {
         display: block;
-        font-family: "Montserrat", sans-serif;
+        font-family: $font-family-title;
         font-weight: 700;
         font-size: 40px;
         line-height: 44px;
@@ -63,10 +63,10 @@
 
     &__img {
         height: 461px;
-    }
 
-    &__img img {
-        max-width: 100%;
+        & img {
+            max-width: 100%;
+        }
     }
 
     &--bg--green {
@@ -103,13 +103,13 @@
         width: 31px;
         min-height: 3px;
         margin: 0 0 11px;
-    }
 
-    &__btn--is-active {
-        background: rgba(30, 6, 6, 0.6);
-    }
+        &--is-active {
+            background: rgba(30, 6, 6, 0.6);
+        }
 
-    &__btn:hover {
-        background: rgba(30, 6, 6, 0.6);
+        &:hover {
+            background: rgba(30, 6, 6, 0.6);
+        }
     }
 }
