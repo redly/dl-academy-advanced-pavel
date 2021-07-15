@@ -1,0 +1,39 @@
+.content-header {
+    padding-top: 20px;
+}
+
+.breadcrumbs-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+
+    &__item,
+    &__item a {
+        color: $font-color-base;
+        font-family: "Crimson Text", serif;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 25px;
+        text-decoration: none;
+    }
+
+    &__item:not(:last-child)::after {
+        content: url('../img/svg/stroke-next.svg');
+        margin: 0 20px;
+    }
+
+    &__item:last-child {
+        opacity: 0.5;
+    }
+
+    &__item:hover:not(.breadcrumbs-list__item:last-child) {
+        opacity: 0.5;
+    }
+
+    &__item:active:not(.breadcrumbs-list__item:last-child) {
+        opacity: 0.2;
+    }
+}

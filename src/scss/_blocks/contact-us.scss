@@ -1,0 +1,104 @@
+.contact-us {
+    padding: 50px 0 60px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+.contacts-form {
+    background-color: #e5eaf8;
+    width: 680px;
+    padding: 42px 40px;
+
+    &__content {
+        display: block;
+    }
+
+    &__group {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__row &__group {
+        width: 50%;
+    }
+
+    &__row &__group:nth-child(odd) {
+        margin-right: 20px;
+    }
+
+    &__label {
+        display: block;
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 4px;
+    }
+
+    &__field {
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        width: 100%;
+        height: 50px;
+        padding: 0 18px;
+        outline: none;
+
+        &::placeholder {
+            color: $font-color-base;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        height: 150px;
+        padding: 15px 18px;
+    }
+
+    &__checkbox {
+        margin: -5px 0 17px;
+
+        /*
+            По макету отступ у контейнера такой же как и у остальных,
+            но из-за чуть сдвинутого вниз переоформленного чекбокса,
+            я сделал отступ по лейблу, а не по инпуту
+        */
+    }
+}
+
+/* custom-checkbox */
+
+.contacts-form__checkbox .custom-checkbox + label,
+.popup__body .custom-checkbox + label {
+    padding: 3px 0 0 34px;
+}
+
+/* contact-us-col */
+
+.contact-us-col {
+    max-width: 380px;
+
+    &__text {
+        padding: 0;
+        margin: 0 0 20px;
+    }
+
+    &__title {
+        color: #c29974;
+        font-family: $font-family-title;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 0 20px;
+    }
+}

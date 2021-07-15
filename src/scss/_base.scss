@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    color: #1e0606;
+    color: $font-color-base;
     font-family: $font-family-base;
     font-size: 16px;
     line-height: 22px;
@@ -37,7 +37,7 @@ body {
 
 .title-h2,
 .title-h2 a {
-    color: #1e0606;
+    color: $color-base;
     font-family: $font-family-title;
     font-weight: bold;
     font-size: 38px;
@@ -81,10 +81,6 @@ body {
     overflow: hidden;
     */
 
-    &:hover {
-        background: #c29974;
-    }
-
     &:active {
         background: #c29974;
         opacity: 0.5;
@@ -92,5 +88,9 @@ body {
 
     &:disabled {
         opacity: 0.2;
+    }
+
+    &:hover:not(.btn:disabled) {
+        background: #c29974;
     }
 }

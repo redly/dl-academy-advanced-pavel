@@ -35,7 +35,7 @@
             <div class="header-search">
                 <form class="header-search__form">
                     <input class="header-search__input" type="search" placeholder="Search...">
-                    <button class="header-search__button" type="submit">
+                    <button class="header-search__btn" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
@@ -391,47 +391,48 @@
             </div>
         </div>
     </footer>
+
     <div class="popup" id="popup">
-        <div class="popup-body container">
-            <div class="popup-content">
-                <div class="contact-us-form-wrapper">
-                    <form class="contact-us-form">
-                        <div class="contact-us-group">
-                            <label class="contact-us-label" for="name">Name</label>
-                            <input class="contact-us-field" type="text" id="name" placeholder="Ivan Ivanov">
+        <div class="popup__body container">
+            <div class="popup__content">
+                <div class="contacts-form">
+                    <form class="contacts-form__content">
+                        <div class="contacts-form__group">
+                            <label class="contacts-form__label" for="name">Name</label>
+                            <input class="contacts-form__field" type="text" id="name" placeholder="Ivan Ivanov">
                         </div>
 
-                        <div class="contact-us-row">
-                            <div class="contact-us-group contact-us-input-tel">
-                                <label class="contact-us-label" for="phone">Phone</label>
-                                <input class="contact-us-field" type="tel" id="phone">
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__group">
+                                <label class="contacts-form__label" for="phone">Phone</label>
+                                <input class="contacts-form__field" type="tel" id="phone">
                             </div>
 
-                            <div class="contact-us-group">
-                                <label class="contact-us-label" for="email">Email</label>
-                                <input class="contact-us-field" type="email" id="email">
+                            <div class="contacts-form__group">
+                                <label class="contacts-form__label" for="email">Email</label>
+                                <input class="contacts-form__field" type="email" id="email">
                             </div>
                         </div>
 
-                        <div class="contact-us-group">
-                            <label class="contact-us-label" for="message">Message</label>
-                            <textarea class="contact-us-field contact-us-textarea" id="message"></textarea>
+                        <div class="contacts-form__group">
+                            <label class="contacts-form__label" for="message">Message</label>
+                            <textarea class="contacts-form__field contacts-form__textarea" id="message"></textarea>
                         </div>
 
-                        <div class="contact-us-group contact-us-checkbox">
-                            <input class="contact-us-field custom-checkbox" type="checkbox" id="consent" checked>
-                            <label class="contact-us-label" for="consent">
+                        <div class="contacts-form__group contacts-form__checkbox">
+                            <input class="contacts-form__field custom-checkbox" type="checkbox" id="consent">
+                            <label class="contacts-form__label" for="consent">
                                 By clicking on the button, you consent to the processing
                                 of your personal data
                             </label>
                         </div>
 
-                        <input class="submit-button btn" type="submit" value="Submit">
+                        <input class="btn" type="submit" value="Submit" disabled>
                     </form>
                 </div>
 
-                <a href="#" class="popup-close">
-                    <img src="img/icons/popup-close.svg" alt="Close window">
+                <a href="#" class="popup__btn-close">
+                    <img src="img/svg/popup-close.svg" alt="Close window">
                 </a>
             </div>
         </div>

@@ -9,7 +9,7 @@
     }
 
     &__contacts-link {
-        color: #1e0606;
+        color: $font-color-base;
         font-size: 14px;
         font-weight: bold;
         line-height: 19px;
@@ -42,7 +42,7 @@
     }
 
     &__link {
-        color: #1e0606;
+        color: $font-color-base;
         text-decoration: none;
     }
 }
@@ -62,7 +62,7 @@
         display: none;
     }
 
-    &__button {
+    &__btn {
         @include btn-reset;
 
         background: url('../img/svg/icon-search.svg') no-repeat 50% 50%;

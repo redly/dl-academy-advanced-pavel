@@ -13,47 +13,48 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
+        <div class="header__container container">
             <a href="index.html" class="header-logo">
-                <img src="img/icons/logo.svg" alt="DLK company logo">
+                <img src="img/svg/logo.svg" alt="DLK company logo">
             </a>
+
             <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li>
-                        <a href="blog.html">Blog</a>
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="blog.html">Blog</a>
                     </li>
-                    <li>
-                        <a href="catalog.html">Catalog</a>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="catalog.html">Catalog</a>
                     </li>
-                    <li>
-                        <a href="#">About Us</a>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">About Us</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="header-aside">
-                <form class="search">
-                    <input class="search-input" type="search" placeholder="Search...">
-                    <button class="search-button" type="submit">
+            <div class="header-search">
+                <form class="header-search__form">
+                    <input class="header-search__input" type="search" placeholder="Search...">
+                    <button class="header-search__btn" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
 
-                <a class="header-contacts" href="contact-us.html">Contact Us</a>
+                <a class="header__contacts-link" href="contact-us.html">Contact Us</a>
             </div>
         </div>
     </header>
     <main class="content">
-        <div class="container content-header">
+        <div class="content__header container">
             <h1 class="title-h1">Toy for kids</h1>
             <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-list-item">
+                <li class="breadcrumbs-list__item">
                     <a href="index.html">Home</a>
                 </li>
-                <li class="breadcrumbs-list-item">
+                <li class="breadcrumbs-list__item">
                     <a href="catalog.html">Catalog</a>
                 </li>
-                <li class="breadcrumbs-list-item">Toys</li>
+                <li class="breadcrumbs-list__item">Toys</li>
             </ul>
         </div>
 
@@ -61,12 +62,12 @@
             <h2 class="visually-hidden">Filters</h2>
             <form class="filters-form container" action="https://echo.htmlacademy.ru/" method="get">
                 <div class="filters-col">
-                    <div class="filters-col-title">Cost</div>
+                    <div class="filters-col__title">Cost</div>
                     <input class="custom-range" type="range" id="input-range" name="cost" value="100" min="0" max="500">
                 </div>
 
                 <div class="filters-col">
-                    <div class="filters-col-title">Color</div>
+                    <div class="filters-col__title">Color</div>
 
                     <ul class="filters-list">
                         <li>
@@ -89,7 +90,7 @@
                 </div>
 
                 <div class="filters-col">
-                    <div class="filters-col-title">Delivery</div>
+                    <div class="filters-col__title">Delivery</div>
 
                     <ul class="filters-list">
                         <li>
@@ -104,7 +105,7 @@
                 </div>
 
                 <div class="filters-col">
-                    <div class="filters-col-title">Amount</div>
+                    <div class="filters-col__title">Amount</div>
 
                     <ul class="filters-amount">
                         <li>
