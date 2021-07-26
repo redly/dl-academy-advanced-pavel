@@ -1,0 +1,19 @@
+.socials-list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0 0;
+
+    &__item {
+        margin: 0 10px 0 0;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.2;
+        }
+    }
+}

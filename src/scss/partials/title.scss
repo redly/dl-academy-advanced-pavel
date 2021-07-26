@@ -1,0 +1,31 @@
+.title-h1 {
+    font-family: $font-family-title;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: (49 / 40);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-h2,
+.title-h2 a {
+    color: $color-black;
+    font-family: $font-family-title;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: (47 / 38);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.title-h3 {
+    color: #fff;
+    font-family: $font-family-title;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: (32 / 26);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}

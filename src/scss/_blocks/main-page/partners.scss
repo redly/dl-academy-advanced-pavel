@@ -1,0 +1,10 @@
+.partners {
+    padding: 45px 0 25px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+}

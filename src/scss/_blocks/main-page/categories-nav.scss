@@ -1,0 +1,50 @@
+.categories-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &__btns {
+        display: flex;
+        flex-direction: row;
+        padding-top: 3px;
+        margin-right: 20px;
+    }
+
+    &__btn {
+        @include btn-reset;
+
+        background-color: rgba(112, 187, 220, 0.2);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 37px;
+        height: 37px;
+        padding: 0;
+        margin-right: 6px;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &--prev {
+            background-image: url('../img/svg/btn-previous.svg');
+        }
+
+        &--next {
+            background-image: url('../img/svg/btn-next.svg');
+        }
+
+        &:hover {
+            background-color: #eee4db;
+        }
+
+        &:active {
+            background-color: #eee4db;
+            opacity: 0.5;
+        }
+    }
+
+    &__text {
+        max-width: 550px;
+        margin: 0;
+    }
+}

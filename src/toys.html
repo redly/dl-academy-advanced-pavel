@@ -61,15 +61,15 @@
         <section class="filters">
             <h2 class="visually-hidden">Filters</h2>
             <form class="filters-form container" action="https://echo.htmlacademy.ru/" method="get">
-                <div class="filters-col">
-                    <div class="filters-col__title">Cost</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Cost</div>
                     <input class="custom-range" type="range" id="input-range" name="cost" value="100" min="0" max="500">
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col__title">Color</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Color</div>
 
-                    <ul class="filters-list">
+                    <ul class="filters-form__col-list">
                         <li>
                             <input class="custom-checkbox" type="checkbox" id="color-black" name="color" value="black" checked>
                             <label for="color-black">Black</label>
@@ -89,10 +89,10 @@
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col__title">Delivery</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Delivery</div>
 
-                    <ul class="filters-list">
+                    <ul class="filters-form__col-list">
                         <li>
                             <input class="custom-radio" type="radio" id="delivery-free" name="delivery" value="free">
                             <label for="delivery-free">Free shipping</label>
@@ -104,27 +104,27 @@
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col__title">Amount</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Amount</div>
 
-                    <ul class="filters-amount">
+                    <ul class="filters-form__col-list filters-form__col-amount">
                         <li>
-                            <input type="radio" id="amount-0" name="amount" value="0-5" checked>
+                            <input class="custom-amount" type="radio" id="amount-0" name="amount" value="0-5" checked>
                             <label for="amount-0">0-5</label>
                         </li>
                         <li>
-                            <input type="radio" id="amount-10" name="amount" value="10-20">
+                            <input class="custom-amount" type="radio" id="amount-10" name="amount" value="10-20">
                             <label for="amount-10">10-20</label>
                         </li>
                         <li>
-                            <input type="radio" id="amount-20" name="amount" value="20-50">
+                            <input class="custom-amount" type="radio" id="amount-20" name="amount" value="20-50">
                             <label for="amount-20">20-50</label>
                         </li>
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <button type="submit" class="btn">Apply</button>
+                <div class="filters-form__col">
+                    <button class="filters-form__col-btn btn" type="submit">Apply</button>
                 </div>
             </form>
         </section>
@@ -219,27 +219,29 @@
                 </ul>
 
                 <div class="content-pagination">
-                    <a class="content-pagination-arrow" href="#">
-                        <img class="content-pagination-arrow-img" src="img/icons/icon-arrow-prev.svg" alt="Previous page">
-                        <img class="content-pagination-arrow-img-active" src="img/icons/icon-arrow-prev-hover.svg" alt="Previous page" hidden>
+                    <a class="content-pagination__arrow" href="#">
+                        <svg class="content-pagination__arrow-svg" width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L3 15L16 28" stroke-width="4"/>
+                        </svg>
                     </a>
-                    <ul class="content-pagination-list">
-                        <li>
-                            <span>1</span>
+                    <ul class="content-pagination__list">
+                        <li class="content-pagination__item">
+                            <span class="content-pagination__span">1</span>
                         </li>
-                        <li>
-                            <a href="#" title="To page 2">2</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 2">2</a>
                         </li>
-                        <li>
-                            <a href="#" title="To page 3">3</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 3">3</a>
                         </li>
-                        <li>
-                            <a href="#" title="To page 4">4</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 4">4</a>
                         </li>
                     </ul>
-                    <a class="content-pagination-arrow" href="#">
-                        <img class="content-pagination-arrow-img" src="img/icons/icon-arrow-next.svg" alt="Next page">
-                        <img class="content-pagination-arrow-img-active" src="img/icons/icon-arrow-next-hover.svg" alt="Next page" hidden>
+                    <a class="content-pagination__arrow" href="#">
+                        <svg class="content-pagination__arrow-svg" width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L15 15L2 28" stroke-width="4"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -303,25 +305,25 @@
                         <button class="footer-mail-btn btn" type="submit">Join</button>
                     </form>
                     <div class="footer-socials-container">
-                        <ul class="footer-socials-list">
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/facebook.svg" alt="Facebook">
+                        <ul class="socials-list">
+                            <li class="socials-list__item">
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/svg/facebook.svg" alt="Facebook">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/twitter.svg" alt="Twitter">
+                            <li class="socials-list__item">
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/svg/twitter.svg" alt="Twitter">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/pinterest.svg" alt="Pinterest">
+                            <li class="socials-list__item">
+                                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/svg/pinterest.svg" alt="Pinterest">
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/instagram.svg" alt="Instagram">
+                            <li class="socials-list__item">
+                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                    <img src="img/svg/instagram.svg" alt="Instagram">
                                 </a>
                             </li>
                         </ul>

@@ -1,0 +1,10 @@
+.footer {
+    background: #434343;
+    color: #fff;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}

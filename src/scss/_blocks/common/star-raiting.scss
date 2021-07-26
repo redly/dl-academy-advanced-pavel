@@ -1,0 +1,88 @@
+.star-rating {
+    display: inline-block;
+
+    &__fieldset {
+        margin: 0;
+        padding: 3px 0 0 147px;
+        border: none;
+        position: relative;
+    }
+
+    &__title {
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__container {
+        position: relative;
+        width: 80px;
+        height: 16px;
+        background-image: url("../img/svg/rating-star-disabled.svg");
+        background-size: 16px;
+        background-repeat: repeat-x;
+    }
+
+    &__fieldset:focus-within {
+        outline: solid 1px #fff;
+        outline-offset: 5px;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        font-size: inherit;
+        background-size: 16px;
+        background-repeat: repeat-x;
+        appearance: none;
+
+        &:nth-of-type(1) {
+            z-index: 5;
+            width: 16px;
+        }
+
+        &:nth-of-type(2) {
+            z-index: 4;
+            width: 32px;
+        }
+
+        &:nth-of-type(3) {
+            z-index: 3;
+            width: 48px;
+        }
+
+        &:nth-of-type(4) {
+            z-index: 2;
+            width: 64px;
+        }
+
+        &:nth-of-type(5) {
+            z-index: 1;
+            width: 80px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:checked,
+        &:hover {
+            background-image: url("../img/svg/rating-star-enabled.svg");
+        }
+
+        &:hover ~ & {
+            background-image: url("../img/svg/rating-star-disabled.svg");
+        }
+    }
+
+    &:hover {
+        color: #c29974;
+    }
+}

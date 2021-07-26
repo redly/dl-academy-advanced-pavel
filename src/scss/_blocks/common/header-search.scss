@@ -1,0 +1,35 @@
+.header-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+
+    &__form {
+        margin-right: 24px;
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__btn {
+        @include btn-reset;
+
+        background: url('../img/svg/icon-search.svg') no-repeat 50% 50%;
+        box-sizing: border-box;
+        padding: 0;
+        position: relative;
+        height: 18px;
+        width: 17px;
+        top: -3px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.2;
+        }
+    }
+}
