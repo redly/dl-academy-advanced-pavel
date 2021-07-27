@@ -9,18 +9,20 @@
         &::before {
             @include custom-filters-visible;
         }
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        &:disabled + label {
-            opacity: 0.5;
-        }
     }
 
-    &--padding {
-        padding: 3px 0 0 34px;
+    &--padding + label {
+        padding: 4px 0 0 33px;
+    }
+
+    & + label:hover {
+        text-decoration: underline;
+    }
+
+    &:disabled + label {
+        opacity: 0.5;
+        text-decoration: none;
+        cursor: default;
     }
 
     &:checked + label::before {

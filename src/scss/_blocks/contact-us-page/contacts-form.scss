@@ -12,19 +12,19 @@
         display: block;
         width: 100%;
         margin-bottom: 20px;
+
+        &--width--half {
+            width: 50%;
+
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+        }
     }
 
     &__row {
         display: flex;
         flex-direction: row;
-    }
-
-    &__row &__group {
-        width: 50%;
-    }
-
-    &__row &__group:nth-child(odd) {
-        margin-right: 20px;
     }
 
     &__label {

@@ -45,7 +45,7 @@
         </div>
     </header>
     <main class="content">
-        <div class="content__header container">
+        <div class="content-header container">
             <h1 class="title-h1">Toy for kids</h1>
             <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-list__item">
@@ -75,7 +75,7 @@
                             <label for="color-black">Black</label>
                         </li>
                         <li>
-                            <input class="custom-checkbox" type="checkbox" id="color-blue" name="color" value="blue">
+                            <input class="custom-checkbox" type="checkbox" id="color-blue" name="color" value="blue" disabled>
                             <label for="color-blue">Blue</label>
                         </li>
                         <li>
@@ -92,7 +92,7 @@
                 <div class="filters-form__col">
                     <div class="filters-form__col-title">Delivery</div>
 
-                    <ul class="filters-form__col-list">
+                    <ul class="filters-form__col-list filters-form__col-list--li-margin--small">
                         <li>
                             <input class="custom-radio" type="radio" id="delivery-free" name="delivery" value="free">
                             <label for="delivery-free">Free shipping</label>
@@ -130,90 +130,79 @@
         </section>
 
         <section class="product-cards">
-            <div class="container product-cards-container">
+            <div class="product-cards__container container">
                 <h2 class="visually-hidden">Product Cards</h2>
-                <ul class="product-cards-list">
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/shark.png" alt="Picture of 'Sharky been bag chair cover' product">
-                            <h3 class="product-cards-title">Sharky bean bag chair cover</h3>
+                <ul class="product-cards__list">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/shark.png" alt="Picture of 'Sharky been bag chair cover' product">
+                            </div>
 
-                            <div class="product-cards-item-active title-h3" hidden>Learn more</div>
-                        </a>
+                            <h3 class="product-cards__item-title">Sharky bean bag chair cover</h3>
+                            <span class="product-cards__item-price">&#36;60.00 usd</span>
 
-                        <!--
-                            Я использовал ссылку как обертку для элементов что бы при наведении
-                            на нее они все отображали состояние наведения, допустимо ли это?
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
+                        </a>
+                    </li>
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/brass.png" alt="Picture of 'Brass deco frames' product">
+                            </div>
 
-                            Пока что я отсавил это состояние первой карточке для теста, если
-                            все правильно то оберну и остальные так же.
+                            <h3 class="product-cards__item-title">Brass deco frames</h3>
+                            <span class="product-cards__item-price">&#36;66.00 usd</span>
 
-                        -->
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
+                        </a>
+                    </li>
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/cibo.png" alt="Picture of 'Cibo full apron' product">
+                            </div>
 
-                        <span class="product-cards-price">&#36;60.00 usd</span>
-                    </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/brass.png" alt="Picture of 'Brass deco frames' product">
+                            <h3 class="product-cards__item-title">Cibo full apron</h3>
+                            <span class="product-cards__item-price">&#36;60.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Brass deco frames</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;66.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/cibo.png" alt="Picture of 'Cibo full apron' product">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/gatcha.png" alt="Picture of 'Gatcha gatcha gumball machine' product">
+                            </div>
+
+                            <h3 class="product-cards__item-title">Gatcha gatcha gumball machine</h3>
+                            <span class="product-cards__item-price">&#36;56.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Cibo full apron</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;60.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/gatcha.png" alt="Picture of 'Gatcha gatcha gumball machine' product">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/christmas.png" alt="Picture of 'Christmas advent scented candle' product">
+                            </div>
+
+                            <h3 class="product-cards__item-title">Christmas advent scented candle</h3>
+                            <span class="product-cards__item-price">&#36;29.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Gatcha gatcha gumball machine</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;56.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/christmas.png" alt="Picture of 'Christmas advent scented candle' product">
-                        </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Christmas advent scented candle</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;29.00 usd</span>
-                        </div>
-                    </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <div class="product-cards-item-img-wrapper">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
                                 <img src="/img/tangle.png" alt="Picture of 'Tangle spinning tea light' product">
                             </div>
 
-                            <!--
-                                Изображения обернул в отдельный div, так как оно меньше по высоте
-                                чем остальные, что бы его сдвинуть ниже (по макету).
+                            <h3 class="product-cards__item-title">Tangle spinning tea light</h3>
+                            <span class="product-cards__item-price">&#36;56.00 usd</span>
 
-                                Думаю так для всех img нужно обернуть.
-                            -->
-
-                            <h3 class="product-cards-title">Tangle spinning tea light</h3>
-
-                            <span class="product-cards-price">&#36;56.00 usd</span>
-
-                            <div class="product-cards-item-active title-h3" hidden>Learn more</div>
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
                     </li>
                 </ul>
@@ -248,10 +237,10 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-container">
+        <div class="footer__container container">
             <section class="footer-col">
-                <h4 class="footer-col-title">Navigation</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Navigation</h4>
+                <ul class="footer-col__list">
                     <li>
                         <a href="#">About Us</a>
                     </li>
@@ -274,8 +263,8 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Customer Information</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Customer Information</h4>
+                <ul class="footer-col__list">
                     <li>
                         <a href="#">Contact Us</a>
                     </li>
@@ -298,62 +287,60 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Connect</h4>
-                <div class="footer-col-container">
-                    <form class="footer-mail-form">
-                        <input class="footer-mail-input" type="email" placeholder="Email">
-                        <button class="footer-mail-btn btn" type="submit">Join</button>
+                <h4 class="footer-col__title">Connect</h4>
+                <div class="footer-col__wrap">
+                    <form class="footer-col__form">
+                        <input class="footer-col__input" type="email" placeholder="Email">
+                        <button class="btn" type="submit">Join</button>
                     </form>
-                    <div class="footer-socials-container">
-                        <ul class="socials-list">
-                            <li class="socials-list__item">
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="img/svg/facebook.svg" alt="Facebook">
-                                </a>
-                            </li>
-                            <li class="socials-list__item">
-                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="img/svg/twitter.svg" alt="Twitter">
-                                </a>
-                            </li>
-                            <li class="socials-list__item">
-                                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="img/svg/pinterest.svg" alt="Pinterest">
-                                </a>
-                            </li>
-                            <li class="socials-list__item">
-                                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                                    <img src="img/svg/instagram.svg" alt="Instagram">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="socials-list">
+                        <li class="socials-list__item">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/facebook.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/twitter.svg" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/pinterest.svg" alt="Pinterest">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/instagram.svg" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
 
-        <div class="container footer-bottom">
-            <div class="footer-bottom-wrapper">
-                <div class="footer-bottom-col">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom__col">
                     <form class="star-rating">
-                        <fieldset class="star-rating-fieldset">
-                            <legend class="star-rating-title">Company Rating</legend>
-                            <div class="star-rating-container">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="very bad" value="1" checked>
-                                <input class="star-rating-input" type="radio" name="stars" area-label="bad" value="2">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="normal" value="3">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="good" value="4">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="excellent" value="5">
+                        <fieldset class="star-rating__fieldset">
+                            <legend class="star-rating__title">Company Rating</legend>
+                            <div class="star-rating__container">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="very bad" value="1" checked>
+                                <input class="star-rating__input" type="radio" name="stars" area-label="bad" value="2">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="normal" value="3">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="good" value="4">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="excellent" value="5">
                             </div>
                         </fieldset>
                     </form>
                 </div>
 
-                <div class="footer-bottom-col">
+                <div class="footer-bottom__col">
                     Copyright © 2018 Dlk • Design Life Kids
                 </div>
 
-                <div class="footer-bottom-col">
+                <div class="footer-bottom__col">
                     <a href="#">Web Design — Direct Line Academy</a>
                 </div>
             </div>
