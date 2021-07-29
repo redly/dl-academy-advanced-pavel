@@ -4,8 +4,12 @@
     padding: 0 30px;
     margin: 0 57px 0 0;
 
+    &:nth-child(2) {
+        margin: 0;
+    }
+
     &__title {
-        margin: -20px 0 10px;
+        margin: -26px 0 11px;
     }
 
     &__subtitle {
@@ -13,7 +17,7 @@
         font-size: 26px;
         font-style: italic;
         font-weight: normal;
-        line-height: (32 / 26);
+        line-height: (33 / 26);
         margin: 0;
     }
 

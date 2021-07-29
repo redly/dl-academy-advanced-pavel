@@ -5,6 +5,10 @@
     align-items: center;
     margin: 28px 0 0;
 
+    &--margin-top--small {
+        margin: 12px 0 0;
+    }
+
     &__arrow-svg {
         display: block;
 

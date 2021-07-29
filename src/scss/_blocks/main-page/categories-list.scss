@@ -29,10 +29,6 @@
         h3 {
             max-width: 200px;
             position: absolute;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
 
         &--bg--green {
@@ -57,6 +53,10 @@
 
         &--bg--blue {
             background-color: #e5eaf8;
+        }
+
+        &:hover h3 {
+            text-decoration: underline;
         }
     }
 }

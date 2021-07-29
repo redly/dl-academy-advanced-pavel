@@ -1,0 +1,42 @@
+.blog-article {
+    max-width: 380px;
+    padding-bottom: 20px;
+    margin-bottom: 14px;
+
+    &__img {
+        display: block;
+        height: 220px;
+        margin-bottom: 20px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    time {
+        color: #818181;
+    }
+
+    &__title {
+        font-family: $font-family-title;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: (31 / 24);
+        margin: 7px 0 15px;
+
+        a {
+            color: $color-black;
+            text-decoration: none;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: (25 / 18);
+        margin: 0;
+    }
+
+    &:hover h3 {
+        text-decoration: underline;
+    }
+}
