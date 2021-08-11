@@ -13,62 +13,63 @@
 </head>
 <body>
     <header class="header">
-        <div class="container header-container">
+        <div class="header__container container">
             <a href="index.html" class="header-logo">
-                <img src="img/icons/logo.svg" alt="DLK company logo">
+                <img src="img/svg/logo.svg" alt="DLK company logo">
             </a>
+
             <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li>
-                        <a href="blog.html">Blog</a>
+                <ul class="header-nav__list">
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="blog.html">Blog</a>
                     </li>
-                    <li>
-                        <a href="catalog.html">Catalog</a>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="catalog.html">Catalog</a>
                     </li>
-                    <li>
-                        <a href="#">About Us</a>
+                    <li class="header-nav__item">
+                        <a class="header-nav__link" href="#">About Us</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="header-aside">
-                <form class="search">
-                    <input class="search-input" type="search" placeholder="Search...">
-                    <button class="search-button" type="submit">
+            <div class="header-search">
+                <form class="header-search__form">
+                    <input class="header-search__input" type="search" placeholder="Search...">
+                    <button class="header-search__btn" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
 
-                <a class="header-contacts" href="contact-us.html">Contact Us</a>
+                <a class="header__contacts-link" href="contact-us.html">Contact Us</a>
             </div>
         </div>
     </header>
     <main class="content">
-        <div class="container content-header">
+        <div class="content-header container">
             <h1 class="title-h1">Toy for kids</h1>
             <ul class="breadcrumbs-list">
-                <li class="breadcrumbs-list-item">
+                <li class="breadcrumbs-list__item">
                     <a href="index.html">Home</a>
                 </li>
-                <li class="breadcrumbs-list-item">
+                <li class="breadcrumbs-list__item">
                     <a href="catalog.html">Catalog</a>
                 </li>
-                <li class="breadcrumbs-list-item">Toys</li>
+                <li class="breadcrumbs-list__item">Toys</li>
             </ul>
         </div>
 
         <section class="filters">
             <h2 class="visually-hidden">Filters</h2>
             <form class="filters-form container" action="https://echo.htmlacademy.ru/" method="get">
-                <div class="filters-col">
-                    <div class="filters-col-title">Cost</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Cost</div>
                     <input class="custom-range" type="range" id="input-range" name="cost" value="100" min="0" max="500">
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col-title">Color</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Color</div>
 
-                    <ul class="filters-list">
+                    <ul class="filters-form__col-list">
                         <li>
                             <input class="custom-checkbox" type="checkbox" id="color-black" name="color" value="black" checked="checked">
                             <label for="color-black">Black</label>
@@ -88,10 +89,10 @@
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col-title">Delivery</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Delivery</div>
 
-                    <ul class="filters-list">
+                    <ul class="filters-form__col-list filters-form__col-list--li-margin--small">
                         <li>
                             <input class="custom-radio" type="radio" id="delivery-free" name="delivery" value="free">
                             <label for="delivery-free">Free shipping</label>
@@ -103,145 +104,148 @@
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <div class="filters-col-title">Amount</div>
+                <div class="filters-form__col">
+                    <div class="filters-form__col-title">Amount</div>
 
-                    <ul class="filters-amount">
+                    <ul class="filters-form__col-list filters-form__col-amount">
                         <li>
-                            <input type="radio" id="amount-0" name="amount" value="0-5" checked="checked">
+                            <input class="custom-amount" type="radio" id="amount-0" name="amount" value="0-5" checked="checked">
                             <label for="amount-0">0-5</label>
                         </li>
                         <li>
-                            <input type="radio" id="amount-10" name="amount" value="10-20">
+                            <input class="custom-amount" type="radio" id="amount-10" name="amount" value="10-20">
                             <label for="amount-10">10-20</label>
                         </li>
                         <li>
-                            <input type="radio" id="amount-20" name="amount" value="20-50">
+                            <input class="custom-amount" type="radio" id="amount-20" name="amount" value="20-50">
                             <label for="amount-20">20-50</label>
                         </li>
                     </ul>
                 </div>
 
-                <div class="filters-col">
-                    <button type="submit" class="btn">Apply</button>
+                <div class="filters-form__col">
+                    <button class="filters-form__col-btn btn" type="submit">Apply</button>
                 </div>
             </form>
         </section>
 
         <section class="product-cards">
-            <div class="container product-cards-container">
+            <div class="product-cards__container container">
                 <h2 class="visually-hidden">Product Cards</h2>
-                <ul class="product-cards-list">
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/shark.png" alt="Picture of 'Sharky been bag chair cover' product">
-                            <h3 class="product-cards-title">Sharky bean bag chair cover</h3>
+                <ul class="product-cards__list">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/shark.png" alt="Picture of 'Sharky been bag chair cover' product">
+                            </div>
 
-                            <div class="product-cards-item-active title-h3" hidden>Learn more</div>
-                        </a>
+                            <h3 class="product-cards__item-title">Sharky bean bag chair cover</h3>
+                            <span class="product-cards__item-price">&#36;60.00 usd</span>
 
-                        
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
+                        </a>
+                    </li>
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/brass.png" alt="Picture of 'Brass deco frames' product">
+                            </div>
 
-                        <span class="product-cards-price">&#36;60.00 usd</span>
-                    </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/brass.png" alt="Picture of 'Brass deco frames' product">
+                            <h3 class="product-cards__item-title">Brass deco frames</h3>
+                            <span class="product-cards__item-price">&#36;66.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Brass deco frames</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;66.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/cibo.png" alt="Picture of 'Cibo full apron' product">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/cibo.png" alt="Picture of 'Cibo full apron' product">
+                            </div>
+
+                            <h3 class="product-cards__item-title">Cibo full apron</h3>
+                            <span class="product-cards__item-price">&#36;60.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Cibo full apron</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;60.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/gatcha.png" alt="Picture of 'Gatcha gatcha gumball machine' product">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/gatcha.png" alt="Picture of 'Gatcha gatcha gumball machine' product">
+                            </div>
+
+                            <h3 class="product-cards__item-title">Gatcha gatcha gumball machine</h3>
+                            <span class="product-cards__item-price">&#36;56.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Gatcha gatcha gumball machine</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;56.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <img src="/img/christmas.png" alt="Picture of 'Christmas advent scented candle' product">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
+                                <img src="/img/christmas.png" alt="Picture of 'Christmas advent scented candle' product">
+                            </div>
+
+                            <h3 class="product-cards__item-title">Christmas advent scented candle</h3>
+                            <span class="product-cards__item-price">&#36;29.00 usd</span>
+
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
-                        <div class="product-cards-item-info">
-                            <h3 class="product-cards-title">
-                                <a href="#">Christmas advent scented candle</a>
-                            </h3>
-                            <span class="product-cards-price">&#36;29.00 usd</span>
-                        </div>
                     </li>
-                    <li class="product-cards-item">
-                        <a href="#" class="product-cards-item-img">
-                            <div class="product-cards-item-img-wrapper">
+                    <li class="product-cards__item">
+                        <a href="#" class="product-cards__item-link">
+                            <div class="product-cards__item-img">
                                 <img src="/img/tangle.png" alt="Picture of 'Tangle spinning tea light' product">
                             </div>
 
-                            
+                            <h3 class="product-cards__item-title">Tangle spinning tea light</h3>
+                            <span class="product-cards__item-price">&#36;56.00 usd</span>
 
-                            <h3 class="product-cards-title">Tangle spinning tea light</h3>
-
-                            <span class="product-cards-price">&#36;56.00 usd</span>
-
-                            <div class="product-cards-item-active title-h3" hidden>Learn more</div>
+                            <div class="product-cards__item--is-active title-h3" hidden>Learn more</div>
                         </a>
                     </li>
                 </ul>
 
                 <div class="content-pagination">
-                    <a class="content-pagination-arrow" href="#">
-                        <img class="content-pagination-arrow-img" src="img/icons/icon-arrow-prev.svg" alt="Previous page">
-                        <img class="content-pagination-arrow-img-active" src="img/icons/icon-arrow-prev-hover.svg" alt="Previous page" hidden>
+                    <a class="content-pagination__arrow" href="#">
+                        <svg class="content-pagination__arrow-svg" width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 2L3 15L16 28" stroke-width="4"/>
+                        </svg>
                     </a>
-                    <ul class="content-pagination-list">
-                        <li>
-                            <span>1</span>
+                    <ul class="content-pagination__list">
+                        <li class="content-pagination__item">
+                            <span class="content-pagination__span">1</span>
                         </li>
-                        <li>
-                            <a href="#" title="To page 2">2</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 2">2</a>
                         </li>
-                        <li>
-                            <a href="#" title="To page 3">3</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 3">3</a>
                         </li>
-                        <li>
-                            <a href="#" title="To page 4">4</a>
+                        <li class="content-pagination__item">
+                            <a class="content-pagination__link" href="#" title="To page 4">4</a>
                         </li>
                     </ul>
-                    <a class="content-pagination-arrow" href="#">
-                        <img class="content-pagination-arrow-img" src="img/icons/icon-arrow-next.svg" alt="Next page">
-                        <img class="content-pagination-arrow-img-active" src="img/icons/icon-arrow-next-hover.svg" alt="Next page" hidden>
+                    <a class="content-pagination__arrow" href="#">
+                        <svg class="content-pagination__arrow-svg" width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 2L15 15L2 28" stroke-width="4"/>
+                        </svg>
                     </a>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-container">
+        <div class="footer__container container">
             <section class="footer-col">
-                <h4 class="footer-col-title">Navigation</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Navigation</h4>
+                <ul class="footer-col__list">
                     <li>
                         <a href="#">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="blog.html">Blog</a>
                     </li>
                     <li>
                         <a href="#">Design Services</a>
@@ -259,10 +263,10 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Customer Information</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Customer Information</h4>
+                <ul class="footer-col__list">
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="contact-us.html">Contact Us</a>
                     </li>
                     <li>
                         <a href="#">Sale Exclusions</a>
@@ -283,63 +287,61 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Connect</h4>
-                <div class="footer-col-container">
-                    <form class="footer-mail-form">
-                        <input class="footer-mail-input" type="email" placeholder="Email">
-                        <button class="footer-mail-btn btn" type="submit">Join</button>
+                <h4 class="footer-col__title">Connect</h4>
+                <div class="footer-col__wrap">
+                    <form class="footer-col__form">
+                        <input class="footer-col__input" type="email" placeholder="Email">
+                        <button class="btn" type="submit">Join</button>
                     </form>
-                    <div class="footer-socials-container">
-                        <ul class="footer-socials-list">
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/facebook.svg" alt="Facebook">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/twitter.svg" alt="Twitter">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/pinterest.svg" alt="Pinterest">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/instagram.svg" alt="Instagram">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="socials-list">
+                        <li class="socials-list__item">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/facebook.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/twitter.svg" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/pinterest.svg" alt="Pinterest">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/instagram.svg" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
 
-        <div class="container footer-bottom">
-            <div class="footer-bottom-wrapper">
-                <div class="footer-bottom-col">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom__col">
                     <form class="star-rating">
-                        <fieldset class="star-rating-fieldset">
-                            <legend class="star-rating-title">Company Rating</legend>
-                            <div class="star-rating-container">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="very bad" value="1" checked="checked">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="bad" value="2">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="normal" value="3">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="good" value="4">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="excellent" value="5">
+                        <fieldset class="star-rating__fieldset">
+                            <legend class="star-rating__title">Company Rating</legend>
+                            <div class="star-rating__container">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="very bad" value="1" checked="checked">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="bad" value="2">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="normal" value="3">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="good" value="4">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="excellent" value="5">
                             </div>
                         </fieldset>
                     </form>
                 </div>
 
-                <div class="footer-bottom-col">
+                <div class="footer-bottom__col">
                     Copyright © 2018 Dlk • Design Life Kids
                 </div>
 
-                <div class="footer-bottom-col">
-                    <a href="#">Web Design — Direct Line Academy</a>
+                <div class="footer-bottom__col">
+                    <a href="https://dlacademy.ru/" target="_blank" rel="noopener noreferrer">Web Design — Direct Line Academy</a>
                 </div>
             </div>
         </div>
