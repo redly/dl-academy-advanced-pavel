@@ -1,0 +1,13 @@
+.catalog-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0;
+
+    li:nth-child(n+4) {
+        margin: 0 0 23px 20px;
+    }
+
+    li:nth-child(4) {
+        margin-left: auto;
+    }
+}

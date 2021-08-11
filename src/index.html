@@ -35,7 +35,7 @@
             <div class="header-search">
                 <form class="header-search__form">
                     <input class="header-search__input" type="search" placeholder="Search...">
-                    <button class="header-search__button" type="submit">
+                    <button class="header-search__btn" type="submit">
                         <span class="visually-hidden">Search</span>
                     </button>
                 </form>
@@ -54,7 +54,7 @@
                         <div class="slide__info">
                             <h2 class="slide__title">The ooh noo collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
-                            <a class="btn">Explore now</a>
+                            <a href="#" class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -68,9 +68,9 @@
                         <div class="slide__counter">02</div>
 
                         <div class="slide__info">
-                            <h2 class="slide__title">A summer's breeze collection</h2>
+                            <h2 class="slide__title">The summer collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
-                            <a class="btn">Explore now</a>
+                            <a href="#" class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -84,9 +84,9 @@
                         <div class="slide__counter">03</div>
 
                         <div class="slide__info">
-                            <h2 class="slide__title">The Keepers of sleep collection</h2>
+                            <h2 class="slide__title">The sleep collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
-                            <a class="btn">Explore now</a>
+                            <a href="#" class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -100,9 +100,9 @@
                         <div class="slide__counter">04</div>
 
                         <div class="slide__info">
-                            <h2 class="slide__title">The Pets collection</h2>
+                            <h2 class="slide__title">The pets collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
-                            <a class="btn">Explore now</a>
+                            <a href="#" class="btn">Explore now</a>
                         </div>
 
                         <div class="slide__img">
@@ -141,47 +141,48 @@
         </div>
 
         <section class="categories">
-            <div class="container categories-container">
-                <h2 class="title-h2 categories-title">
+            <div class="categories__container container">
+                <h2 class="categories__title title-h2">
                     <a href="catalog.html">Category Products</a>
                 </h2>
-                <ul class="products-list">
-                    <li class="products-list-item">
-                        <a href="#" class="products-list-item-wrapper bg-green">
+                <ul class="categories-list">
+                    <li class="categories-list__item">
+                        <a href="#" class="categories-list__wrap categories-list__wrap--bg--green">
                             <img src="img/apparel.png" alt="Apparel Kids">
                             <h3 class="title-h3">Apparel Kids</h3>
                         </a>
                     </li>
-                    <li class="products-list-item">
-                        <a href="#" class="products-list-item-wrapper bg-orange">
+                    <li class="categories-list__item">
+                        <a href="#" class="categories-list__wrap categories-list__wrap--bg--orange">
                             <img src="img/shop.png" alt="Holiday shop">
                             <h3 class="title-h3">Holiday shop</h3>
                         </a>
                     </li>
-                    <li class="products-list-item">
-                        <a href="toys.html" class="products-list-item-wrapper bg-yellow">
+                    <li class="categories-list__item">
+                        <a href="toys.html" class="categories-list__wrap categories-list__wrap--bg--yellow">
                             <img src="img/toys.png" alt="Toys">
                             <h3 class="title-h3">Toys</h3>
                         </a>
                     </li>
-                    <li class="products-list-item">
-                        <a href="#" class="products-list-item-wrapper bg-violet">
+                    <li class="categories-list__item">
+                        <a href="#" class="categories-list__wrap categories-list__wrap--bg--violet">
                             <img src="img/access.png" alt="Accessories">
                             <h3 class="title-h3">Accessories</h3>
                         </a>
                     </li>
                 </ul>
-                <div class="products-nav">
-                    <div class="products-nav-btns">
-                        <button type="button" class="products-nav-btn products-nav-btn-prev">
+
+                <div class="categories-nav">
+                    <div class="categories-nav__btns">
+                        <button type="button" class="categories-nav__btn categories-nav__btn--prev">
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button type="button" class="products-nav-btn products-nav-btn-next">
+                        <button type="button" class="categories-nav__btn categories-nav__btn--next">
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
 
-                    <p class="products-nav-text">
+                    <p class="categories-nav__text">
                         Modern finds for the modern home. Curated goods by unique designers around the world
                         from fashion to furniture for kids and adults.
                     </p>
@@ -190,61 +191,62 @@
         </section>
 
         <section class="delivery">
-            <div class="container delivery-container">
-                <div class="delivery-img">
+            <div class="delivery__container container">
+                <div class="delivery__img">
                     <img src="img/imagewoman.jpg" alt="Picture with woman">
                 </div>
-                <div class="delivery-aside">
-                    <h2 class="title-h2 delivery-title">Delivery</h2>
-                    <ul class="delivery-list">
+
+                <div class="delivery__col">
+                    <h2 class="delivery__col-title title-h2">Delivery</h2>
+                    <ul class="delivery__col-list">
                         <li>
-                            <a class="delivery-list-item-active" href="#">Delivery</a>
+                            <a href="#" class="delivery__col-link delivery__col-link--is-active">Delivery</a>
                         </li>
                         <li>
-                            <a href="#">Guarantee</a>
+                            <a href="#" class="delivery__col-link">Guarantee</a>
                         </li>
                         <li>
-                            <a href="#">Credit</a>
+                            <a href="#" class="delivery__col-link">Credit</a>
                         </li>
                     </ul>
-                    <p>
+                    <p class="delivery__col-text">
                         Some days i feel like i've been working on dlk my entire life and there are other days
                         that i am completely shocked that four years have flown by. It's simply magical.
                     </p>
-                    <p>
+                    <p class="delivery__col-text">
                         What started as an outlet to deal  with the traumatic loss of my husband,
                         dlk has now become a truly happy place for me and i have you and
                         all of the beautiful designers that we work with to thank!
                     </p>
-                    <a class="learn-more-btn btn" href="#">Learn More</a>
+                    <a class="delivery__col-btn btn" href="#">Learn More</a>
                 </div>
             </div>
         </section>
 
         <section class="partners">
-            <div class="container partners-container">
+            <div class="partners__container container">
                 <h2>
                     <span class="visually-hidden">Partners</span>
                 </h2>
-                <div class="partners-list-wrapper">
-                    <ul class="partners-list">
-                        <li>
-                            <a href="https://corp.mail.ru">
+                <div class="partners-row">
+                    <ul class="partners-row__list">
+                        <li class="partners-row__item">
+                            <a href="https://corp.mail.ru" target="_blank" rel="noopener noreferrer">
                                 <img src="img/mail.png" alt="Mail Group Company">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.apple.com">
+                        <li class="partners-row__item">
+                            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
                                 <img src="img/apple.png" alt="Apple Company">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://eltex-co.ru">
+                        <li class="partners-row__item">
+                            <a href="https://eltex-co.ru" target="_blank" rel="noopener noreferrer">
                                 <img src="img/eltex.png" alt="Eltex Company">
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.owox.ru">
+                        <li class="partners-row__item">
+                            <a href="https://www.owox.ru" target="_blank" rel="noopener noreferrer">
                                 <img src="img/owox.png" alt="Owox Company">
                             </a>
                         </li>
@@ -254,25 +256,25 @@
         </section>
 
         <section class="main-bottom">
-            <div class="container main-bottom-container">
-                <div class="dlk-aside-container main-bottom-col">
-                    <h2 class="title-h2 dlk-aside-title main-bottom-title">Design Life Kids</h2>
-                    <h3 class="dlk-aside-subtitle">About Us</h3>
-                    <p class="main-bottom-text">
+            <div class="main-bottom__container container">
+                <div class="main-bottom-col">
+                    <h2 class="main-bottom-col__title title-h2">Design Life Kids</h2>
+                    <h3 class="main-bottom-col__subtitle">About Us</h3>
+                    <p class="main-bottom-col__text">
                         Some days i feel like i've been working on dlk my entire life and there are other days that
                         i am completely shocked that four years have flown by. It's simply magical.
                     </p>
-                    <a class="dlk-aside-btn btn" href="#">Buy Now</a>
+                    <a href="#" class="main-bottom-col__btn btn">Buy Now</a>
                 </div>
 
-                <div class="contacts-aside-container main-bottom-col">
-                    <h2 class="title-h2 contacts-aside-title main-bottom-title">Contacts</h2>
-                    <p class="main-bottom-text">
+                <div class="main-bottom-col">
+                    <h2 class="main-bottom-col__title title-h2">Contacts</h2>
+                    <p class="main-bottom-col__text">
                         Some days i feel like i've been working on dlk my entire life and there are other days that
                         i am completely shocked that four years have flown by. It's simply magical.
                     </p>
 
-                    <div class="contacts-aside-map">
+                    <div class="main-bottom-map">
                         <img src="img/contacts-map.png" alt="Map">
                     </div>
                 </div>
@@ -280,15 +282,15 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-container">
+        <div class="footer__container container">
             <section class="footer-col">
-                <h4 class="footer-col-title">Navigation</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Navigation</h4>
+                <ul class="footer-col__list">
                     <li>
                         <a href="#">About Us</a>
                     </li>
                     <li>
-                        <a href="#">Blog</a>
+                        <a href="blog.html">Blog</a>
                     </li>
                     <li>
                         <a href="#">Design Services</a>
@@ -306,10 +308,10 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Customer Information</h4>
-                <ul class="footer-col-list">
+                <h4 class="footer-col__title">Customer Information</h4>
+                <ul class="footer-col__list">
                     <li>
-                        <a href="#">Contact Us</a>
+                        <a href="contact-us.html">Contact Us</a>
                     </li>
                     <li>
                         <a href="#">Sale Exclusions</a>
@@ -330,108 +332,111 @@
             </section>
 
             <section class="footer-col">
-                <h4 class="footer-col-title">Connect</h4>
-                <div class="footer-col-container">
-                    <form class="footer-mail-form">
-                        <input class="footer-mail-input" type="email" placeholder="Email">
-                        <button class="footer-mail-btn btn" type="submit">Join</button>
+                <h4 class="footer-col__title">Connect</h4>
+                <div class="footer-col__wrap">
+                    <form class="footer-col__form">
+                        <input class="footer-col__input" type="email" placeholder="Email">
+                        <button class="btn" type="submit">Join</button>
                     </form>
-                    <div class="footer-socials-container">
-                        <ul class="footer-socials-list">
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/facebook.svg" alt="Facebook">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/twitter.svg" alt="Twitter">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/pinterest.svg" alt="Pinterest">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="img/icons/instagram.svg" alt="Instagram">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="socials-list">
+                        <li class="socials-list__item">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/facebook.svg" alt="Facebook">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/twitter.svg" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/pinterest.svg" alt="Pinterest">
+                            </a>
+                        </li>
+                        <li class="socials-list__item">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                                <img src="img/svg/instagram.svg" alt="Instagram">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </div>
 
-        <div class="container footer-bottom">
-            <div class="footer-bottom-wrapper">
-                <div class="footer-bottom-col">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-bottom__col">
                     <form class="star-rating">
-                        <fieldset class="star-rating-fieldset">
-                            <legend class="star-rating-title">Company Rating</legend>
-                            <div class="star-rating-container">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="very bad" value="1" checked>
-                                <input class="star-rating-input" type="radio" name="stars" area-label="bad" value="2">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="normal" value="3">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="good" value="4">
-                                <input class="star-rating-input" type="radio" name="stars" area-label="excellent" value="5">
+                        <fieldset class="star-rating__fieldset">
+                            <legend class="star-rating__title">Company Rating</legend>
+                            <div class="star-rating__container">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="very bad" value="1" checked>
+                                <input class="star-rating__input" type="radio" name="stars" area-label="bad" value="2">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="normal" value="3">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="good" value="4">
+                                <input class="star-rating__input" type="radio" name="stars" area-label="excellent" value="5">
                             </div>
                         </fieldset>
                     </form>
                 </div>
 
-                <div class="footer-bottom-col">
+                <div class="footer-bottom__col">
                     Copyright © 2018 Dlk • Design Life Kids
                 </div>
 
-                <div class="footer-bottom-col">
-                    <a href="#">Web Design — Direct Line Academy</a>
+                <div class="footer-bottom__col">
+                    <a href="https://dlacademy.ru/" target="_blank" rel="noopener noreferrer">Web Design — Direct Line Academy</a>
                 </div>
             </div>
         </div>
     </footer>
+
     <div class="popup" id="popup">
-        <div class="popup-body container">
-            <div class="popup-content">
-                <div class="contact-us-form-wrapper">
-                    <form class="contact-us-form">
-                        <div class="contact-us-group">
-                            <label class="contact-us-label" for="name">Name</label>
-                            <input class="contact-us-field" type="text" id="name" placeholder="Ivan Ivanov">
+        <div class="popup__body container">
+            <div class="popup__content">
+                <div class="contacts-form">
+                    <form class="contacts-form__content" action="https://echo.htmlacademy.ru/" method="get">
+                        <div class="contacts-form__group">
+                            <label class="contacts-form__label" for="name">Name</label>
+                            <input class="contacts-form__field" type="text" id="name" placeholder="Ivan Ivanov">
                         </div>
 
-                        <div class="contact-us-row">
-                            <div class="contact-us-group contact-us-input-tel">
-                                <label class="contact-us-label" for="phone">Phone</label>
-                                <input class="contact-us-field" type="tel" id="phone">
+                        <div class="contacts-form__row">
+                            <div class="contacts-form__group contacts-form__group--width--half">
+                                <label class="contacts-form__label" for="phone">Phone</label>
+                                <input class="contacts-form__field" type="tel" id="phone">
                             </div>
 
-                            <div class="contact-us-group">
-                                <label class="contact-us-label" for="email">Email</label>
-                                <input class="contact-us-field" type="email" id="email">
+                            <div class="contacts-form__group contacts-form__group--width--half">
+                                <label class="contacts-form__label" for="email">Email</label>
+                                <input class="contacts-form__field" type="email" id="email">
                             </div>
                         </div>
 
-                        <div class="contact-us-group">
-                            <label class="contact-us-label" for="message">Message</label>
-                            <textarea class="contact-us-field contact-us-textarea" id="message"></textarea>
+                        <div class="contacts-form__group">
+                            <label class="contacts-form__label" for="message">Message</label>
+                            <textarea class="contacts-form__field contacts-form__textarea" id="message"></textarea>
                         </div>
 
-                        <div class="contact-us-group contact-us-checkbox">
-                            <input class="contact-us-field custom-checkbox" type="checkbox" id="consent" checked>
-                            <label class="contact-us-label" for="consent">
+                        <div class="contacts-form__group contacts-form__checkbox">
+                            <input class="custom-checkbox custom-checkbox--padding" type="checkbox" id="consent">
+                            <label class="contacts-form__label" for="consent">
                                 By clicking on the button, you consent to the processing
                                 of your personal data
                             </label>
                         </div>
 
-                        <input class="submit-button btn" type="submit" value="Submit">
+                        <input class="btn" type="submit" value="Submit" disabled>
+
+                        <!--
+                            Пока не нашел как активировать кнопку при клике по чекбоксу
+                        -->
                     </form>
                 </div>
 
-                <a href="#" class="popup-close">
-                    <img src="img/icons/popup-close.svg" alt="Close window">
+                <a href="#" class="popup__btn-close">
+                    <img src="img/svg/popup-close.svg" alt="Close window">
                 </a>
             </div>
         </div>

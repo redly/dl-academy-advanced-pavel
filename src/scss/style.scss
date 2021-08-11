@@ -13,8 +13,51 @@
 @import "_base";
 
 /*
+    Import partial elements
+*/
+@import "partials/btn";
+@import "partials/title";
+
+/*
     Import all other blocks
 */
-@import "_blocks/container";
-@import "_blocks/header";
-@import "_blocks/slider";
+@import "_blocks/common/container";
+@import "_blocks/common/header";
+@import "_blocks/common/header-logo";
+@import "_blocks/common/header-nav";
+@import "_blocks/common/header-search";
+@import "_blocks/common/footer";
+@import "_blocks/common/footer-col";
+@import "_blocks/common/footer-bottom";
+@import "_blocks/common/socials-list";
+@import "_blocks/common/star-raiting";
+@import "_blocks/common/content-header";
+@import "_blocks/common/content-pagination";
+@import "_blocks/common/breadcrumbs-list";
+@import "_blocks/main-page/slider";
+@import "_blocks/main-page/slider-nav";
+@import "_blocks/main-page/slide";
+@import "_blocks/main-page/categories";
+@import "_blocks/main-page/categories-list";
+@import "_blocks/main-page/categories-nav";
+@import "_blocks/main-page/delivery";
+@import "_blocks/main-page/partners";
+@import "_blocks/main-page/partners-row";
+@import "_blocks/main-page/main-bottom";
+@import "_blocks/main-page/main-bottom-col";
+@import "_blocks/main-page/main-bottom-map";
+@import "_blocks/main-page/popup";
+@import "_blocks/catalog-page/catalog";
+@import "_blocks/catalog-page/catalog-list";
+@import "_blocks/catalog-page/text-content";
+@import "_blocks/toys-page/filters";
+@import "_blocks/toys-page/filters-form";
+@import "_blocks/toys-page/custom-amount";
+@import "_blocks/toys-page/custom-checkbox";
+@import "_blocks/toys-page/custom-radio";
+@import "_blocks/toys-page/custom-range";
+@import "_blocks/toys-page/product-cards";
+@import "_blocks/blog-page/blog-article";
+@import "_blocks/blog-page/blog-articles";
+@import "_blocks/contact-us-page/contact-us";
+@import "_blocks/contact-us-page/contacts-form";

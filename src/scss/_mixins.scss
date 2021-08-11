@@ -14,3 +14,56 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Сброс стандартной стилизации input */
+
+@mixin input-reset {
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+/* Общие стили для custom-range thumb */
+
+@mixin range-thumb {
+    appearance: none;
+    border: 8px solid #c29974;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Общие стили для custom-range track */
+
+@mixin range-track {
+    border-radius: none;
+    cursor: pointer;
+    height: 4px;
+    width: 188px;
+}
+
+/* Скрытие стилей для стандартных фильтров */
+
+@mixin custom-filters-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+/* Cтили для кастомных фильтров */
+
+@mixin custom-filters-visible {
+    background: #fff;
+    border: 2px solid #c29974;
+    border-radius: 3px;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+}

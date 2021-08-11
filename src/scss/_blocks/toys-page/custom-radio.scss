@@ -1,0 +1,37 @@
+.custom-radio {
+    @include custom-filters-hidden;
+
+    & + label {
+        position: relative;
+        padding: 0 0 0 29px;
+        cursor: pointer;
+
+        &::before {
+            @include custom-filters-visible;
+
+            border-radius: 100%;
+        }
+
+        &::after {
+            content: "";
+            border-radius: 100%;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            height: 12px;
+            width: 12px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:disabled + label {
+            opacity: 0.5;
+        }
+    }
+
+    &:checked + label::after {
+        background: #c29974;
+    }
+}

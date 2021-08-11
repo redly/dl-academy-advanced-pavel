@@ -1,0 +1,30 @@
+.contact-us {
+    padding: 50px 0 60px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__col {
+        max-width: 380px;
+    }
+
+    &__col-text {
+        padding: 0;
+        margin: 0 0 20px;
+    }
+
+    &__col-title {
+        color: #c29974;
+        font-family: $font-family-title;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: (32 / 26);
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 0 20px;
+    }
+}

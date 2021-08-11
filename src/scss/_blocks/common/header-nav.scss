@@ -1,0 +1,30 @@
+.header-nav {
+    margin-left: 20px;
+
+    &__list {
+        @include no-list;
+
+        display: flex;
+        flex-direction: row;
+
+        a:hover {
+            opacity: 0.5;
+        }
+
+        a:active {
+            opacity: 0.2;
+        }
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: (19 / 14);
+        text-transform: uppercase;
+        margin: 0 10px;
+    }
+
+    &__link {
+        color: $color-black;
+        text-decoration: none;
+    }
+}

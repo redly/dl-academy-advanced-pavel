@@ -1,0 +1,7 @@
+.custom-amount {
+    @include custom-filters-hidden;
+
+    &:checked + label {
+        background: #f3d0db;
+    }
+}

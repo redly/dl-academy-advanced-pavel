@@ -1,0 +1,9 @@
+.main-bottom {
+    padding: 66px 0 148px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

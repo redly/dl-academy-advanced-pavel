@@ -1,0 +1,27 @@
+.header {
+    padding: 50px 0 40px;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__contacts-link {
+        color: $color-black;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: (19 / 14);
+        text-transform: uppercase;
+        text-decoration: none;
+
+        &:hover:not(.header__contacts-link--not-active) {
+            opacity: 0.5;
+        }
+
+        &:active:not(.header__contacts-link--not-active) {
+            opacity: 0.2;
+        }
+    }
+}

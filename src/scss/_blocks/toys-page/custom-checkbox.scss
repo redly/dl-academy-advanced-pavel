@@ -1,0 +1,33 @@
+.custom-checkbox {
+    @include custom-filters-hidden;
+
+    & + label {
+        position: relative;
+        padding: 0 0 0 29px;
+        cursor: pointer;
+
+        &::before {
+            @include custom-filters-visible;
+        }
+    }
+
+    &--padding + label {
+        padding: 4px 0 0 33px;
+    }
+
+    & + label:hover {
+        text-decoration: underline;
+    }
+
+    &:disabled + label {
+        opacity: 0.5;
+        text-decoration: none;
+        cursor: default;
+    }
+
+    &:checked + label::before {
+        background: #fff url("../img/svg/checkbox-checked.svg") no-repeat 100% 0;
+
+        /* background-size: 12px 12px; */
+    }
+}

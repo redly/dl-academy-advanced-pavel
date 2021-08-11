@@ -1,0 +1,20 @@
+.categories {
+    padding: 45px 0;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__title {
+        display: inline-block;
+        margin-bottom: 30px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.2;
+        }
+    }
+}

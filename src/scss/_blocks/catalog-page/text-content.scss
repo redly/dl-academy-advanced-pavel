@@ -1,0 +1,21 @@
+.text-content {
+    padding: 5px 0 55px;
+
+    &__container {
+        padding-left: 220px;
+
+        h2 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            text-align: left;
+            max-width: 670px;
+            margin: 0 0 15px;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

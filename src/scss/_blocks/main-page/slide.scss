@@ -1,0 +1,64 @@
+.slide {
+    background: #eee4db;
+    box-shadow: inset 0 89px #fff;
+    height: 500px;
+    width: 100%;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__counter {
+        color: rgba(30, 6, 6, 0.05);
+        font-family: $font-family-title;
+        font-size: 60px;
+        font-weight: 300;
+        line-height: (73 / 60);
+        margin: 106px 22px 0 28px;
+    }
+
+    &__info {
+        margin: 178px 5px 0 22px;
+    }
+
+    &__title {
+        display: block;
+        font-family: $font-family-title;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: (44 / 40);
+        text-transform: uppercase;
+        max-width: 307px;
+        margin: 0 0 20px;
+    }
+
+    &__description {
+        display: block;
+        font-family: $font-family-subtitle;
+        font-size: 20px;
+        font-style: italic;
+        line-height: (25 / 20);
+        margin: 0 0 20px;
+    }
+
+    &__img {
+        height: 461px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &--bg--green {
+        background: #daedde;
+    }
+
+    &--bg--violet {
+        background: #dfdaed;
+    }
+
+    &--bg--pink {
+        background: #eddada;
+    }
+}

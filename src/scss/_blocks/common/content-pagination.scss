@@ -1,0 +1,61 @@
+.content-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px 0 0;
+
+    &--margin-top--small {
+        margin: 12px 0 0;
+    }
+
+    &__arrow-svg {
+        display: block;
+
+        /*
+            Я думаю здесь не нужно ставить переменную для цвета,
+            так как при изминении например цвета шрифта во всем проекте,
+            она заденет и цвет svg
+        */
+        stroke: #1e0606;
+        stroke-opacity: 0.12;
+
+        &:hover {
+            stroke: #c29974;
+            stroke-opacity: 1;
+        }
+    }
+
+    &__list {
+        @include no-list;
+
+        display: flex;
+        flex-direction: row;
+        max-width: 1150px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        font-family: $font-family-title;
+        font-weight: bold;
+        line-height: (20 / 16);
+        margin: 0 33px;
+    }
+
+    &__span {
+        color: #c29974;
+    }
+
+    &__link {
+        color: #1e0606;
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:active {
+            opacity: 0.25;
+        }
+    }
+}

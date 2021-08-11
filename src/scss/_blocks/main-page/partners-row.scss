@@ -1,0 +1,36 @@
+.partners-row {
+    overflow: hidden;
+
+    &__list {
+        @include no-list;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 61px;
+    }
+
+    &__item {
+        /* display: flex;
+        flex-direction: row; */
+        margin: 0 127px 20px 0;
+
+        &:nth-child(4n) {
+            margin-right: auto;
+        }
+
+        img {
+            opacity: 0.8;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
+    }
+}
