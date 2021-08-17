@@ -73,3 +73,10 @@ sliderNavBtns.forEach((sliderBtn) => {
     });
 });
 */
+
+$(document).ready(function() {
+    $('.header__burger').click(function(event) {
+        $('.header__burger').toggleClass('header__burger--is-active');
+        $('.header-nav').toggleClass('header-nav--is-active');
+    });
+});

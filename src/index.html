@@ -6,7 +6,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@300;700&family=Open+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>DLK - Design Life Kids</title>
@@ -16,6 +15,19 @@
         <div class="header__container container">
             <div class="header-logo">
                 <img src="img/svg/logo.svg" alt="DLK company logo">
+            </div>
+
+            <div class="header__burger">
+                <span class="header__burger-menu">Menu</span>
+
+                <svg class="header__burger-svg" width="55px" height="54px" viewBox="0 0 55 54" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g transform="translate(0.000000, -1.000000)" fill="#000000">
+                            <rect transform="translate(27.961245, 28.014445) rotate(45.000000) translate(-27.961245, -28.014445)" x="-8.78840257" y="26.5144594" width="73.4992951" height="2.99997123"></rect>
+                            <rect transform="translate(27.890535, 28.014445) rotate(45.000000) translate(-27.890535, -28.014445)" x="26.3905494" y="-8.73520257" width="2.99997123" height="73.4992951"></rect>
+                        </g>
+                    </g>
+                </svg>
             </div>
 
             <nav class="header-nav">
@@ -29,6 +41,9 @@
                     <li class="header-nav__item">
                         <a class="header-nav__link" href="#popup">About Us</a>
                     </li>
+                    <li class="header-nav__item header-nav__item--margin-top" hidden>
+                        <a class="header-nav__link header-nav__link--font-w--bold" href="contact-us.html">Contact Us</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -40,11 +55,11 @@
                     </button>
                 </form>
 
-                <a class="header__contacts-link" href="contact-us.html">Contact Us</a>
+                <a class="header__link" href="contact-us.html">Contact Us</a>
             </div>
         </div>
     </header>
-    <main>
+    <main class="content-main">
         <div class="container">
             <div class="slider">
                 <div class="slide" id="slide-1">
@@ -371,11 +386,11 @@
                         <fieldset class="star-rating__fieldset">
                             <legend class="star-rating__title">Company Rating</legend>
                             <div class="star-rating__container">
-                                <input class="star-rating__input" type="radio" name="stars" area-label="very bad" value="1" checked>
-                                <input class="star-rating__input" type="radio" name="stars" area-label="bad" value="2">
-                                <input class="star-rating__input" type="radio" name="stars" area-label="normal" value="3">
-                                <input class="star-rating__input" type="radio" name="stars" area-label="good" value="4">
-                                <input class="star-rating__input" type="radio" name="stars" area-label="excellent" value="5">
+                                <input class="star-rating__input" type="radio" name="stars" aria-label="very bad" value="1" checked>
+                                <input class="star-rating__input" type="radio" name="stars" aria-label="bad" value="2">
+                                <input class="star-rating__input" type="radio" name="stars" aria-label="normal" value="3">
+                                <input class="star-rating__input" type="radio" name="stars" aria-label="good" value="4">
+                                <input class="star-rating__input" type="radio" name="stars" aria-label="excellent" value="5">
                             </div>
                         </fieldset>
                     </form>
@@ -442,6 +457,7 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
