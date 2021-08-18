@@ -76,7 +76,8 @@ sliderNavBtns.forEach((sliderBtn) => {
 
 $(document).ready(function() {
     $('.header__burger').click(function(event) {
-        $('.header__burger').toggleClass('header__burger--is-active');
+        $('.header__burger-menu').toggleClass('header__burger-menu--is-active');
+        $('.header__burger-svg').toggleClass('header__burger-svg--is-active');
         $('.header-nav').toggleClass('header-nav--is-active');
     });
 });
