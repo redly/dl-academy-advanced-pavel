@@ -1,5 +1,5 @@
 
-// Script for input-range
+// Скрипт для input-range
 
 // Сначала проверяем, есть ли вообще такой элемент на странице
 if (document.getElementById('input-range')) {
@@ -21,7 +21,7 @@ if (document.getElementById('input-range')) {
     });
 }
 
-// Script for slider-slide
+// Скрипт для slider
 
 /* ES5 способ */
 
@@ -73,3 +73,11 @@ sliderNavBtns.forEach((sliderBtn) => {
     });
 });
 */
+
+// Скрипт для header__burger
+
+var headerMenu = document.querySelector(".js-toggleHeaderMenu");
+
+headerMenu.addEventListener('click', function() {
+    headerMenu.classList.toggle("is-active");
+});

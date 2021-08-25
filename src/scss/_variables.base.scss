@@ -18,4 +18,14 @@ $font-family-subtitle: "Crimson Text", serif;
 $line-height-base: (22 / 16);
 
 $color-black: #1e0606;
+$color-white: #fff;
 $color-custom-filters: #c29974;
+
+$max-width-mobile: 666px;
+
+/*
+    Сделал меньше max-width для смартфонов,
+    что бы брейкпоинт начинался не с планшетной ширины в 768px,
+    а с книжной ориентации iPhone 6/7/8/se
+*/
+$max-width-tablet: 1023px;

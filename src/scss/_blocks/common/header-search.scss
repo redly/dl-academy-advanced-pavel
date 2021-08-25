@@ -5,8 +5,17 @@
     justify-content: flex-end;
     margin-left: auto;
 
+    @media (max-width: $max-width-tablet) {
+        margin: 0;
+        z-index: 3;
+    }
+
     &__form {
         margin-right: 27px;
+
+        @media (max-width: $max-width-tablet) {
+            margin: 0;
+        }
     }
 
     &__input {
@@ -16,13 +25,9 @@
     &__btn {
         @include btn-reset;
 
-        background: url('../img/svg/icon-search.svg') no-repeat 50% 50%;
-        box-sizing: border-box;
         padding: 0;
         position: relative;
-        height: 18px;
-        width: 17px;
-        top: -5px;
+        top: 3px;
 
         &:hover {
             opacity: 0.5;
@@ -30,6 +35,16 @@
 
         &:active {
             opacity: 0.2;
+        }
+    }
+
+    &__btn-svg {
+        display: block;
+        background-color: $color-white;
+
+        @media (max-width: $max-width-mobile) {
+            height: 13px;
+            width: 13px;
         }
     }
 }
