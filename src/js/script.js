@@ -1,5 +1,5 @@
 
-// Script for input-range
+// Скрипт для input-range
 
 // Сначала проверяем, есть ли вообще такой элемент на странице
 if (document.getElementById('input-range')) {
@@ -21,7 +21,7 @@ if (document.getElementById('input-range')) {
     });
 }
 
-// Script for slider-slide
+// Скрипт для slider
 
 /* ES5 способ */
 
@@ -74,10 +74,10 @@ sliderNavBtns.forEach((sliderBtn) => {
 });
 */
 
-$(document).ready(function() {
-    $('.header__burger').click(function(event) {
-        $('.header__burger-menu').toggleClass('header__burger-menu--is-active');
-        $('.header__burger-svg').toggleClass('header__burger-svg--is-active');
-        $('.header-nav').toggleClass('header-nav--is-active');
-    });
+// Скрипт для header__burger
+
+var headerMenu = document.querySelector(".js-toggleHeaderMenu");
+
+headerMenu.addEventListener('click', function() {
+    headerMenu.classList.toggle("is-active");
 });

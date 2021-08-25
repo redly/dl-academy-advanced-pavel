@@ -25,13 +25,9 @@
     &__btn {
         @include btn-reset;
 
-        background: url('../img/svg/icon-search.svg') no-repeat 50% 50%;
-        box-sizing: border-box;
         padding: 0;
         position: relative;
-        height: 18px;
-        width: 18px;
-        top: -5px;
+        top: 3px;
 
         &:hover {
             opacity: 0.5;
@@ -39,6 +35,16 @@
 
         &:active {
             opacity: 0.2;
+        }
+    }
+
+    &__btn-svg {
+        display: block;
+        background-color: $color-white;
+
+        @media (max-width: $max-width-mobile) {
+            height: 13px;
+            width: 13px;
         }
     }
 }

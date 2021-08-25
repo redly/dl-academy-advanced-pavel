@@ -2,22 +2,13 @@
     margin: 0 20px;
 
     @media (max-width: $max-width-tablet) {
-        background-color: $color-white;
-        display: block;
-        text-align: center;
-        width: 100%;
-        padding: 100px 0 0 0;
-        margin: 0;
-        position: fixed;
-        top: -100%;
-        left: 0;
-        z-index: 2;
+        display: none;
 
-        /* transition: all 300ms ease-in; */
-    }
-
-    &--is-active {
-        top: 0;
+        /*
+            Не получается анимировать появление
+            скрытого меню с помощью transition
+        */
+        transition: all 400ms ease 0s;
     }
 
     &__list {
