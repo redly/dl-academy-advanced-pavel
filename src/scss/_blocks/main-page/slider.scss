@@ -1,4 +1,5 @@
 .slider {
+    width: 100%;
     margin: 0 0 45px;
     position: relative;
 
@@ -14,5 +15,9 @@
         padding: 12px 0;
         position: absolute;
         bottom: 0;
+
+        @media (max-width: $max-width-mobile) {
+            padding: 12px 20px;
+        }
     }
 }

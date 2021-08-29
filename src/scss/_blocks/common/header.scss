@@ -25,6 +25,10 @@
         @media (max-width: $max-width-tablet) {
             justify-content: space-between;
         }
+
+        @media (max-width: $max-width-mobile) {
+            padding: 0 30px;
+        }
     }
 
     &__burger {
@@ -86,21 +90,6 @@
         }
     }
 }
-
-/*
-.header__burger--is-active {
-    .header__burger-menu {
-        display: none;
-    }
-
-    .header__burger-svg {
-        display: block;
-        cursor: pointer;
-        width: 18px;
-        margin: auto;
-    }
-}
-*/
 
 .header__burger.is-active .header__burger-menu {
     display: none;

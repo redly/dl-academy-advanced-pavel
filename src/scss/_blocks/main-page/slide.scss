@@ -6,9 +6,30 @@
 
     /* padding: 0 0 0 20px; */
 
+    @media (max-width: $max-width-tablet) {
+        box-shadow: none;
+        height: 411px;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        height: 493px;
+    }
+
+    @media (max-width: $max-width-micro-mobile) {
+        height: 543px;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: row;
+        width: 100%;
+        position: relative;
+
+        @media (max-width: $max-width-mobile) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding: 0 20px 0;
+        }
     }
 
     &__counter {
@@ -18,10 +39,29 @@
         font-weight: 300;
         line-height: (73 / 60);
         margin: 106px 22px 0 28px;
+
+        @media (max-width: $max-width-tablet) {
+            font-size: 48px;
+            line-height: (58 / 48);
+            margin: 17px 0 0;
+        }
     }
 
     &__info {
         margin: 178px 5px 0 22px;
+
+        @media (max-width: $max-width-tablet) {
+            margin: 76px 0 0 11px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            /* max-width: 276px; */
+            margin: 76px 0 0;
+        }
+
+        @media (max-width: $max-width-micro-mobile) {
+            max-width: 200px;
+        }
     }
 
     &__title {
@@ -33,6 +73,11 @@
         text-transform: uppercase;
         max-width: 307px;
         margin: 0 0 20px;
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 36px;
+            line-height: (40 / 36);
+        }
     }
 
     &__description {
@@ -42,12 +87,67 @@
         font-style: italic;
         line-height: (25 / 20);
         margin: 0 0 20px;
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 18px;
+            line-height: (22 / 18);
+        }
     }
 
     &__img {
+        width: 636px;
         height: 461px;
 
+        @media (min-width: 1024px) and (max-width: 1124px) {
+            position: absolute;
+            top: 10px;
+            right: 8px;
+        }
+
+        @media (max-width: $max-width-tablet) {
+            width: 385px;
+            height: 285px;
+            position: absolute;
+            top: 86px;
+            right: 8px;
+        }
+
+        @media (orientation: landscape) and (max-width: 735px) {
+            width: 292px;
+            height: 226px;
+            top: 156px;
+        }
+
+        @media (min-width: 667px) and (max-width: 735px) {
+            width: 292px;
+            height: 226px;
+            top: 160px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            width: 292px;
+            height: 226px;
+            top: 222px;
+            right: 0;
+        }
+
+        @media (max-width: $max-width-mini-mobile) {
+            width: 250px;
+            height: 226px;
+            top: 255px;
+        }
+
+        @media (max-width: $max-width-micro-mobile) {
+            top: 305px;
+        }
+
+        picture {
+            display: block;
+            max-width: 100%;
+        }
+
         img {
+            display: block;
             max-width: 100%;
         }
     }

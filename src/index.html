@@ -26,7 +26,7 @@
             <button class="header__burger js-toggleHeaderMenu" type="button">
                 <span class="header__burger-menu">Menu</span>
 
-                <svg class="header__burger-svg" width="17px" height="17px" viewBox="0 0 55 54">
+                <svg class="header__burger-svg" width="17" height="17" viewBox="0 0 55 54">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(0.000000, -1.000000)" fill="#000000">
                             <rect transform="translate(27.961245, 28.014445) rotate(45.000000) translate(-27.961245, -28.014445)" x="-8.78840257"
@@ -80,7 +80,7 @@
         </div>
     </header>
     <main class="content-main">
-        <div class="container">
+        <div class="container container--no-padding">
             <div class="slider">
                 <div class="slide" id="slide-1">
                     <div class="slide__wrapper">
@@ -93,7 +93,15 @@
                         </div>
 
                         <div class="slide__img">
-                            <img src="img/soft-toy.png" alt="Picture with soft toy on a wooden cart">
+                            <picture>
+                                <source srcset="img/soft-toy-mobile.webp 1x, img/soft-toy-mobile@2x.webp 2x" media="(max-width: 666px)" type="image/webp">
+                                <source srcset="img/soft-toy-mobile.png 1x, img/soft-toy-mobile@2x.png 2x" media="(max-width: 666px)">
+                                <source srcset="img/soft-toy-tablet.webp 1x, img/soft-toy-tablet@2x.webp 2x" media="(max-width: 1023px)" type="image/webp">
+                                <source srcset="img/soft-toy-tablet.png 1x, img/soft-toy-tablet@2x.png 2x" media="(max-width: 1023px)">
+                                <source srcset="img/soft-toy-desktop.webp 1x, img/soft-toy-desktop@2x.webp 2x" media="(min-width: 1024px)" type="image/webp">
+                                <source srcset="img/soft-toy-desktop.png 1x, img/soft-toy-desktop@2x.png 2x" media="(min-width: 1024px)">
+                                <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" alt="Picture with soft toy on a wooden cart">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -175,7 +183,7 @@
             </div>
         </div>
 
-        <section class="categories">
+        <section class="categories" hidden>
             <div class="categories__container container">
                 <h2 class="categories__title title-h2">
                     <a href="catalog.html">Category Products</a>
@@ -225,7 +233,7 @@
             </div>
         </section>
 
-        <section class="delivery">
+        <section class="delivery" hidden>
             <div class="delivery__container container">
                 <div class="delivery__img">
                     <img src="img/imagewoman.jpg" alt="Picture with woman">
@@ -258,7 +266,7 @@
             </div>
         </section>
 
-        <section class="partners">
+        <section class="partners" hidden>
             <div class="partners__container container">
                 <h2>
                     <span class="visually-hidden">Partners</span>
@@ -290,7 +298,7 @@
             </div>
         </section>
 
-        <section class="main-bottom">
+        <section class="main-bottom" hidden>
             <div class="main-bottom__container container">
                 <div class="main-bottom-col">
                     <h2 class="main-bottom-col__title title-h2">Design Life Kids</h2>

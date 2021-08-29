@@ -21,11 +21,13 @@ $color-black: #1e0606;
 $color-white: #fff;
 $color-custom-filters: #c29974;
 
-$max-width-mobile: 666px;
+$max-width-micro-mobile: 320px; /* для смартфонов с двумя экранами */
+$max-width-mini-mobile: 350px; /* для смартфонов по типу iPhone 5/se */
+$max-width-mobile: 666px; /* для iPhone 6/7/8 и 6/7/8 plus */
 
 /*
     Сделал меньше max-width для смартфонов,
     что бы брейкпоинт начинался не с планшетной ширины в 768px,
-    а с книжной ориентации iPhone 6/7/8/se
+    а с книжной ориентации iPhone 6/7/8/se2
 */
 $max-width-tablet: 1023px;

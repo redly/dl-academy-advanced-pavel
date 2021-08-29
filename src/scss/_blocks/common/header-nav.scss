@@ -3,12 +3,6 @@
 
     @media (max-width: $max-width-tablet) {
         display: none;
-
-        /*
-            Не получается анимировать появление
-            скрытого меню с помощью transition
-        */
-        transition: all 400ms ease 0s;
     }
 
     &__list {
