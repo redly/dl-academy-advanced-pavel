@@ -1,13 +1,56 @@
 .categories {
     padding: 45px 0;
 
+    @media (max-width: $max-width-tablet) {
+        padding: 30px 0;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        padding: 40px 0;
+    }
+
     &__container {
-        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: 1239px) {
+            padding: 0 0 0 20px;
+        }
+
+        @media (max-width: $max-width-tablet) {
+            padding: 0 0 0 60px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 20px;
+        }
     }
 
     &__title {
         display: inline-block;
         margin-bottom: 30px;
+
+        @media (max-width: $max-width-tablet) {
+            font-size: 36px;
+            line-height: (44 / 36);
+            margin-bottom: 24px;
+
+            a {
+                font-size: 36px;
+                line-height: (44 / 36);
+            }
+        }
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 24px;
+            line-height: (29 / 24);
+            margin-bottom: 20px;
+
+            a {
+                font-size: 24px;
+                line-height: (29 / 24);
+            }
+        }
 
         &:hover {
             opacity: 0.5;

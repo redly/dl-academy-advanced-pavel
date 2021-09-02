@@ -3,6 +3,14 @@
     margin: 0 0 45px;
     position: relative;
 
+    @media (max-width: $max-width-tablet) {
+        margin: 0 0 30px;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        margin: 0 0 40px;
+    }
+
     &__notification {
         background: rgba(194, 153, 116, 1);
         color: #fff;

@@ -81,3 +81,37 @@ var headerMenu = document.querySelector('.js-toggleHeaderMenu');
 headerMenu.addEventListener('click', function() {
     headerMenu.classList.toggle('is-active');
 });
+
+// Скрипт для слайдера в блоке categories
+
+/* Сделал такой вариант слайдера, но не могу через кнопку добраться до списка */
+
+/*
+var categoriesNextBtn = document.querySelector('.js-addCategoriesNextBtn');
+
+categoriesNextBtn.addEventListener('click', function() {
+    categoriesNextBtn.classList.add('is-active');
+});
+
+var categoriesPrevBtn = document.querySelector('.js-removeCategoriesPrevBtn');
+
+categoriesPrevBtn.addEventListener('click', function() {
+    categoriesNextBtn.classList.remove('is-active');
+});
+*/
+
+// Это скорее слайдер-демо, думаю здесь должна быть немного другая логика
+
+/* Сделал вариант добавляющий активный класс списку при клике на кнопку */
+
+var categoriesNextBtn = document.querySelector('.js-addCategoriesNextBtn');
+var categoriesPrevBtn = document.querySelector('.js-removeCategoriesPrevBtn');
+var categoriesSlider = document.querySelector('.categories-list');
+
+categoriesNextBtn.addEventListener('click', function() {
+    categoriesSlider.classList.add('is-active');
+});
+
+categoriesPrevBtn.addEventListener('click', function() {
+    categoriesSlider.classList.remove('is-active');
+});
