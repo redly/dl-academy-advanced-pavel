@@ -1,9 +1,21 @@
 .main-bottom {
-    padding: 66px 0 148px;
+    padding: 71px 0 148px;
+
+    @media (max-width: $max-width-tablet) {
+        padding: 59px 0 125px;
+    }
+
+    @media (max-width: $max-width-tablet) {
+        padding: 50px 0 148px;
+    }
 
     &__container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+
+        @media (max-width: $max-width-mobile) {
+            flex-direction: column;
+        }
     }
 }

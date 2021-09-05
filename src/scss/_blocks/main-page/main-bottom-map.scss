@@ -3,7 +3,25 @@
     max-height: 196px;
     margin: 0 0 -114px;
 
+    @media (max-width: $max-width-tablet) {
+        max-height: 151px;
+        margin: 0 0 -75px;
+    }
+
+    @media (max-width: $max-width-tablet) {
+        max-height: 196px;
+        margin: 0 0 -98px;
+    }
+
+    /* Есть ли смысл в этих параметрах для picture? */
+
+    /* picture {
+        max-width: 100%;
+        display: block;
+    } */
+
     img {
         max-width: 100%;
+        display: block;
     }
 }
