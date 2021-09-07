@@ -112,12 +112,13 @@
 
 .header__burger.is-active + .header-nav {
     @media (max-width: $max-width-tablet) {
-        background-color: $color-white;
+        background-color: rgba(125, 151, 218, 0.8);
         display: block;
         text-align: center;
         width: 100%;
-        padding: 102px 0 0 0;
-        margin: 0;
+        height: 100%;
+        padding: 0;
+        margin: 102px 0 0 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -125,6 +126,6 @@
     }
 
     @media (max-width: $max-width-mobile) {
-        padding: 72px 0 0 0;
+        margin: 72px 0 0 0;
     }
 }
