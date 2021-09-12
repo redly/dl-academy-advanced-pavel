@@ -11,19 +11,22 @@
     $font-family-base: "Open Sans", $font-family-sans-serif;
 */
 
-$font-family-base: "Open Sans", sans-serif;
-$font-family-title: "Montserrat", sans-serif;
-$font-family-subtitle: "Crimson Text", serif;
+$font-system-sans-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-system-serif-family: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
+$font-system-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-$line-height-base: (22 / 16);
+$font-family-base: "Open Sans", $font-system-sans-serif-family;
+$font-family-title: "Montserrat", $font-system-sans-serif-family;
+$font-family-subtitle: "Crimson Text", $font-system-serif-family;
+
+$line-height-base: calc(22 / 16);
 
 $color-black: #1e0606;
 $color-white: #fff;
 $color-custom-filters: #c29974;
 
-$max-width-micro-mobile: 320px; /* для смартфонов с двумя экранами */
-$max-width-mini-mobile: 350px; /* для смартфонов по типу iPhone 5/se */
-$max-width-mobile: 666px; /* для iPhone 6/7/8 и 6/7/8 plus */
+$max-width-mini-mobile: 320px;
+$max-width-mobile: 666px;
 
 /*
     Сделал меньше max-width для смартфонов,

@@ -15,7 +15,7 @@
         height: 493px;
     }
 
-    @media (max-width: $max-width-micro-mobile) {
+    @media (max-width: $max-width-mini-mobile) {
         height: 543px;
     }
 
@@ -37,12 +37,11 @@
         font-family: $font-family-title;
         font-size: 60px;
         font-weight: 300;
-        line-height: (73 / 60);
+        line-height: calc(73 / 60);
         margin: 106px 22px 0 28px;
 
         @media (max-width: $max-width-tablet) {
             font-size: 48px;
-            line-height: (58 / 48);
             margin: 17px 0 0;
         }
     }
@@ -59,7 +58,7 @@
             margin: 76px 0 0;
         }
 
-        @media (max-width: $max-width-micro-mobile) {
+        @media (max-width: $max-width-mini-mobile) {
             max-width: 200px;
         }
     }
@@ -69,14 +68,13 @@
         font-family: $font-family-title;
         font-weight: 700;
         font-size: 40px;
-        line-height: (44 / 40);
+        line-height: calc(44 / 40);
         text-transform: uppercase;
         max-width: 307px;
         margin: 0 0 20px;
 
         @media (max-width: $max-width-mobile) {
             font-size: 36px;
-            line-height: (40 / 36);
         }
     }
 
@@ -85,12 +83,11 @@
         font-family: $font-family-subtitle;
         font-size: 20px;
         font-style: italic;
-        line-height: (25 / 20);
+        line-height: calc(25 / 20);
         margin: 0 0 20px;
 
         @media (max-width: $max-width-mobile) {
             font-size: 18px;
-            line-height: (22 / 18);
         }
     }
 
@@ -98,6 +95,9 @@
         width: 636px;
         height: 461px;
 
+        /*
+        * TODO: Перепроверить позднее
+        */
         @media (min-width: 1024px) and (max-width: 1124px) {
             position: absolute;
             top: 10px;
@@ -131,23 +131,17 @@
             right: 0;
         }
 
-        @media (max-width: $max-width-mini-mobile) {
+        @media (max-width: 350px) {
             width: 250px;
             height: 226px;
             top: 255px;
         }
 
-        @media (max-width: $max-width-micro-mobile) {
+        @media (max-width: $max-width-mini-mobile) {
             top: 305px;
         }
 
-        picture {
-            display: block;
-            max-width: 100%;
-        }
-
         img {
-            display: block;
             max-width: 100%;
         }
     }

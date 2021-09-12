@@ -66,13 +66,6 @@
 
         @media (max-width: $max-width-tablet) {
             font-size: 14px;
-            line-height: (19 / 14);
         }
     }
 }
-
-/*
-categories-nav__btn.is-active ~ .categories-list {
-    transform: translateX(-600px);
-}
-*/

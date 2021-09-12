@@ -3,21 +3,9 @@
     margin: 0 20px 0 0;
 
     @media (max-width: $max-width-mobile) {
-        width: 335px;
+        width: 100%;
         margin: 0;
         padding: 0 0 10px;
-    }
-
-    @media (max-width: 360px) {
-        width: 320px; /* Для смартфонов с диагональю до 360 */
-    }
-
-    @media (max-width: 350px) {
-        width: 280px; /* Для смартфонов с диагональю до 320 */
-    }
-
-    @media (max-width: 319px) {
-        width: 240px; /* Для смартфонов с двойным экраном */
     }
 
     &:last-child {
@@ -47,8 +35,6 @@
         @media (max-width: $max-width-mobile) {
             padding: 20px 0;
             column-count: 2;
-            -moz-column-count: 2;
-            -webkit-column-count: 2;
         }
 
         li {
@@ -56,7 +42,6 @@
 
             @media (max-width: $max-width-mobile) {
                 font-size: 14px;
-                line-height: (19 / 14);
                 margin: 0 0 15px;
             }
 
@@ -71,7 +56,6 @@
 
         a {
             color: #fff;
-            line-height: $line-height-base;
             text-decoration: none;
         }
     }
@@ -93,7 +77,6 @@
 
         @media (max-width: $max-width-mobile) {
             font-size: 14px;
-            line-height: (19 / 14);
         }
 
         &::placeholder {

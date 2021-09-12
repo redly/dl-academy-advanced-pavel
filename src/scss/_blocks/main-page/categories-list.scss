@@ -19,6 +19,9 @@
         width: 280px;
         height: 270px;
 
+        /*
+        * TODO: Перепроверить позднее
+        */
         @media (max-width: $max-width-tablet) {
             width: 258px;
             height: 249px;
@@ -31,6 +34,7 @@
 
         img {
             max-width: 100%;
+            max-height: 100%;
         }
 
         h3 {
@@ -68,7 +72,9 @@
     }
 }
 
-.categories-list.is-active {
+/* Делал это для движения слайдера на разных разрешениях */
+
+/* .categories-list.is-active {
     transform: translateX(-1200px);
 
     @media (max-width: 1219px) {
@@ -82,4 +88,4 @@
     @media (max-width: $max-width-mobile) {
         transform: translateX(-267px);
     }
-}
+} */

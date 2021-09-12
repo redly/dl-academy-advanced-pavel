@@ -41,7 +41,7 @@
         @media (max-width: $max-width-tablet) {
             display: block;
             font-size: 14px;
-            line-height: (19 / 14);
+            line-height: calc(19 / 14);
             text-transform: uppercase;
             margin: 47px 0 0;
             position: fixed;

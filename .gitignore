@@ -9,7 +9,7 @@ ehthumbs.db
 Thumbs.db
 *~
 .idea/
-svg.svg
+src/img/svg.svg
 
 # VS code files #
 #################

@@ -2,9 +2,21 @@
     font-family: $font-family-title;
     font-weight: bold;
     font-size: 40px;
-    line-height: (49 / 40);
+    line-height: calc(49 / 40);
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width: $max-width-tablet) {
+        font-size: 36px;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 350px) {
+        font-size: 20px;
+    }
 }
 
 .title-h2,
@@ -13,10 +25,22 @@
     font-family: $font-family-title;
     font-weight: bold;
     font-size: 38px;
-    line-height: (47 / 38);
+    line-height: calc(47 / 38);
     text-decoration: none;
     text-transform: uppercase;
     margin: 0;
+
+    @media (max-width: $max-width-tablet) {
+        font-size: 36px;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        font-size: 24px;
+    }
+
+    @media (max-width: 350px) {
+        font-size: 18px;
+    }
 }
 
 .title-h3 {
@@ -24,7 +48,7 @@
     font-family: $font-family-title;
     font-size: 26px;
     font-weight: 700;
-    line-height: (32 / 26);
+    line-height: calc(32 / 26);
     text-align: center;
     text-transform: uppercase;
     margin: 0;

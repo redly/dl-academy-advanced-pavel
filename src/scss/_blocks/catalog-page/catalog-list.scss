@@ -3,11 +3,103 @@
     justify-content: flex-start;
     margin: 0;
 
-    li:nth-child(n+4) {
-        margin: 0 0 23px 20px;
+    &__item {
+        /*
+            Сделал разные отсупы карточкам на
+            разных разрешениях что бы они помещались по две в блоке
+        */
+        @media (max-width: $max-width-tablet) {
+            margin: 0 20px 20px 0;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            margin: 0 15px 15px 0;
+        }
+
+        @media (max-width: 360px) {
+            margin: 0 12px 12px 0;
+        }
+
+        @media (max-width: $max-width-mini-mobile) {
+            margin: 0 10px 10px 0;
+        }
+
+        &:nth-child(3n+3) {
+            margin-right: 0;
+
+            @media (max-width: $max-width-mobile) {
+                margin-right: 15px;
+            }
+
+            @media (max-width: 360px) {
+                margin-right: 12px;
+            }
+
+            @media (max-width: 320px) {
+                margin-right: 10px;
+            }
+        }
+
+        &:nth-child(2n+2) {
+            @media (max-width: $max-width-mobile) {
+                margin-right: 0;
+            }
+        }
+
+        &:nth-child(4) {
+            margin-left: auto;
+        }
     }
 
-    li:nth-child(4) {
-        margin-left: auto;
+    &__wrap {
+        /*
+        * TODO: Перепроверить позднее
+        */
+        @media (max-width: $max-width-tablet) {
+            width: 202px;
+            height: 196px;
+        }
+
+        @media (max-width: 767px) {
+            width: 160px;
+            height: 154px;
+        }
+
+        @media (max-width: 360px) {
+            width: 154px;
+            height: 149px;
+        }
+
+        @media (max-width: $max-width-mini-mobile) {
+            width: 135px;
+            height: 131px;
+        }
+
+        @media (max-width: 290px) {
+            width: 115px;
+            height: 112px;
+        }
+
+        h3 {
+            @media (max-width: $max-width-tablet) {
+                font-size: 24px;
+                max-width: 180px;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 18px;
+                max-width: 135px;
+            }
+
+            @media (max-width: $max-width-mini-mobile) {
+                font-size: 17px;
+                max-width: 130px;
+            }
+
+            @media (max-width: 290px) {
+                font-size: 15px;
+                max-width: 110px;
+            }
+        }
     }
 }
