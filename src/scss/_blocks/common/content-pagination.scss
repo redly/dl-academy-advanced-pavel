@@ -6,19 +6,22 @@
     margin: 28px 0 0;
 
     &--margin-top--small {
-        margin: 12px 0 0;
+        margin: 16px 0 0;
+
+        @media (max-width: $max-width-tablet) {
+            margin: 10px 0 0;
+        }
     }
 
     &__arrow-svg {
         display: block;
-
-        /*
-            Я думаю здесь не нужно ставить переменную для цвета,
-            так как при изминении например цвета шрифта во всем проекте,
-            она заденет и цвет svg
-        */
         stroke: #1e0606;
         stroke-opacity: 0.12;
+
+        @media (max-width: $max-width-mobile) {
+            width: 12px;
+            height: 24px;
+        }
 
         &:hover {
             stroke: #c29974;
@@ -40,6 +43,15 @@
         font-weight: bold;
         line-height: calc(20 / 16);
         margin: 0 33px;
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 14px;
+            margin: 0 26px;
+        }
+
+        @media (max-width: $max-width-mini-mobile) {
+            margin: 0 22px;
+        }
     }
 
     &__span {
