@@ -23,6 +23,12 @@
 
     transition: background 400ms ease-in;
 
+    @media (max-width: $max-width-mobile) {
+        font-size: 14px;
+        min-height: 36px;
+        padding: 8px 20px;
+    }
+
     &:active {
         background: #c29974;
         opacity: 0.5;

@@ -1,8 +1,29 @@
 .categories {
     padding: 45px 0;
 
+    @media (max-width: $max-width-tablet) {
+        padding: 30px 0;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        padding: 40px 0;
+    }
+
     &__container {
-        width: 100%;
+        overflow: hidden;
+        position: relative;
+
+        @media (max-width: 1239px) {
+            padding: 0 0 0 20px;
+        }
+
+        @media (max-width: $max-width-tablet) {
+            padding: 0 0 0 60px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 20px;
+        }
     }
 
     &__title {

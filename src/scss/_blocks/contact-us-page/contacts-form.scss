@@ -30,7 +30,7 @@
     &__label {
         display: block;
         font-size: 14px;
-        line-height: (19 / 14);
+        line-height: calc(19 / 14);
         margin-bottom: 4px;
     }
 

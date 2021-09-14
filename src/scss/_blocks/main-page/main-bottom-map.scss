@@ -3,6 +3,16 @@
     max-height: 196px;
     margin: 0 0 -114px;
 
+    @media (max-width: $max-width-tablet) {
+        max-height: 151px;
+        margin: 0 0 -75px;
+    }
+
+    @media (max-width: $max-width-tablet) {
+        max-height: 196px;
+        margin: 0 0 -98px;
+    }
+
     img {
         max-width: 100%;
     }

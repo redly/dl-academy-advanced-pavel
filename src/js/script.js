@@ -76,8 +76,8 @@ sliderNavBtns.forEach((sliderBtn) => {
 
 // Скрипт для header__burger
 
-var headerMenu = document.querySelector(".js-toggleHeaderMenu");
+var headerMenu = document.querySelector('.js-toggleHeaderMenu');
 
 headerMenu.addEventListener('click', function() {
-    headerMenu.classList.toggle("is-active");
+    headerMenu.classList.toggle('is-active');
 });

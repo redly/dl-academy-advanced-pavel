@@ -6,11 +6,19 @@
     align-items: center;
     margin: 17px 0 0;
 
+    @media (max-width: $max-width-tablet) {
+        margin: 10px 0 0;
+    }
+
     &__item {
         font-family: $font-family-subtitle;
         font-size: 20px;
         font-style: italic;
-        line-height: (25 / 20);
+        line-height: calc(25 / 20);
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 16px;
+        }
 
         a {
             color: $color-black;

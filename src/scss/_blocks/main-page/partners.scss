@@ -1,6 +1,14 @@
 .partners {
     padding: 45px 0 25px;
 
+    @media (max-width: $max-width-tablet) {
+        padding: 30px 0 25px;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        padding: 53px 0 25px;
+    }
+
     &__container {
         display: flex;
         flex-direction: row;

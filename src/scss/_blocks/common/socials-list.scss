@@ -3,10 +3,17 @@
 
     display: flex;
     flex-direction: row;
-    margin: 25px 0 0;
+    margin: 10px 0 35px;
 
     &__item {
         margin: 0 10px 0 0;
+
+        svg {
+            @media (max-width: $max-width-mobile) {
+                width: 28px;
+                height: 28px;
+            }
+        }
 
         &:hover {
             opacity: 0.5;

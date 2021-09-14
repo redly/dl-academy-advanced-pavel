@@ -60,7 +60,7 @@
             display: block;
             flex-shrink: 0;
             text-align: center;
-            line-height: (35 / 16);
+            line-height: calc(35 / 16);
             cursor: pointer;
             min-width: 80px;
 
