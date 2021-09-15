@@ -1098,17 +1098,23 @@ a.header-logo:hover {
   margin: 28px 0 0;
 }
 .content-pagination--margin-top--small {
-  margin: 12px 0 0;
+  margin: 16px 0 0;
+}
+@media (max-width: 1023px) {
+  .content-pagination--margin-top--small {
+    margin: 10px 0 0;
+  }
 }
 .content-pagination__arrow-svg {
   display: block;
-  /*
-      Я думаю здесь не нужно ставить переменную для цвета,
-      так как при изминении например цвета шрифта во всем проекте,
-      она заденет и цвет svg
-  */
   stroke: #1e0606;
   stroke-opacity: 0.12;
+}
+@media (max-width: 666px) {
+  .content-pagination__arrow-svg {
+    width: 12px;
+    height: 24px;
+  }
 }
 .content-pagination__arrow-svg:hover {
   stroke: #c29974;
@@ -1128,6 +1134,17 @@ a.header-logo:hover {
   font-weight: bold;
   line-height: calc(20 / 16);
   margin: 0 33px;
+}
+@media (max-width: 666px) {
+  .content-pagination__item {
+    font-size: 14px;
+    margin: 0 26px;
+  }
+}
+@media (max-width: 320px) {
+  .content-pagination__item {
+    margin: 0 22px;
+  }
 }
 .content-pagination__span {
   color: #c29974;
@@ -2592,16 +2609,49 @@ a.header-logo:hover {
 }
 
 .blog-article {
-  max-width: 380px;
-  padding-bottom: 20px;
-  margin-bottom: 14px;
+  max-width: calc(33.333% - 14px);
+  margin: 0 20px 14px 0;
+}
+.blog-article:nth-child(3n+3) {
+  margin: 0 0 14px;
+}
+@media (max-width: 1023px) {
+  .blog-article {
+    max-width: calc(50% - 10px);
+    margin: 0 20px 10px 0;
+  }
+  .blog-article:nth-child(3n+3) {
+    margin: 0 20px 10px 0;
+  }
+  .blog-article:nth-child(2n+2) {
+    margin: 0 0 10px;
+  }
+}
+@media (max-width: 666px) {
+  .blog-article {
+    max-width: 100%;
+    margin: 0 0 10px;
+  }
+  .blog-article:nth-child(3n+3) {
+    margin: 0 0 10px;
+  }
 }
 .blog-article__img {
   display: block;
-  height: 220px;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+}
+@media (max-width: 1023px) {
+  .blog-article__img {
+    margin: 0 0 15px;
+  }
+}
+@media (max-width: 666px) {
+  .blog-article__img {
+    margin: 0 0 10px;
+  }
 }
 .blog-article__img img {
+  display: block;
   max-width: 100%;
 }
 .blog-article__time {
@@ -2612,7 +2662,18 @@ a.header-logo:hover {
   font-weight: bold;
   font-size: 24px;
   line-height: calc(31 / 24);
-  margin: 7px 0 15px;
+  margin: 10px 0 15px;
+}
+@media (max-width: 1023px) {
+  .blog-article__title {
+    margin: 5px 0 10px;
+  }
+}
+@media (max-width: 666px) {
+  .blog-article__title {
+    font-size: 18px;
+    margin: 4px 0 7px;
+  }
 }
 .blog-article__title a {
   color: #1e0606;
@@ -2621,7 +2682,12 @@ a.header-logo:hover {
 .blog-article__text {
   font-size: 18px;
   line-height: calc(25 / 18);
-  margin: 0;
+  margin: 0 0 20px;
+}
+@media (max-width: 666px) {
+  .blog-article__text {
+    font-size: 16px;
+  }
 }
 .blog-article:hover h3 {
   text-decoration: underline;
@@ -2629,6 +2695,11 @@ a.header-logo:hover {
 
 .blog-articles {
   padding: 50px 0 60px;
+}
+@media (max-width: 1023px) {
+  .blog-articles {
+    padding: 30px 0 50px;
+  }
 }
 .blog-articles__container {
   display: flex;
@@ -2639,7 +2710,6 @@ a.header-logo:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .contact-us {
