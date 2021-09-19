@@ -1,16 +1,3 @@
-/*
-    Тут нужно будет задать переменные
-
-    – Шрифты
-    – Цвета
-    – Чуть позже брейкпоинты для адаптива
-
-    Пример,
-
-    $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    $font-family-base: "Open Sans", $font-family-sans-serif;
-*/
-
 $font-system-sans-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-system-serif-family: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
 $font-system-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -27,10 +14,4 @@ $color-custom-filters: #c29974;
 
 $max-width-mini-mobile: 320px;
 $max-width-mobile: 666px;
-
-/*
-    Сделал меньше max-width для смартфонов,
-    что бы брейкпоинт начинался не с планшетной ширины в 768px,
-    а с книжной ориентации iPhone 6/7/8/se2
-*/
 $max-width-tablet: 1023px;

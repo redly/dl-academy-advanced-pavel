@@ -1,22 +1,22 @@
 .slide {
     background: #eee4db;
     box-shadow: inset 0 89px #fff;
-    height: 500px;
-    width: 100%;
 
-    /* padding: 0 0 0 20px; */
+    /* height: 500px; */
+    width: 100%;
 
     @media (max-width: $max-width-tablet) {
         box-shadow: none;
-        height: 411px;
+
+        /* height: 411px; */
     }
 
     @media (max-width: $max-width-mobile) {
-        height: 493px;
+        /* height: 493px; */
     }
 
     @media (max-width: $max-width-mini-mobile) {
-        height: 543px;
+        /* height: 543px; */
     }
 
     &__wrapper {
@@ -54,7 +54,6 @@
         }
 
         @media (max-width: $max-width-mobile) {
-            /* max-width: 276px; */
             margin: 76px 0 0;
         }
 
@@ -92,54 +91,21 @@
     }
 
     &__img {
-        width: 636px;
-        height: 461px;
-
-        /*
-        * TODO: Перепроверить позднее
-        */
-        @media (min-width: 1024px) and (max-width: 1124px) {
-            position: absolute;
-            top: 10px;
-            right: 8px;
-        }
-
         @media (max-width: $max-width-tablet) {
-            width: 385px;
-            height: 285px;
             position: absolute;
             top: 86px;
             right: 8px;
         }
 
-        @media (orientation: landscape) and (max-width: 735px) {
-            width: 292px;
-            height: 226px;
-            top: 156px;
-        }
-
-        @media (min-width: 667px) and (max-width: 735px) {
-            width: 292px;
-            height: 226px;
-            top: 160px;
-        }
-
+        /*
         @media (max-width: $max-width-mobile) {
-            width: 292px;
-            height: 226px;
-            top: 222px;
-            right: 0;
-        }
 
-        @media (max-width: 350px) {
-            width: 250px;
-            height: 226px;
-            top: 255px;
         }
 
         @media (max-width: $max-width-mini-mobile) {
-            top: 305px;
+
         }
+        */
 
         img {
             max-width: 100%;
