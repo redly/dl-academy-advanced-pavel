@@ -1,21 +1,4 @@
 @charset "UTF-8";
-/*
-    Тут нужно будет задать переменные
-
-    – Шрифты
-    – Цвета
-    – Чуть позже брейкпоинты для адаптива
-
-    Пример,
-
-    $font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    $font-family-base: "Open Sans", $font-family-sans-serif;
-*/
-/*
-    Сделал меньше max-width для смартфонов,
-    что бы брейкпоинт начинался не с планшетной ширины в 768px,
-    а с книжной ориентации iPhone 6/7/8/se2
-*/
 /* Сброс стилей списков */
 /* Сброс стандартной стилизации кнопок */
 /* Сброс стандартной стилизации input */
@@ -541,13 +524,13 @@ body {
 }
 @media (max-width: 1023px) {
   .container {
-    max-width: 768px;
+    /* max-width: 768px; */
     padding: 0 60px;
   }
 }
 @media (max-width: 666px) {
   .container {
-    max-width: 375px;
+    /* max-width: 375px; */
     padding: 0 20px;
   }
 }
@@ -1324,24 +1307,23 @@ a.header-logo:hover {
 .slide {
   background: #eee4db;
   box-shadow: inset 0 89px #fff;
-  height: 500px;
+  /* height: 500px; */
   width: 100%;
-  /* padding: 0 0 0 20px; */
 }
 @media (max-width: 1023px) {
   .slide {
     box-shadow: none;
-    height: 411px;
+    /* height: 411px; */
   }
 }
 @media (max-width: 666px) {
   .slide {
-    height: 493px;
+    /* height: 493px; */
   }
 }
 @media (max-width: 320px) {
   .slide {
-    height: 543px;
+    /* height: 543px; */
   }
 }
 .slide__wrapper {
@@ -1381,7 +1363,6 @@ a.header-logo:hover {
 }
 @media (max-width: 666px) {
   .slide__info {
-    /* max-width: 276px; */
     margin: 76px 0 0;
   }
 }
@@ -1419,64 +1400,34 @@ a.header-logo:hover {
   }
 }
 .slide__img {
-  width: 636px;
-  height: 461px;
+  position: relative;
   /*
-  * TODO: Перепроверить позднее
+  &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: calc(163 / 212) * 100%;
+  }
   */
-}
-@media (min-width: 1024px) and (max-width: 1124px) {
-  .slide__img {
-    position: absolute;
-    top: 10px;
-    right: 8px;
+  /*
+  @media (max-width: $max-width-tablet) {
+
   }
-}
-@media (max-width: 1023px) {
-  .slide__img {
-    width: 385px;
-    height: 285px;
-    position: absolute;
-    top: 86px;
-    right: 8px;
+
+  @media (max-width: $max-width-mobile) {
+
   }
-}
-@media (orientation: landscape) and (max-width: 735px) {
-  .slide__img {
-    width: 292px;
-    height: 226px;
-    top: 156px;
+
+  @media (max-width: $max-width-mini-mobile) {
+
   }
-}
-@media (min-width: 667px) and (max-width: 735px) {
-  .slide__img {
-    width: 292px;
-    height: 226px;
-    top: 160px;
-  }
-}
-@media (max-width: 666px) {
-  .slide__img {
-    width: 292px;
-    height: 226px;
-    top: 222px;
-    right: 0;
-  }
-}
-@media (max-width: 350px) {
-  .slide__img {
-    width: 250px;
-    height: 226px;
-    top: 255px;
-  }
-}
-@media (max-width: 320px) {
-  .slide__img {
-    top: 305px;
-  }
+  */
 }
 .slide__img img {
   max-width: 100%;
+  /* position: absolute; */
+  bottom: 0;
+  right: 0;
 }
 .slide--bg--green {
   background: #daedde;
@@ -2232,34 +2183,65 @@ a.header-logo:hover {
   margin-top: 48px;
   padding: 42px 0;
 }
+@media (max-width: 1023px) {
+  .filters {
+    margin-top: 30px;
+    padding: 30px 0;
+  }
+}
 
 .filters-form {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 0;
   align-items: flex-start;
+}
+@media (max-width: 1023px) {
+  .filters-form {
+    flex-wrap: wrap;
+  }
 }
 .filters-form__col {
   color: #1e0606;
   flex-shrink: 0;
   font-size: 16px;
   line-height: calc(22 / 16);
+  min-width: calc(15% - 50px);
+  margin: 0 60px 0 0;
 }
-.filters-form__col:nth-child(1) {
-  margin-right: 108px;
+@media (max-width: 1023px) {
+  .filters-form__col {
+    min-width: calc(30% - 60px);
+    margin: 0 60px 20px 0;
+  }
 }
-.filters-form__col:nth-child(2) {
-  margin-right: 124px;
+@media (max-width: 666px) {
+  .filters-form__col {
+    font-size: 14px;
+    margin: 0 60px 25px 0;
+  }
+  .filters-form__col:first-child {
+    margin: 0 60px 55px 0;
+  }
+  .filters-form__col:last-child {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
 }
-.filters-form__col:nth-child(3) {
-  margin-right: 70px;
+@media (max-width: 1023px) {
+  .filters-form__col--margin-bottom--none {
+    margin: 0 60px 0 0;
+  }
 }
-.filters-form__col:nth-child(4) {
-  margin-right: 60px;
+@media (max-width: 666px) {
+  .filters-form__col--margin-bottom--none {
+    margin: 0 60px 25px 0;
+  }
 }
 .filters-form__col-title {
-  font-size: 16px;
   font-weight: bold;
-  line-height: calc(22 / 16);
   margin: 0 0 15px;
 }
 .filters-form__col-list {
@@ -2267,13 +2249,16 @@ a.header-logo:hover {
   margin: 0;
   padding: 0;
 }
-.filters-form__col-list li {
+.filters-form__col-item {
   margin-bottom: 15px;
 }
-.filters-form__col-list--li-margin--small li {
+.filters-form__col-item--margin--small {
   margin-bottom: 10px;
 }
-.filters-form__col-list li:last-child {
+.filters-form__col-item--margin--none {
+  margin-bottom: 0;
+}
+.filters-form__col-item:last-child {
   margin-bottom: 0;
 }
 .filters-form__col-amount {
@@ -2298,6 +2283,11 @@ a.header-logo:hover {
 }
 .filters-form__col-btn {
   margin: 37px 0 0;
+}
+@media (max-width: 666px) {
+  .filters-form__col-btn {
+    margin: 0;
+  }
 }
 
 .custom-amount {
@@ -2331,11 +2321,22 @@ a.header-logo:hover {
   position: absolute;
   top: 1px;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 19px;
+  width: 19px;
+}
+@media (max-width: 666px) {
+  .custom-checkbox + label::before {
+    height: 17px;
+    width: 17px;
+  }
 }
 .custom-checkbox--padding + label {
   padding: 4px 0 0 33px;
+}
+@media (max-width: 666px) {
+  .custom-checkbox--padding + label {
+    padding: 0 0 0 28px;
+  }
 }
 .custom-checkbox + label:hover {
   text-decoration: underline;
@@ -2347,7 +2348,12 @@ a.header-logo:hover {
 }
 .custom-checkbox:checked + label::before {
   background: #fff url("../img/svg/checkbox-checked.svg") no-repeat 100% 0;
-  /* background-size: 12px 12px; */
+  background-size: 14px 14px;
+}
+@media (max-width: 666px) {
+  .custom-checkbox:checked + label::before {
+    background-size: 12px 12px;
+  }
 }
 
 .custom-radio {
@@ -2370,9 +2376,15 @@ a.header-logo:hover {
   position: absolute;
   top: 1px;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 19px;
+  width: 19px;
   border-radius: 100%;
+}
+@media (max-width: 666px) {
+  .custom-radio + label::before {
+    height: 17px;
+    width: 17px;
+  }
 }
 .custom-radio + label::after {
   content: "";
@@ -2533,7 +2545,17 @@ a.header-logo:hover {
 }
 
 .product-cards {
-  padding: 59px 0;
+  padding: 60px 0;
+}
+@media (max-width: 1023px) {
+  .product-cards {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards {
+    padding: 40px 0 50px;
+  }
 }
 .product-cards__container {
   display: flex;
@@ -2550,11 +2572,32 @@ a.header-logo:hover {
 }
 .product-cards__item {
   text-align: center;
-  max-width: 380px;
+  max-width: calc(33.333% - 14px);
   margin: 0 20px 20px 0;
 }
+@media (max-width: 1023px) {
+  .product-cards__item {
+    margin: 0 20px 10px 0;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards__item {
+    max-width: calc(50% - 8px);
+    margin: 0 16px 10px 0;
+  }
+}
 .product-cards__item:nth-child(3n+3) {
-  margin-right: 0;
+  margin: 0 0 20px 0;
+}
+@media (max-width: 666px) {
+  .product-cards__item:nth-child(3n+3) {
+    margin: 0 16px 10px 0;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards__item:nth-child(2n+2) {
+    margin: 0 0 10px 0;
+  }
 }
 .product-cards__item--is-active {
   display: none;
@@ -2572,10 +2615,6 @@ a.header-logo:hover {
   position: absolute;
   top: 89px;
   left: 87px;
-  /*
-      Можно ли как то реализовать появление блока
-      без каскада?
-  */
 }
 .product-cards__item-link {
   display: block;
@@ -2585,27 +2624,66 @@ a.header-logo:hover {
   position: relative;
   margin: 0 0 25px;
 }
+@media (max-width: 1023px) {
+  .product-cards__item-link {
+    margin: 0 0 20px;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards__item-link {
+    margin: 0 0 15px;
+  }
+}
 .product-cards__item-img {
   display: flex;
   align-items: flex-start;
-  height: 385px;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
+}
+@media (max-width: 1023px) {
+  .product-cards__item-img {
+    margin: 0 0 15px;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards__item-img {
+    margin: 0 0 10px;
+  }
 }
 .product-cards__item-img img {
   display: block;
   max-width: 100%;
 }
 .product-cards__item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
   font-size: 14px;
   line-height: calc(20 / 14);
   text-transform: uppercase;
+  height: 3em;
   margin: 0 0 15px;
+}
+@media (max-width: 1023px) {
+  .product-cards__item-title {
+    font-size: 12px;
+    margin: 0 0 5px;
+  }
 }
 .product-cards__item-price {
   font-weight: bold;
   text-transform: uppercase;
+}
+@media (max-width: 1023px) {
+  .product-cards__item-price {
+    font-size: 14px;
+  }
+}
+@media (max-width: 666px) {
+  .product-cards__item-price {
+    font-size: 12px;
+  }
 }
 
 .blog-article {
@@ -2715,18 +2793,68 @@ a.header-logo:hover {
 .contact-us {
   padding: 50px 0 60px;
 }
+@media (max-width: 1023px) {
+  .contact-us {
+    padding: 45px 0 50px;
+  }
+}
+@media (max-width: 666px) {
+  .contact-us {
+    padding: 25px 0 50px;
+  }
+}
 .contact-us__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  /*
+  @media (max-width: $max-width-tablet) {
+      flex-direction: column-reverse;
+  }
+  */
+  /*
+      Сделал индивидуальные брейкпоинты для элементов в
+      формах так как визуальное перестроение с ними лучше
+      чем на тех которые у меня в variables
+  */
+}
+@media (max-width: 768px) {
+  .contact-us__container {
+    flex-direction: column-reverse;
+  }
 }
 .contact-us__col {
-  max-width: 380px;
+  width: 380px;
+  /*
+  @media (max-width: $max-width-tablet) {
+      text-align: center;
+      width: 100%;
+      margin: 0 0 25px;
+  }
+  */
+}
+@media (max-width: 768px) {
+  .contact-us__col {
+    text-align: center;
+    width: 100%;
+    margin: 0 0 25px;
+  }
+}
+@media (max-width: 666px) {
+  .contact-us__col {
+    margin: 0 0 10px;
+  }
 }
 .contact-us__col-text {
   padding: 0;
   margin: 0 0 20px;
+}
+@media (max-width: 666px) {
+  .contact-us__col-text {
+    font-size: 14px;
+    margin: 0 0 15px;
+  }
 }
 .contact-us__col-title {
   color: #c29974;
@@ -2738,11 +2866,35 @@ a.header-logo:hover {
   padding: 0;
   margin: 0 0 20px;
 }
+@media (max-width: 666px) {
+  .contact-us__col-title {
+    font-size: 24px;
+    margin: 0 0 15px;
+  }
+}
 
 .contacts-form {
   background-color: #e5eaf8;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   width: 680px;
   padding: 42px 40px;
+  margin: 0 20px 0 0;
+  /*
+  @media (max-width: $max-width-tablet) {
+      width: 100%;
+  }
+  */
+}
+@media (max-width: 768px) {
+  .contacts-form {
+    width: 100%;
+    padding: 42px 56px;
+  }
+}
+@media (max-width: 666px) {
+  .contacts-form {
+    padding: 25px;
+  }
 }
 .contacts-form__content {
   display: block;
@@ -2754,6 +2906,16 @@ a.header-logo:hover {
 }
 .contacts-form__group--width--half {
   width: 50%;
+  /*
+  @media (max-width: $max-width-mobile) {
+      width: 100%;
+  }
+  */
+}
+@media (max-width: 414px) {
+  .contacts-form__group--width--half {
+    width: 100%;
+  }
 }
 .contacts-form__group--width--half:nth-child(odd) {
   margin-right: 20px;
@@ -2761,6 +2923,16 @@ a.header-logo:hover {
 .contacts-form__row {
   display: flex;
   flex-direction: row;
+  /*
+  @media (max-width: $max-width-mobile) {
+      flex-direction: column;
+  }
+  */
+}
+@media (max-width: 414px) {
+  .contacts-form__row {
+    flex-direction: column;
+  }
 }
 .contacts-form__label {
   display: block;
@@ -2776,6 +2948,12 @@ a.header-logo:hover {
   width: 100%;
   height: 50px;
   padding: 0 18px;
+}
+@media (max-width: 666px) {
+  .contacts-form__field {
+    font-size: 14px;
+    height: 40px;
+  }
 }
 .contacts-form__field::-moz-placeholder {
   color: #1e0606;
