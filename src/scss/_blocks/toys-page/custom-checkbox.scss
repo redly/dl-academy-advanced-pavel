@@ -13,6 +13,10 @@
 
     &--padding + label {
         padding: 4px 0 0 33px;
+
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 28px;
+        }
     }
 
     & + label:hover {
@@ -27,7 +31,10 @@
 
     &:checked + label::before {
         background: #fff url("../img/svg/checkbox-checked.svg") no-repeat 100% 0;
+        background-size: 14px 14px;
 
-        /* background-size: 12px 12px; */
+        @media (max-width: $max-width-mobile) {
+            background-size: 12px 12px;
+        }
     }
 }

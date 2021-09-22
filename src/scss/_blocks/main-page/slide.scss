@@ -91,13 +91,22 @@
     }
 
     &__img {
-        @media (max-width: $max-width-tablet) {
-            position: absolute;
-            top: 86px;
-            right: 8px;
-        }
+        position: relative;
 
         /*
+        &::before {
+            display: block;
+            content: "";
+            width: 100%;
+            padding-top: calc(163 / 212) * 100%;
+        }
+        */
+
+        /*
+        @media (max-width: $max-width-tablet) {
+
+        }
+
         @media (max-width: $max-width-mobile) {
 
         }
@@ -109,6 +118,10 @@
 
         img {
             max-width: 100%;
+
+            /* position: absolute; */
+            bottom: 0;
+            right: 0;
         }
     }
 

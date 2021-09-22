@@ -64,6 +64,11 @@
     position: absolute;
     top: 1px;
     left: 0;
-    height: 20px;
-    width: 20px;
+    height: 19px;
+    width: 19px;
+
+    @media (max-width: $max-width-mobile) {
+        height: 17px;
+        width: 17px;
+    }
 }
