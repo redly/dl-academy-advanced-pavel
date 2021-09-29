@@ -23,6 +23,7 @@
         padding: 12px 0;
         position: absolute;
         bottom: 0;
+        z-index: 2;
 
         @media (max-width: $max-width-mobile) {
             padding: 12px 20px;

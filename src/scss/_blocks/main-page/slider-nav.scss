@@ -5,33 +5,14 @@
     top: 190px;
     left: 31px;
 
-    /*
-    * TODO: Перепроверить позднее
-    * Может сделать этот блок без абсолютного позиционирования?
-    */
     @media (max-width: $max-width-tablet) {
         top: 80px;
         left: 0;
     }
 
     @media (max-width: $max-width-mobile) {
-        left: 320px;
-    }
-
-    @media (max-width: 360px) {
-        left: 305px;
-    }
-
-    @media (max-width: 340px) {
-        left: 285px;
-    }
-
-    @media (max-width: $max-width-mini-mobile) {
-        left: 260px;
-    }
-
-    @media (max-width: 300px) {
-        left: 225px;
+        left: auto;
+        right: 20px;
     }
 
     &__item {
