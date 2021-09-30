@@ -1232,6 +1232,7 @@ a.header-logo:hover {
   padding: 12px 0;
   position: absolute;
   bottom: 0;
+  z-index: 2;
 }
 @media (max-width: 666px) {
   .slider__notification {
@@ -1246,10 +1247,6 @@ a.header-logo:hover {
   position: absolute;
   top: 190px;
   left: 31px;
-  /*
-  * TODO: Перепроверить позднее
-  * Может сделать этот блок без абсолютного позиционирования?
-  */
 }
 @media (max-width: 1023px) {
   .slider-nav {
@@ -1259,27 +1256,8 @@ a.header-logo:hover {
 }
 @media (max-width: 666px) {
   .slider-nav {
-    left: 320px;
-  }
-}
-@media (max-width: 360px) {
-  .slider-nav {
-    left: 305px;
-  }
-}
-@media (max-width: 340px) {
-  .slider-nav {
-    left: 285px;
-  }
-}
-@media (max-width: 320px) {
-  .slider-nav {
-    left: 260px;
-  }
-}
-@media (max-width: 300px) {
-  .slider-nav {
-    left: 225px;
+    left: auto;
+    right: 20px;
   }
 }
 .slider-nav__item {
@@ -1307,30 +1285,19 @@ a.header-logo:hover {
 .slide {
   background: #eee4db;
   box-shadow: inset 0 89px #fff;
-  /* height: 500px; */
+  height: 500px;
   width: 100%;
+  position: relative;
 }
 @media (max-width: 1023px) {
   .slide {
     box-shadow: none;
-    /* height: 411px; */
-  }
-}
-@media (max-width: 666px) {
-  .slide {
-    /* height: 493px; */
-  }
-}
-@media (max-width: 320px) {
-  .slide {
-    /* height: 543px; */
   }
 }
 .slide__wrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
-  position: relative;
 }
 @media (max-width: 666px) {
   .slide__wrapper {
@@ -1355,6 +1322,7 @@ a.header-logo:hover {
 }
 .slide__info {
   margin: 178px 5px 0 22px;
+  z-index: 3;
 }
 @media (max-width: 1023px) {
   .slide__info {
@@ -1400,34 +1368,20 @@ a.header-logo:hover {
   }
 }
 .slide__img {
-  position: relative;
-  /*
-  &::before {
-      display: block;
-      content: "";
-      width: 100%;
-      padding-top: calc(163 / 212) * 100%;
-  }
-  */
-  /*
-  @media (max-width: $max-width-tablet) {
-
-  }
-
-  @media (max-width: $max-width-mobile) {
-
-  }
-
-  @media (max-width: $max-width-mini-mobile) {
-
-  }
-  */
-}
-.slide__img img {
-  max-width: 100%;
-  /* position: absolute; */
+  z-index: 1;
+  position: absolute;
   bottom: 0;
   right: 0;
+  padding-left: 20%;
+}
+@media (max-width: 666px) {
+  .slide__img {
+    bottom: 30px;
+  }
+}
+.slide__img img {
+  display: block;
+  max-width: 100%;
 }
 .slide--bg--green {
   background: #daedde;
@@ -1484,7 +1438,6 @@ a.header-logo:hover {
 
 .categories-list-wrapper {
   overflow: hidden;
-  position: relative;
 }
 
 .categories-list {
@@ -1498,37 +1451,47 @@ a.header-logo:hover {
   transition: transform 0.5s ease;
 }
 .categories-list__item {
-  margin: 0 20px 23px 0;
-}
-.categories-list__wrap {
   display: flex;
-  flex-direction: row;
+  flex: 0 0 calc(25% - 15px);
   justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 270px;
   /*
-  * TODO: Перепроверить позднее
+  width: calc(25% - 15px);
+  max-width: calc(25% - 15px);
   */
+  min-width: 247px;
+  max-width: 280px;
+  /*
+  min-height: 238px;
+  max-height: 270px;
+  */
+  margin: 0 20px 23px 0;
+  position: relative;
 }
 @media (max-width: 1023px) {
-  .categories-list__wrap {
-    width: 258px;
-    height: 249px;
+  .categories-list__item {
+    flex: 0 0 calc(33% - 25px);
+    min-width: 258px;
   }
 }
 @media (max-width: 666px) {
-  .categories-list__wrap {
-    width: 247px;
-    height: 238px;
+  .categories-list__item {
+    flex: 0 0 calc(45% - 10px);
+    min-width: 247px;
   }
+}
+.categories-list__wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100%;
 }
 .categories-list__wrap img {
   max-width: 100%;
-  max-height: 100%;
 }
 .categories-list__wrap h3 {
-  max-width: 200px;
+  max-width: 180px;
   position: absolute;
 }
 .categories-list__wrap--bg--green {
@@ -1554,7 +1517,8 @@ a.header-logo:hover {
 }
 
 /* Делал это для движения слайдера на разных разрешениях */
-/* .categories-list.is-active {
+/*
+.categories-list.is-active {
     transform: translateX(-1200px);
 
     @media (max-width: 1219px) {
@@ -1568,7 +1532,8 @@ a.header-logo:hover {
     @media (max-width: $max-width-mobile) {
         transform: translateX(-267px);
     }
-} */
+}
+*/
 .categories-nav {
   display: flex;
   flex-direction: row;
@@ -1578,7 +1543,6 @@ a.header-logo:hover {
   display: flex;
   flex-direction: row;
   padding-top: 3px;
-  margin-right: 20px;
 }
 @media (max-width: 1023px) {
   .categories-nav__btns {
@@ -1631,11 +1595,18 @@ a.header-logo:hover {
 }
 .categories-nav__text {
   max-width: 550px;
-  margin: 0;
+  margin: 0 20px;
 }
 @media (max-width: 1023px) {
   .categories-nav__text {
     font-size: 14px;
+    margin: 0 60px 0 20px;
+  }
+}
+@media (max-width: 666px) {
+  .categories-nav__text {
+    font-size: 14px;
+    margin: 0 20px 0 16px;
   }
 }
 
