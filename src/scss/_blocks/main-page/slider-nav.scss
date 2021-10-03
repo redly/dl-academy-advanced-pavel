@@ -4,13 +4,14 @@
     position: absolute;
     top: 190px;
     left: 31px;
+    z-index: 4;
 
     @media (max-width: $max-width-tablet) {
         top: 80px;
         left: 0;
     }
 
-    @media (max-width: $max-width-mobile) {
+    @media (max-width: 414px) {
         left: auto;
         right: 20px;
     }

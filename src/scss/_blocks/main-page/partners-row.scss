@@ -30,11 +30,6 @@
             width: 118px;
         }
 
-        picture {
-            text-align: center;
-            opacity: 0.8;
-        }
-
         /* Оставил на случай переполнения */
 
         /* &:last-child {
@@ -72,5 +67,11 @@
         &:active {
             opacity: 0.3;
         }
+    }
+
+    &__item-link {
+        text-align: center;
+        display: block;
+        opacity: 0.8;
     }
 }

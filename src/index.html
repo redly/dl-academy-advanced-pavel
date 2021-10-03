@@ -84,8 +84,6 @@
             <div class="slider">
                 <div class="slide" id="slide-1">
                     <div class="slide__wrapper">
-                        <div class="slide__counter">01</div>
-
                         <div class="slide__info">
                             <h2 class="slide__title">The ooh noo collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
@@ -94,22 +92,20 @@
 
                         <div class="slide__img">
                             <picture>
-                                <!--<source srcset="img/soft-toy-mobile.webp 1x, img/soft-toy-mobile@2x.webp 2x" media="(max-width: 413px)" type="image/webp">
-                                <source srcset="img/soft-toy-mobile.png 1x, img/soft-toy-mobile@2x.png 2x" media="(max-width: 413px)">
-                                <source srcset="img/soft-toy-tablet.webp 1x, img/soft-toy-tablet@2x.webp 2x" media="(max-width: 840px)" type="image/webp">
-                                <source srcset="img/soft-toy-tablet.png 1x, img/soft-toy-tablet@2x.png 2x" media="(max-width: 840px)">
-                                <source srcset="img/soft-toy-desktop.webp 1x, img/soft-toy-desktop@2x.webp 2x" media="(min-width: 841px)" type="image/webp">
-                                <source srcset="img/soft-toy-desktop.png 1x, img/soft-toy-desktop@2x.png 2x" media="(min-width: 841px)">-->
+                                <source srcset="img/soft-toy-mobile.webp 1x, img/soft-toy-mobile@2x.webp 2x" media="(max-width: 414px)" type="image/webp">
+                                <source srcset="img/soft-toy-mobile.png 1x, img/soft-toy-mobile@2x.png 2x" media="(max-width: 414px)">
+                                <source srcset="img/soft-toy-tablet.webp 1x, img/soft-toy-tablet@2x.webp 2x" media="(max-width: 768px)" type="image/webp">
+                                <source srcset="img/soft-toy-tablet.png 1x, img/soft-toy-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <source srcset="img/soft-toy-desktop.webp 1x, img/soft-toy-desktop@2x.webp 2x" media="(min-width: 769px)" type="image/webp">
+                                <source srcset="img/soft-toy-desktop.png 1x, img/soft-toy-desktop@2x.png 2x" media="(min-width: 769px)">
                                 <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" alt="Picture with soft toy on a wooden cart">
                             </picture>
                         </div>
                     </div>
                 </div>
 
-                <div class="slide slide--bg--green" id="slide-2" hidden>
+                <div class="slide slide--bg--green visually-hidden" id="slide-2">
                     <div class="slide__wrapper">
-                        <div class="slide__counter">02</div>
-
                         <div class="slide__info">
                             <h2 class="slide__title">The summer collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
@@ -130,10 +126,8 @@
                     </div>
                 </div>
 
-                <div class="slide slide--bg--violet" id="slide-3" hidden>
+                <div class="slide slide--bg--violet visually-hidden" id="slide-3">
                     <div class="slide__wrapper">
-                        <div class="slide__counter">03</div>
-
                         <div class="slide__info">
                             <h2 class="slide__title">The sleep collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
@@ -154,10 +148,8 @@
                     </div>
                 </div>
 
-                <div class="slide slide--bg--pink" id="slide-4" hidden>
+                <div class="slide slide--bg--pink visually-hidden" id="slide-4">
                     <div class="slide__wrapper">
-                        <div class="slide__counter">04</div>
-
                         <div class="slide__info">
                             <h2 class="slide__title">The pets collection</h2>
                             <p class="slide__description">Designed in Slovenia</p>
@@ -281,9 +273,9 @@
             <div class="delivery__container container">
                 <div class="delivery__img">
                     <picture>
-                        <source srcset="img/woman-mobile.jpg 1x, img/woman-mobile@2x.jpg 2x" media="(max-width: 666px)">
+                        <source srcset="img/woman-mobile.jpg 1x, img/woman-mobile@2x.jpg 2x" media="(max-width: 515px)">
                         <source srcset="img/woman-tablet.jpg 1x, img/woman-tablet@2x.jpg 2x" media="(max-width: 1023px)">
-                        <img src="img/woman.jpg" srcset="img/woman@2x.jpg 2x" alt="Picture with woman">
+                        <img src="img/woman.jpg" srcset="img/woman@2x.jpg 2x" loading="lazy" alt="Picture with woman">
                     </picture>
                 </div>
 
@@ -322,7 +314,7 @@
                 <div class="partners-row">
                     <ul class="partners-row__list">
                         <li class="partners-row__item">
-                            <a href="https://corp.mail.ru" target="_blank" rel="noopener noreferrer">
+                            <a class="partners-row__item-link" href="https://corp.mail.ru" target="_blank" rel="noopener noreferrer">
                                 <picture>
                                     <source srcset="img/mail-tablet.png 1x, img/mail-tablet@2x.png 2x" media="(max-width: 340px)">
                                     <source srcset="img/mail-mobile.png 1x, img/mail-mobile@2x.png 2x" media="(max-width: 666px)">
@@ -332,7 +324,7 @@
                             </a>
                         </li>
                         <li class="partners-row__item">
-                            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
+                            <a class="partners-row__item-link" href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
                                 <picture>
                                     <source srcset="img/apple-tablet.png 1x, img/apple-tablet@2x.png 2x" media="(max-width: 340px)">
                                     <source srcset="img/apple-mobile.png 1x, img/apple-mobile@2x.png 2x" media="(max-width: 666px)">
@@ -342,7 +334,7 @@
                             </a>
                         </li>
                         <li class="partners-row__item">
-                            <a href="https://eltex-co.ru" target="_blank" rel="noopener noreferrer">
+                            <a class="partners-row__item-link" href="https://eltex-co.ru" target="_blank" rel="noopener noreferrer">
                                 <picture>
                                     <source srcset="img/eltex-tablet.png 1x, img/eltex-tablet@2x.png 2x" media="(max-width: 340px)">
                                     <source srcset="img/eltex-mobile.png 1x, img/eltex-mobile@2x.png 2x" media="(max-width: 666px)">
@@ -352,7 +344,7 @@
                             </a>
                         </li>
                         <li class="partners-row__item">
-                            <a href="https://www.owox.ru" target="_blank" rel="noopener noreferrer">
+                            <a class="partners-row__item-link" href="https://www.owox.ru" target="_blank" rel="noopener noreferrer">
                                 <picture>
                                     <source srcset="img/owox-tablet.png 1x, img/owox-tablet@2x.png 2x" media="(max-width: 340px)">
                                     <source srcset="img/owox-mobile.png 1x, img/owox-mobile@2x.png 2x" media="(max-width: 666px)">
@@ -386,11 +378,16 @@
                     </p>
 
                     <div class="main-bottom-map">
-                        <picture>
-                            <source srcset="img/contacts-map-mobile.jpg 1x, img/contacts-map-mobile@2x.jpg 2x" media="(max-width: 666px)">
-                            <source srcset="img/contacts-map-tablet.jpg 1x, img/contacts-map-tablet@2x.jpg 2x" media="(max-width: 1023px)">
-                            <img src="img/contacts-map.jpg" srcset="img/contacts-map@2x.jpg 2x" alt="Navigation map">
-                        </picture>
+                        <iframe
+                            class="main-bottom-map__iframe"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3153.5826098235916!2d-122.42372968421704!3d37.77638397975915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sru!4v1633006865948!5m2!1sen!2sru"
+                            width="483"
+                            height="196"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer"
+                            title="Navigation map">
+                        </iframe>
                     </div>
                 </div>
             </div>

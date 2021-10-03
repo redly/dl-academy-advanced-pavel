@@ -37,17 +37,17 @@ for (i = 0; i < sliderNavBtns.length; i++) {
         var k;
 
         for (k = 0; k < slides.length; k++) {
-            // Добавляем всем слайдам аттрибут hidden
-            slides[k].hidden = true;
+            // Добавляем всем слайдам класс visually-hidden
+            slides[k].classList.add('visually-hidden');
             // Убираем с кнопок активный класс
             sliderNavBtns[k].classList.remove('slider-nav__btn--is-active');
         }
         // Кнопке, по которой кликнули, добавляем активный класс
         this.classList.add('slider-nav__btn--is-active');
-        // Ищем текущий слайд и убираем у него аттрибут hidden
+        // Ищем текущий слайд и убираем у него класс visually-hidden
         var currentSlide = document.querySelector(this.getAttribute('href'));
         if (currentSlide) {
-            currentSlide.hidden = false;
+            currentSlide.classList.remove('visually-hidden');
         }
     })
 }
