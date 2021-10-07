@@ -30,6 +30,14 @@
         display: inline-block;
         margin-bottom: 30px;
 
+        @media (max-width: $max-width-tablet) {
+            margin-bottom: 24px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            margin-bottom: 20px;
+        }
+
         &:hover {
             opacity: 0.5;
         }

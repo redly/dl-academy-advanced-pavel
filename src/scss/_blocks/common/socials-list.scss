@@ -5,8 +5,16 @@
     flex-direction: row;
     margin: 10px 0 35px;
 
+    @media (max-width: $max-width-mobile) {
+        margin: 10px 0 45px;
+    }
+
     &__item {
         margin: 0 10px 0 0;
+
+        @media (max-width: $max-width-mobile) {
+            margin: 0 15px 0 0;
+        }
 
         svg {
             @media (max-width: $max-width-mobile) {

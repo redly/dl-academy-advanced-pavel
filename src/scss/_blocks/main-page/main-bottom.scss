@@ -1,12 +1,12 @@
 .main-bottom {
-    padding: 71px 0 148px;
+    padding: 64px 0 148px;
 
     @media (max-width: $max-width-tablet) {
-        padding: 59px 0 125px;
+        padding: 50px 0 125px;
     }
 
-    @media (max-width: $max-width-tablet) {
-        padding: 50px 0 148px;
+    @media (max-width: $max-width-mobile) {
+        padding: 45px 0 148px;
     }
 
     &__container {

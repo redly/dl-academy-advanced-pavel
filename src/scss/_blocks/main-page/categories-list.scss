@@ -7,6 +7,10 @@
     margin: 0 0 7px;
     transition: transform 0.5s ease;
 
+    @media (max-width: $max-width-mobile) {
+        margin: 0;
+    }
+
     &__item {
         display: flex;
         flex: 0 0 calc(25% - 15px);
@@ -35,6 +39,7 @@
         @media (max-width: $max-width-mobile) {
             flex: 0 0 calc(45% - 10px);
             min-width: 247px;
+            margin: 0 16px 20px 0;
         }
     }
 
@@ -47,6 +52,7 @@
 
         img {
             max-width: 100%;
+            display: block;
         }
 
         h3 {

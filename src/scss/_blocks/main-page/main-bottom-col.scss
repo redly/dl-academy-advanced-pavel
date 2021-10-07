@@ -24,7 +24,7 @@
         margin: -26px 0 11px;
 
         @media (max-width: $max-width-tablet) {
-            margin: -18px 0 14px;
+            margin: -18px 0 15px;
             font-size: 30px;
         }
 
@@ -44,11 +44,11 @@
     }
 
     &__text {
-        padding: 10px 0 0;
-        margin: 0 0 20px;
+        margin: 10px 0 20px;
 
-        @media (max-width: $max-width-tablet) {
-            margin: 0 0 15px;
+        @media (max-width: $max-width-mobile) {
+            font-size: 14px;
+            margin: 10px 0 15px;
         }
     }
 

@@ -25,12 +25,22 @@
         @media (max-width: $max-width-mobile) {
             padding: 0 0 20px;
         }
+
+        &--padding-top--big {
+            @media (max-width: $max-width-mobile) {
+                padding: 15px 0 23px;
+            }
+        }
     }
 
     &__list {
         @include no-list;
 
         padding: 13px 0;
+
+        @media (max-width: $max-width-tablet) {
+            padding: 13px 0 23px;
+        }
 
         @media (max-width: $max-width-mobile) {
             padding: 20px 0;
@@ -64,6 +74,10 @@
         display: flex;
         flex-direction: row;
         padding: 25px 0 15px;
+
+        @media (max-width: $max-width-mobile) {
+            padding: 25px 0 10px;
+        }
     }
 
     &__input {
