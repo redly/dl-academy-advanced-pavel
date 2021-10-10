@@ -82,7 +82,12 @@
             <h1 class="title-h1">Category Products</h1>
             <ul class="breadcrumbs-list">
                 <li class="breadcrumbs-list__item">
-                    <a href="index.html">Home</a>
+                    <a class="breadcrumbs-list__item-link" href="index.html">
+                        <span>Home</span>
+                        <svg class="breadcrumbs-list__item-svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.31229 0L0 1.17735L5.37541 6L0 10.8227L1.31229 12L8 6L1.31229 0Z" fill="#1E0606"/>
+                        </svg>
+                    </a>
                 </li>
                 <li class="breadcrumbs-list__item">Catalog</li>
             </ul>
@@ -94,37 +99,61 @@
                 <ul class="categories-list catalog-list">
                     <li class="categories-list__item catalog-list__item">
                         <a href="#" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--green">
-                            <img src="img/apparel.png" srcset="img/apparel@2x.png 2x" alt="Apparel Kids">
+                            <picture>
+                                <source srcset="img/apparel-mobile.png 1x, img/apparel-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-apparel-tablet.png 1x, img/catalog-apparel-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/apparel.png" srcset="img/apparel@2x.png 2x" alt="Apparel Kids">
+                            </picture>
                             <h3 class="title-h3">Apparel Kids</h3>
                         </a>
                     </li>
                     <li class="categories-list__item catalog-list__item">
                         <a href="#" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--orange">
-                            <img src="img/shop.png" srcset="img/shop@2x.png 2x" alt="Holiday shop">
+                            <picture>
+                                <source srcset="img/shop-mobile.png 1x, img/shop-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-shop-tablet.png 1x, img/catalog-shop-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/shop.png" srcset="img/shop@2x.png 2x" alt="Holiday shop">
+                            </picture>
                             <h3 class="title-h3">Holiday shop</h3>
                         </a>
                     </li>
                     <li class="categories-list__item catalog-list__item">
                         <a href="toys.html" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--yellow">
-                            <img src="img/toys.png" srcset="img/toys@2x.png 2x" alt="Toys">
+                            <picture>
+                                <source srcset="img/toys-mobile.png 1x, img/toys-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-toys-tablet.png 1x, img/catalog-toys-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/toys.png" srcset="img/toys@2x.png 2x" alt="Toys">
+                            </picture>
                             <h3 class="title-h3">Toys</h3>
                         </a>
                     </li>
                     <li class="categories-list__item catalog-list__item">
                         <a href="#" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--violet">
-                            <img src="img/access.png" srcset="img/access@2x.png 2x" alt="Accessories">
+                            <picture>
+                                <source srcset="img/access-mobile.png 1x, img/access-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-access-tablet.png 1x, img/catalog-access-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/access.png" srcset="img/access@2x.png 2x" alt="Accessories">
+                            </picture>
                             <h3 class="title-h3">Accessories</h3>
                         </a>
                     </li>
                     <li class="categories-list__item catalog-list__item">
                         <a href="#" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--pink">
-                            <img src="img/sale.png" srcset="img/sale@2x.png 2x" alt="Sale">
+                            <picture>
+                                <source srcset="img/sale-mobile.png 1x, img/sale-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-sale-tablet.png 1x, img/catalog-sale-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/sale.png" srcset="img/sale@2x.png 2x" alt="Sale">
+                            </picture>
                             <h3 class="title-h3">Sale</h3>
                         </a>
                     </li>
                     <li class="categories-list__item catalog-list__item">
                         <a href="#" class="categories-list__wrap catalog-list__wrap categories-list__wrap--bg--blue">
-                            <img src="img/apparel-adults.png" srcset="img/apparel-adults@2x.png 2x" alt="Apparel Adults">
+                            <picture>
+                                <source srcset="img/apparel-adults-mobile.png 1x, img/apparel-adults-mobile@2x.png 2x" media="(max-width: 375px)">
+                                <source srcset="img/catalog-apparel-adults-tablet.png 1x, img/catalog-apparel-adults-tablet@2x.png 2x" media="(max-width: 768px)">
+                                <img src="img/apparel-adults.png" srcset="img/apparel-adults@2x.png 2x" alt="Apparel adults">
+                            </picture>
                             <h3 class="title-h3">Apparel Adults</h3>
                         </a>
                     </li>

@@ -11,8 +11,15 @@
         flex: 0 0 calc(33% - 15px);
         min-width: 160px;
 
+        /*
+            Не нашел как сделать блоки одинаковой высоты без js.
+            При переносе на новую строку, они получаются разной высоты.
+        */
+
         @media (min-width: 768px) and (max-width: $max-width-tablet) {
             min-width: 202px;
+
+            /* max-height: 196px; */
             margin: 0 20px 20px 0;
         }
 
@@ -27,6 +34,12 @@
             min-width: 100px;
             margin: 0 10px 10px 0;
         }
+
+        /*
+        img {
+            max-height: 100%;
+        }
+        */
 
         &:nth-child(3n+3) {
             margin-right: 0;
