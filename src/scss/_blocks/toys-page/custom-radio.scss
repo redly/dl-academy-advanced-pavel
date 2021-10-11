@@ -6,6 +6,10 @@
         padding: 0 0 0 29px;
         cursor: pointer;
 
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 25px;
+        }
+
         &::before {
             @include custom-filters-visible;
 

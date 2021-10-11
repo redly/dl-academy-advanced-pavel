@@ -5,6 +5,14 @@
     align-items: center;
     margin: 28px 0 0;
 
+    @media (max-width: $max-width-tablet) {
+        margin: 18px 0 0;
+    }
+
+    @media (max-width: $max-width-mobile) {
+        margin: 10px 0 0;
+    }
+
     &--margin-top--small {
         margin: 14px 0 0;
 
