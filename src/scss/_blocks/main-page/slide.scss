@@ -90,6 +90,7 @@
 
     &__img {
         display: flex;
+        flex-direction: column-reverse;
         z-index: 1;
 
         @media (max-width: $max-width-tablet) {
@@ -101,7 +102,8 @@
 
         @media (max-width: $max-width-mobile) {
             right: 0;
-            bottom: 50px;
+
+            /* bottom: 50px; */
             padding-left: 25%;
         }
 

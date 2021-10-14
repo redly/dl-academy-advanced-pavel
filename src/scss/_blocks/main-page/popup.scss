@@ -15,12 +15,22 @@
     &__body {
         min-height: 100%;
         display: flex;
-        align-items: center;
+
+        /* align-items: center; */
         justify-content: center;
     }
 
     &__content {
         position: relative;
+        margin-top: 113px;
+
+        @media (max-width: $max-width-tablet) {
+            margin-top: 241px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            margin-top: 128px;
+        }
     }
 
     &__btn-close {

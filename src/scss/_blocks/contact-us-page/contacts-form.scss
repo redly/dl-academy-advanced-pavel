@@ -29,6 +29,10 @@
         width: 100%;
         margin-bottom: 20px;
 
+        @media (max-width: $max-width-mobile) {
+            margin-bottom: 15px;
+        }
+
         &--width--half {
             width: 50%;
 
@@ -107,6 +111,10 @@
     }
 
     &__checkbox {
-        margin: -5px 0 17px;
+        margin: -5px 0 20px;
+
+        @media (max-width: $max-width-mobile) {
+            margin: -5px 0 15px;
+        }
     }
 }
