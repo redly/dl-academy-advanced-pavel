@@ -6,13 +6,15 @@
         padding: 5px 0 50px;
     }
 
-    @media (max-width: 290px) {
-        display: block;
-    }
-
     &__container {
-        @media (min-width: 1024px) {
-            padding-right: 130px;
+        padding-right: 130px;
+
+        @media (max-width: $max-width-tablet) {
+            padding-right: 60px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            padding-right: 20px;
         }
 
         h2 {
@@ -33,7 +35,7 @@
         max-width: 670px;
         margin: 0 0 15px;
 
-        @media (max-width: 350px) {
+        @media (max-width: $max-width-mini-mobile) {
             font-size: 14px;
         }
 

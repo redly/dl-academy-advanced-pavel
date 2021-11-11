@@ -14,7 +14,7 @@
         font-size: 24px;
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: $max-width-mini-mobile) {
         font-size: 20px;
     }
 }
@@ -38,7 +38,7 @@
         font-size: 24px;
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: $max-width-mini-mobile) {
         font-size: 18px;
     }
 }

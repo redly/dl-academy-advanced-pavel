@@ -11,7 +11,7 @@
         left: 0;
     }
 
-    @media (max-width: 414px) {
+    @media (max-width: $max-width-mobile) {
         top: 87px;
         left: auto;
         right: 20px;

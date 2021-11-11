@@ -16,18 +16,8 @@
         flex: 0 0 calc(25% - 15px);
         justify-content: center;
         align-items: center;
-
-        /*
-        width: calc(25% - 15px);
-        max-width: calc(25% - 15px);
-        */
         min-width: 247px;
         max-width: 280px;
-
-        /*
-        min-height: 238px;
-        max-height: 270px;
-        */
         margin: 0 20px 23px 0;
         position: relative;
 
@@ -90,15 +80,11 @@
     }
 }
 
-/* Делал это для движения слайдера на разных разрешениях */
+/* Сдвиг слайдера на разных разрешениях */
 
 /*
 .categories-list.is-active {
     transform: translateX(-1200px);
-
-    @media (max-width: 1219px) {
-        transform: translateX(-900px);
-    }
 
     @media (max-width: $max-width-tablet) {
         transform: translateX(-556px);
