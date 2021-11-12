@@ -40,6 +40,10 @@
         &:nth-child(3n+3) {
             margin: 0 0 20px 0;
 
+            @media (max-width: $max-width-tablet) {
+                margin: 0 0 10px 0;
+            }
+
             @media (max-width: $max-width-mobile) {
                 margin: 0 16px 10px 0;
             }
@@ -94,7 +98,7 @@
         margin: 0 0 30px;
 
         @media (max-width: $max-width-tablet) {
-            margin: 0 0 15px;
+            margin: 0 0 19px;
         }
 
         @media (max-width: $max-width-mobile) {
@@ -116,12 +120,15 @@
         font-size: 14px;
         line-height: calc(20 / 14);
         text-transform: uppercase;
-        height: 3em;
         margin: 0 0 15px;
 
         @media (max-width: $max-width-tablet) {
             font-size: 12px;
-            margin: 0 0 5px;
+            margin: 0 0 4px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            height: 3em;
         }
     }
 

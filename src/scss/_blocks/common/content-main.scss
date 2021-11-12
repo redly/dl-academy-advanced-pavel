@@ -1,15 +1,11 @@
 .content-main {
-    padding-top: 150px;
+    padding-top: 142px;
 
-    /*
-        Подстраиваю отступ под разный размер header при разных
-        разрешениях
-    */
     @media (max-width: $max-width-tablet) {
-        padding-top: 102px;
+        padding-top: 117px;
     }
 
     @media (max-width: $max-width-mobile) {
-        padding-top: 73px;
+        padding-top: 72px;
     }
 }

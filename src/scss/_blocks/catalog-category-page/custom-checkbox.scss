@@ -6,16 +6,24 @@
         padding: 0 0 0 29px;
         cursor: pointer;
 
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 25px;
+        }
+
         &::before {
             @include custom-filters-visible;
         }
     }
 
     &--padding + label {
-        padding: 4px 0 0 33px;
+        padding: 2px 0 0 34px;
+
+        @media (max-width: $max-width-tablet) {
+            padding: 5px 0 0 34px;
+        }
 
         @media (max-width: $max-width-mobile) {
-            padding: 0 0 0 28px;
+            padding: 1px 0 0 29px;
         }
     }
 

@@ -4,6 +4,7 @@
     position: absolute;
     top: 190px;
     left: 31px;
+    z-index: 4;
 
     @media (max-width: $max-width-tablet) {
         top: 80px;
@@ -11,6 +12,7 @@
     }
 
     @media (max-width: $max-width-mobile) {
+        top: 87px;
         left: auto;
         right: 20px;
     }
@@ -28,6 +30,11 @@
         width: 31px;
         min-height: 3px;
         margin: 0 0 11px;
+
+        @media (max-width: $max-width-tablet) {
+            width: 27px;
+            margin: 0 0 10px;
+        }
 
         &--is-active {
             background: rgba(30, 6, 6, 0.6);

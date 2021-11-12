@@ -11,6 +11,10 @@
         @media (max-width: $max-width-tablet) {
             padding-top: 0;
         }
+
+        @media (max-width: $max-width-mobile) {
+            padding-top: 3px;
+        }
     }
 
     &__btn {

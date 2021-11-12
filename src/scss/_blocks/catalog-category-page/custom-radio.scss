@@ -6,6 +6,10 @@
         padding: 0 0 0 29px;
         cursor: pointer;
 
+        @media (max-width: $max-width-mobile) {
+            padding: 0 0 0 25px;
+        }
+
         &::before {
             @include custom-filters-visible;
 
@@ -18,8 +22,13 @@
             position: absolute;
             top: 5px;
             left: 4px;
-            height: 12px;
-            width: 12px;
+            height: 11px;
+            width: 11px;
+
+            @media (max-width: $max-width-mobile) {
+                height: 9px;
+                width: 9px;
+            }
         }
 
         &:hover {

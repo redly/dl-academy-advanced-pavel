@@ -15,24 +15,10 @@
     }
 
     &__item {
-        width: 216px;
         margin: 0 0 20px 0;
 
-        @media (max-width: $max-width-tablet) {
-            width: 118px;
-        }
-
         @media (max-width: $max-width-mobile) {
-            width: 149px;
-        }
-
-        @media (max-width: 340px) {
-            width: 118px;
-        }
-
-        picture {
-            text-align: center;
-            opacity: 0.8;
+            width: calc(50% - 10px);
         }
 
         /* Оставил на случай переполнения */
@@ -71,6 +57,16 @@
 
         &:active {
             opacity: 0.3;
+        }
+    }
+
+    &__item-link {
+        text-align: center;
+        display: block;
+        opacity: 0.8;
+
+        img {
+            max-width: 100%;
         }
     }
 }

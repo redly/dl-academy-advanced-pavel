@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 0 45px;
     position: relative;
+    counter-reset: slide-counter;
 
     @media (max-width: $max-width-tablet) {
         margin: 0 0 30px;
@@ -20,13 +21,13 @@
         text-transform: uppercase;
         text-align: center;
         width: 100%;
-        padding: 12px 0;
+        padding: 11px 0;
         position: absolute;
         bottom: 0;
         z-index: 2;
 
         @media (max-width: $max-width-mobile) {
-            padding: 12px 20px;
+            padding: 11px 20px;
         }
     }
 }

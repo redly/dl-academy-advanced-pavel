@@ -3,39 +3,44 @@
     justify-content: flex-start;
     margin: 0;
 
+    @media (max-width: $max-width-tablet) {
+        justify-content: center;
+    }
+
     &__item {
-        /*
-            Сделал разные отсупы карточкам на
-            разных разрешениях что бы они помещались по две в блоке
-        */
+        flex: 0 0 calc(33% - 15px);
+
         @media (max-width: $max-width-tablet) {
+            min-width: 202px;
+            min-height: 196px;
             margin: 0 20px 20px 0;
         }
 
         @media (max-width: $max-width-mobile) {
+            flex: 0 0 calc(50% - 15px);
+            min-width: 100px;
+            min-height: 155px;
             margin: 0 15px 15px 0;
         }
 
-        @media (max-width: 360px) {
-            margin: 0 12px 12px 0;
-        }
-
         @media (max-width: $max-width-mini-mobile) {
+            flex: 0 0 calc(50% - 5px);
+            min-height: 95px;
             margin: 0 10px 10px 0;
         }
 
         &:nth-child(3n+3) {
             margin-right: 0;
 
+            @media (max-width: $max-width-tablet) {
+                margin-right: 20px;
+            }
+
             @media (max-width: $max-width-mobile) {
                 margin-right: 15px;
             }
 
-            @media (max-width: 360px) {
-                margin-right: 12px;
-            }
-
-            @media (max-width: 320px) {
+            @media (max-width: $max-width-mini-mobile) {
                 margin-right: 10px;
             }
         }
@@ -48,57 +53,28 @@
 
         &:nth-child(4) {
             margin-left: auto;
+
+            @media (max-width: $max-width-tablet) {
+                margin-left: 0;
+            }
         }
     }
 
     &__wrap {
-        /*
-        * TODO: Перепроверить позднее
-        */
-        @media (max-width: $max-width-tablet) {
-            width: 202px;
-            height: 196px;
-        }
-
-        @media (max-width: 767px) {
-            width: 160px;
-            height: 154px;
-        }
-
-        @media (max-width: 360px) {
-            width: 154px;
-            height: 149px;
-        }
-
-        @media (max-width: $max-width-mini-mobile) {
-            width: 135px;
-            height: 131px;
-        }
-
-        @media (max-width: 290px) {
-            width: 115px;
-            height: 112px;
-        }
-
         h3 {
             @media (max-width: $max-width-tablet) {
                 font-size: 24px;
                 max-width: 180px;
             }
 
-            @media (max-width: 767px) {
+            @media (max-width: $max-width-mobile) {
                 font-size: 18px;
                 max-width: 135px;
             }
 
             @media (max-width: $max-width-mini-mobile) {
-                font-size: 17px;
-                max-width: 130px;
-            }
-
-            @media (max-width: 290px) {
-                font-size: 15px;
-                max-width: 110px;
+                font-size: 14px;
+                max-width: 105px;
             }
         }
     }

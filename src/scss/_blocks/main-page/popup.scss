@@ -6,6 +6,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 10;
 
     &:target {
         display: block;
@@ -14,18 +15,31 @@
     &__body {
         min-height: 100%;
         display: flex;
-        align-items: center;
         justify-content: center;
     }
 
     &__content {
         position: relative;
+        margin-top: 113px;
+
+        @media (max-width: $max-width-tablet) {
+            margin-top: 241px;
+        }
+
+        @media (max-width: $max-width-mobile) {
+            margin-top: 128px;
+        }
     }
 
     &__btn-close {
         position: absolute;
         right: -25px;
         top: 0;
+
+        @media (max-width: $max-width-tablet) {
+            right: 0;
+            top: -25px;
+        }
 
         &:hover {
             opacity: 0.5;

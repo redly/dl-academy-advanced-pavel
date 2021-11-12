@@ -30,14 +30,14 @@
 
     &__img {
         display: block;
-        margin: 0 0 20px;
+        margin: 0 0 18px;
 
         @media (max-width: $max-width-tablet) {
-            margin: 0 0 15px;
+            margin: 0 0 13px;
         }
 
         @media (max-width: $max-width-mobile) {
-            margin: 0 0 10px;
+            margin: 0 0 5px;
         }
 
         img {
@@ -48,6 +48,10 @@
 
     &__time {
         color: #818181;
+
+        @media (max-width: $max-width-mobile) {
+            font-size: 14px;
+        }
     }
 
     &__title {
@@ -55,15 +59,15 @@
         font-weight: bold;
         font-size: 24px;
         line-height: calc(31 / 24);
-        margin: 10px 0 15px;
+        margin: 9px 0 15px;
 
         @media (max-width: $max-width-tablet) {
-            margin: 5px 0 10px;
+            margin: 4px 0 10px;
         }
 
         @media (max-width: $max-width-mobile) {
             font-size: 18px;
-            margin: 4px 0 7px;
+            margin: 3px 0 4px;
         }
 
         a {
@@ -79,6 +83,7 @@
 
         @media (max-width: $max-width-mobile) {
             font-size: 16px;
+            margin: 0 0 15px;
         }
     }
 
