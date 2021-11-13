@@ -1,0 +1,67 @@
+/* open-sans-regular - latin-ext_latin */
+
+@font-face {
+    font-family: $font-family-base;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../fonts/open-sans/open-sans-v27-latin-ext_latin-regular.woff2') format('woff2'),
+        url('../fonts/open-sans/open-sans-v27-latin-ext_latin-regular.woff') format('woff');
+}
+
+/* open-sans-700 - latin-ext_latin */
+
+@font-face {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/open-sans/open-sans-v27-latin-ext_latin-700.woff2') format('woff2'),
+        url('../fonts/open-sans/open-sans-v27-latin-ext_latin-700.woff') format('woff');
+}
+
+/* montserrat-600 - latin-ext_latin */
+
+@font-face {
+    font-family: $font-family-title;
+    font-weight: 600;
+    font-display: swap;
+    src:
+        url('../fonts/montserrat/montserrat-v18-latin-ext_latin-600.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-v18-latin-ext_latin-600.woff') format('woff');
+}
+
+/* montserrat-700 - latin-ext_latin */
+
+@font-face {
+    font-family: $font-family-title;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/montserrat/montserrat-v18-latin-ext_latin-700.woff2') format('woff2'),
+        url('../fonts/montserrat/montserrat-v18-latin-ext_latin-700.woff') format('woff');
+}
+
+/* crimson-text-italic - latin */
+
+@font-face {
+    font-family: $font-family-subtitle;
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src:
+        url('../fonts/crimson-text/crimson-text-v11-latin-italic.woff2') format('woff2'),
+        url('../fonts/crimson-text/crimson-text-v11-latin-italic.woff') format('woff');
+}
+
+/* crimson-text-700italic - latin */
+
+@font-face {
+    font-family: $font-family-subtitle;
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src:
+        url('../fonts/crimson-text/crimson-text-v11-latin-700italic.woff2') format('woff2'),
+        url('../fonts/crimson-text/crimson-text-v11-latin-700italic.woff') format('woff');
+}
