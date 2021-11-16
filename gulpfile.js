@@ -79,7 +79,8 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function() {
     return gulp.src([
-            paths.src + '/img/**/*'
+            paths.src + '/img/**/*',
+            paths.src + '/fonts/**/*'
         ], {
             base: paths.src
         })
