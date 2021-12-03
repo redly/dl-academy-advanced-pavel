@@ -7,6 +7,60 @@
 /* Скрытие стилей для стандартных фильтров */
 /* Cтили для кастомных фильтров */
 /*
+    Import fonts
+*/
+/* open-sans-regular */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/open-sans/open-sans-regular.woff2") format("woff2"), url("../fonts/open-sans/open-sans-regular.woff") format("woff");
+}
+/* open-sans-bold */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/open-sans/open-sans-bold.woff2") format("woff2"), url("../fonts/open-sans/open-sans-bold.woff") format("woff");
+}
+/* montserrat-light */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/montserrat/montserrat-light.woff2") format("woff2"), url("../fonts/montserrat/montserrat-light.woff") format("woff");
+}
+/* montserrat-semi-bold */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/montserrat/montserrat-semi-bold.woff2") format("woff2"), url("../fonts/montserrat/montserrat-semi-bold.woff") format("woff");
+}
+/* montserrat-bold */
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/montserrat/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat/montserrat-bold.woff") format("woff");
+}
+/* crimson-text-regular-italic */
+@font-face {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/crimson-text/crimson-text-regular-italic.woff2") format("woff2"), url("../fonts/crimson-text/crimson-text-regular-italic.woff") format("woff");
+}
+/* crimson-text-bold-italic */
+@font-face {
+  font-family: "Crimson Text";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/crimson-text/crimson-text-bold-italic.woff2") format("woff2"), url("../fonts/crimson-text/crimson-text-bold-italic.woff") format("woff");
+}
+/*
     Import vendor libraries
 */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -1004,17 +1058,21 @@ a.header-logo:hover {
     margin: 0 15px 0 0;
   }
 }
-@media (max-width: 666px) {
-  .socials-list__item svg {
-    width: 28px;
-    height: 28px;
-  }
-}
 .socials-list__item:hover {
   opacity: 0.5;
 }
 .socials-list__item:active {
   opacity: 0.2;
+}
+.socials-list__item-icon {
+  width: 30px;
+  height: 30px;
+}
+@media (max-width: 666px) {
+  .socials-list__item-icon {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .star-rating {
@@ -1453,6 +1511,7 @@ a.header-logo:hover {
 .slide__img img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 .slide--bg--green {
   background: #daedde;
@@ -1563,8 +1622,9 @@ a.header-logo:hover {
   height: 100%;
 }
 .categories-list__wrap img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .categories-list__wrap h3 {
   max-width: 180px;
@@ -1734,6 +1794,8 @@ a.header-logo:hover {
 }
 .delivery__img img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 .delivery__col {
   max-width: 45%;
@@ -1923,6 +1985,7 @@ a.header-logo:hover {
 }
 .partners-row__item-link img {
   max-width: 100%;
+  height: auto;
 }
 
 .main-bottom {
@@ -2783,6 +2846,7 @@ a.header-logo:hover {
 .product-cards__item-img img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 .product-cards__item-title {
   display: flex;
@@ -2866,6 +2930,7 @@ a.header-logo:hover {
 .blog-article__img img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 .blog-article__time {
   color: #818181;
