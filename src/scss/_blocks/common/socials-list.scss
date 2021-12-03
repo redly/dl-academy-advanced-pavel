@@ -16,19 +16,22 @@
             margin: 0 15px 0 0;
         }
 
-        svg {
-            @media (max-width: $max-width-mobile) {
-                width: 28px;
-                height: 28px;
-            }
-        }
-
         &:hover {
             opacity: 0.5;
         }
 
         &:active {
             opacity: 0.2;
+        }
+    }
+
+    &__item-icon {
+        width: 30px;
+        height: 30px;
+
+        @media (max-width: $max-width-mobile) {
+            width: 28px;
+            height: 28px;
         }
     }
 }
