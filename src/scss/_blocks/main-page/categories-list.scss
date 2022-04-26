@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     margin: 0 0 7px;
+    transform: translate(0, 0);
     transition: transform 0.5s ease;
 
     @media (max-width: $max-width-mobile) {
@@ -20,6 +21,9 @@
         max-width: 280px;
         margin: 0 20px 23px 0;
         position: relative;
+        transition:
+            background 0.5s ease,
+            color 0.5s ease;
 
         @media (max-width: $max-width-tablet) {
             flex: 0 0 calc(33% - 25px);
@@ -80,19 +84,3 @@
         }
     }
 }
-
-/* Сдвиг слайдера на разных разрешениях */
-
-/*
-.categories-list.is-active {
-    transform: translateX(-1200px);
-
-    @media (max-width: $max-width-tablet) {
-        transform: translateX(-556px);
-    }
-
-    @media (max-width: $max-width-mobile) {
-        transform: translateX(-267px);
-    }
-}
-*/
