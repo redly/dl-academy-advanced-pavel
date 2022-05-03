@@ -1584,6 +1584,7 @@ a.header-logo:hover {
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 0 0 7px;
+  transform: translate(0, 0);
   transition: transform 0.5s ease;
 }
 @media (max-width: 666px) {
@@ -1600,6 +1601,7 @@ a.header-logo:hover {
   max-width: 280px;
   margin: 0 20px 23px 0;
   position: relative;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 @media (max-width: 1023px) {
   .categories-list__item {
@@ -1652,20 +1654,6 @@ a.header-logo:hover {
   text-decoration: underline;
 }
 
-/* Сдвиг слайдера на разных разрешениях */
-/*
-.categories-list.is-active {
-    transform: translateX(-1200px);
-
-    @media (max-width: $max-width-tablet) {
-        transform: translateX(-556px);
-    }
-
-    @media (max-width: $max-width-mobile) {
-        transform: translateX(-267px);
-    }
-}
-*/
 .categories-nav {
   display: flex;
   flex-direction: row;

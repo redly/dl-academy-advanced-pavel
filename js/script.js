@@ -81,3 +81,37 @@ var headerMenu = document.querySelector('.js-toggleHeaderMenu');
 headerMenu.addEventListener('click', function() {
     headerMenu.classList.toggle('is-active');
 });
+
+
+// Скрипт для слайдера Category Products
+
+const sliderBtns = document.querySelectorAll('.categories-nav__btn');
+
+sliderBtns.forEach((sliderBtn) => {
+    sliderBtn.addEventListener('click', (evt) => {
+        const direction = evt.currentTarget.dataset.direction;
+
+        // Заменил поиск по родителю текущего элемента на поиск по селектору,
+        // тк здесь элемент находится в другом блоке
+        // const slider = evt.currentTarget.parentNode;
+        const slider = document.querySelector('.categories-list-wrapper');
+        const sliderWrapper = slider.querySelector('.categories-list');
+
+        const slides = slider.querySelectorAll('.categories-list__item');
+        const activeIndex = [...slider.querySelectorAll('.categories-list__item')].indexOf(slider.querySelector('.categories-list__item.active'));
+
+        const newIndex = (direction === 'left') ? (activeIndex - 1) : (activeIndex + 1);
+
+        if (newIndex < 0 || newIndex >= slides.length) {
+            return;
+        }
+
+        const marginRight = +getComputedStyle(slides[0]).marginRight.replace(/\D/g,'');
+        const offset = newIndex * (slides[0].offsetWidth + marginRight);
+
+        slider.querySelector('.categories-list__item.active').classList.remove('active');
+        slider.querySelector('.categories-list__item:nth-child(' + (newIndex + 1) + ')').classList.add('active');
+
+        sliderWrapper.style.transform = 'translate(-' + offset + 'px, 0)';
+    });
+})
