@@ -1,4 +1,3 @@
-
 // Скрипт для input-range
 
 // Сначала проверяем, есть ли вообще такой элемент на странице
@@ -25,6 +24,7 @@ if (document.getElementById('input-range')) {
 
 /* ES5 способ */
 
+/*
 // Получаем все элементы с классом slider-nav__btn
 var sliderNavBtns = document.querySelectorAll('.slider-nav__btn');
 var i = 0;
@@ -51,6 +51,7 @@ for (i = 0; i < sliderNavBtns.length; i++) {
         }
     })
 }
+*/
 
 /* ES6 способ */
 
@@ -74,6 +75,23 @@ sliderNavBtns.forEach((sliderBtn) => {
 });
 */
 
+// Скрипт для slider со swiper js
+
+const swiper = new Swiper('.swiper', {
+    direction: 'vertical',
+    initialSlide: +localStorage.getItem('activeSlide') || 0,
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
+swiper.on('activeIndexChange', function () {
+    localStorage.setItem('activeSlide', swiper.realIndex);
+});
+
 // Скрипт для header__burger
 
 var headerMenu = document.querySelector('.js-toggleHeaderMenu');
@@ -81,7 +99,6 @@ var headerMenu = document.querySelector('.js-toggleHeaderMenu');
 headerMenu.addEventListener('click', function() {
     headerMenu.classList.toggle('is-active');
 });
-
 
 // Скрипт для слайдера Category Products
 
@@ -91,8 +108,6 @@ sliderBtns.forEach((sliderBtn) => {
     sliderBtn.addEventListener('click', (evt) => {
         const direction = evt.currentTarget.dataset.direction;
 
-        // Заменил поиск по родителю текущего элемента на поиск по селектору,
-        // тк здесь элемент находится в другом блоке
         // const slider = evt.currentTarget.parentNode;
         const slider = document.querySelector('.categories-list-wrapper');
         const sliderWrapper = slider.querySelector('.categories-list');
