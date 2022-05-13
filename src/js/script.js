@@ -77,20 +77,24 @@ sliderNavBtns.forEach((sliderBtn) => {
 
 // Скрипт для slider со swiper js
 
-const swiper = new Swiper('.swiper', {
-    direction: 'vertical',
-    initialSlide: +localStorage.getItem('activeSlide') || 0,
+const slider = document.querySelector('.swiper');
 
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true,
-    },
-});
+if (slider) {
+    const swiper = new Swiper('.swiper', {
+        direction: 'vertical',
+        initialSlide: +localStorage.getItem('activeSlide') || 0,
 
-swiper.on('activeIndexChange', function () {
-    localStorage.setItem('activeSlide', swiper.realIndex);
-});
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+    swiper.on('activeIndexChange', function () {
+        localStorage.setItem('activeSlide', swiper.realIndex);
+    });
+}
 
 // Скрипт для header__burger
 
@@ -130,3 +134,62 @@ sliderBtns.forEach((sliderBtn) => {
         sliderWrapper.style.transform = 'translate(-' + offset + 'px, 0)';
     });
 })
+
+// Скрипт для фильтров Toys for kids
+
+function getParamsFromLocation() {
+    let searchParams = new URLSearchParams(location.search);
+
+    return {
+        cost: searchParams.get('cost'),
+        color: searchParams.getAll('color'),
+        delivery: searchParams.get('delivery'),
+        amount: searchParams.get('amount'),
+    };
+}
+
+function setDataToFilter(data) {
+    const form = document.forms.filter;
+
+    if (form) {
+        form.elements.cost.value = data.cost;
+        form.elements.color.forEach(checkbox => {
+            if (data.color.includes(checkbox.value)) {
+                checkbox.checked = true;
+            }
+        });
+        form.elements.delivery.forEach(radio => {
+            if (data.delivery === radio.value) {
+                radio.checked = true;
+            }
+        });
+        form.elements.amount.forEach(radio => {
+            if (data.amount === radio.value) {
+                radio.checked = true;
+            }
+        });
+    }
+
+    // TODO: Проверить заполнение custom range при перезагрузке
+
+    // Более короткая запись сбрасывает фильтры по умолчанию
+    /*
+    if (form) {
+        form.elements.cost.value = data.cost;
+        form.elements.color.forEach(checkbox => {
+            checkbox.checked = data.color.includes(checkbox.value);
+        });
+        form.elements.delivery.forEach(radio => {
+            radio.checked = data.delivery === radio.value;
+        });
+        form.elements.amount.forEach(radio => {
+            radio.checked = data.amount === radio.value;
+        });
+    }
+    */
+}
+
+(function() {
+    const pararms = getParamsFromLocation();
+    setDataToFilter(pararms);
+})();
