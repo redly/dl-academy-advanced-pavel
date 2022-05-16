@@ -141,6 +141,7 @@ function getParamsFromLocation() {
     let searchParams = new URLSearchParams(location.search);
 
     return {
+        page: +searchParams.get('page') || 0,
         cost: searchParams.get('cost'),
         color: searchParams.getAll('color'),
         delivery: searchParams.get('delivery'),
@@ -189,7 +190,66 @@ function setDataToFilter(data) {
     */
 }
 
+function setSearchParams(data) {
+    let searchParams = new URLSearchParams();
+
+    searchParams.set('cost', data.cost);
+    data.color.forEach(item => {
+        searchParams.append('color', item);
+    });
+
+    if (data.page) {
+        searchParams.set('page', data.page);
+    } else {
+        searchParams.set('page', 0);
+    }
+
+    if (data.delivery) {
+        searchParams.set('delivery', data.delivery);
+    }
+
+    if (data.amount) {
+        searchParams.set('amount', data.amount);
+    }
+
+    history.replaceState(null, document.title, '?' + searchParams.toString());
+}
+
 (function() {
-    const pararms = getParamsFromLocation();
-    setDataToFilter(pararms);
+    const form = document.forms.filter;
+
+    if (form) {
+        form.addEventListener('submit', evt => {
+            evt.preventDefault();
+
+            let data = {
+                page: 0,
+            };
+
+            data.cost = form.elements.cost.value;
+            data.color = [...form.elements.color].filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            data.delivery = ([...form.elements.delivery].find(radio => radio.checked) || { value: null }).value;
+            data.amount = ([...form.elements.amount].find(radio => radio.checked) || { value: null }).value;
+            setSearchParams(data);
+        });
+    }
+
+    const params = getParamsFromLocation();
+    setDataToFilter(params);
+
+    const links = document.querySelectorAll('.content-pagination__link');
+
+    if (links.length !== 0) {
+        links[params.page].classList.add('content-pagination__link--is-active');
+        links.forEach((link, index) => {
+            link.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                let searchParams = new URLSearchParams(location.search);
+                links[params.page].classList.remove('content-pagination__link--is-active');
+                searchParams.set('page', index);
+                links[index].classList.add('content-pagination__link--is-active');
+                history.replaceState(null, document.title, '?' + searchParams.toString());
+            });
+        });
+    }
 })();
