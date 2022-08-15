@@ -62,19 +62,21 @@
         }
     }
 
-    &__span {
-        color: #c29974;
-    }
-
     &__link {
         color: #1e0606;
         text-decoration: none;
 
-        &:hover {
+        &--is-active {
+            color: #c29974;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        &:hover:not(.content-pagination__link--is-active) {
             opacity: 0.5;
         }
 
-        &:active {
+        &:active:not(.content-pagination__link--is-active) {
             opacity: 0.25;
         }
     }

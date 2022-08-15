@@ -1,4 +1,3 @@
-
 // Скрипт для input-range
 
 // Сначала проверяем, есть ли вообще такой элемент на странице
@@ -25,6 +24,7 @@ if (document.getElementById('input-range')) {
 
 /* ES5 способ */
 
+/*
 // Получаем все элементы с классом slider-nav__btn
 var sliderNavBtns = document.querySelectorAll('.slider-nav__btn');
 var i = 0;
@@ -51,6 +51,7 @@ for (i = 0; i < sliderNavBtns.length; i++) {
         }
     })
 }
+*/
 
 /* ES6 способ */
 
@@ -74,6 +75,27 @@ sliderNavBtns.forEach((sliderBtn) => {
 });
 */
 
+// Скрипт для slider со swiper js
+
+const slider = document.querySelector('.swiper');
+
+if (slider) {
+    const swiper = new Swiper('.swiper', {
+        direction: 'vertical',
+        initialSlide: +localStorage.getItem('activeSlide') || 0,
+
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
+
+    swiper.on('activeIndexChange', function () {
+        localStorage.setItem('activeSlide', swiper.realIndex);
+    });
+}
+
 // Скрипт для header__burger
 
 var headerMenu = document.querySelector('.js-toggleHeaderMenu');
@@ -81,7 +103,6 @@ var headerMenu = document.querySelector('.js-toggleHeaderMenu');
 headerMenu.addEventListener('click', function() {
     headerMenu.classList.toggle('is-active');
 });
-
 
 // Скрипт для слайдера Category Products
 
@@ -91,8 +112,6 @@ sliderBtns.forEach((sliderBtn) => {
     sliderBtn.addEventListener('click', (evt) => {
         const direction = evt.currentTarget.dataset.direction;
 
-        // Заменил поиск по родителю текущего элемента на поиск по селектору,
-        // тк здесь элемент находится в другом блоке
         // const slider = evt.currentTarget.parentNode;
         const slider = document.querySelector('.categories-list-wrapper');
         const sliderWrapper = slider.querySelector('.categories-list');
@@ -115,3 +134,122 @@ sliderBtns.forEach((sliderBtn) => {
         sliderWrapper.style.transform = 'translate(-' + offset + 'px, 0)';
     });
 })
+
+// Скрипт для фильтров Toys for kids
+
+function getParamsFromLocation() {
+    let searchParams = new URLSearchParams(location.search);
+
+    return {
+        page: +searchParams.get('page') || 0,
+        cost: searchParams.get('cost'),
+        color: searchParams.getAll('color'),
+        delivery: searchParams.get('delivery'),
+        amount: searchParams.get('amount'),
+    };
+}
+
+function setDataToFilter(data) {
+    const form = document.forms.filter;
+
+    if (form) {
+        form.elements.cost.value = data.cost;
+        form.elements.color.forEach(checkbox => {
+            if (data.color.includes(checkbox.value)) {
+                checkbox.checked = true;
+            }
+        });
+        form.elements.delivery.forEach(radio => {
+            if (data.delivery === radio.value) {
+                radio.checked = true;
+            }
+        });
+        form.elements.amount.forEach(radio => {
+            if (data.amount === radio.value) {
+                radio.checked = true;
+            }
+        });
+    }
+
+    // TODO: Проверить заполнение custom range при перезагрузке
+
+    // Более короткая запись сбрасывает фильтры по умолчанию
+    /*
+    if (form) {
+        form.elements.cost.value = data.cost;
+        form.elements.color.forEach(checkbox => {
+            checkbox.checked = data.color.includes(checkbox.value);
+        });
+        form.elements.delivery.forEach(radio => {
+            radio.checked = data.delivery === radio.value;
+        });
+        form.elements.amount.forEach(radio => {
+            radio.checked = data.amount === radio.value;
+        });
+    }
+    */
+}
+
+function setSearchParams(data) {
+    let searchParams = new URLSearchParams();
+
+    searchParams.set('cost', data.cost);
+    data.color.forEach(item => {
+        searchParams.append('color', item);
+    });
+
+    if (data.page) {
+        searchParams.set('page', data.page);
+    } else {
+        searchParams.set('page', 0);
+    }
+
+    if (data.delivery) {
+        searchParams.set('delivery', data.delivery);
+    }
+
+    if (data.amount) {
+        searchParams.set('amount', data.amount);
+    }
+
+    history.replaceState(null, document.title, '?' + searchParams.toString());
+}
+
+(function() {
+    const form = document.forms.filter;
+
+    if (form) {
+        form.addEventListener('submit', evt => {
+            evt.preventDefault();
+
+            let data = {
+                page: 0,
+            };
+
+            data.cost = form.elements.cost.value;
+            data.color = [...form.elements.color].filter(checkbox => checkbox.checked).map(checkbox => checkbox.value);
+            data.delivery = ([...form.elements.delivery].find(radio => radio.checked) || { value: null }).value;
+            data.amount = ([...form.elements.amount].find(radio => radio.checked) || { value: null }).value;
+            setSearchParams(data);
+        });
+    }
+
+    const params = getParamsFromLocation();
+    setDataToFilter(params);
+
+    const links = document.querySelectorAll('.content-pagination__link');
+
+    if (links.length !== 0) {
+        links[params.page].classList.add('content-pagination__link--is-active');
+        links.forEach((link, index) => {
+            link.addEventListener('click', (evt) => {
+                evt.preventDefault();
+                let searchParams = new URLSearchParams(location.search);
+                links[params.page].classList.remove('content-pagination__link--is-active');
+                searchParams.set('page', index);
+                links[index].classList.add('content-pagination__link--is-active');
+                history.replaceState(null, document.title, '?' + searchParams.toString());
+            });
+        });
+    }
+})();

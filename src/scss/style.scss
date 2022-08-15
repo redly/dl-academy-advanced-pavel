@@ -10,6 +10,7 @@
     Import vendor libraries
 */
 @import "vendor/_normalize";
+@import "vendor/_swiper-js";
 
 /*
     Import utils classes and base styles
@@ -41,7 +42,6 @@
 @import "_blocks/common/breadcrumbs-list";
 @import "_blocks/common/content-main";
 @import "_blocks/main-page/slider";
-@import "_blocks/main-page/slider-nav";
 @import "_blocks/main-page/slide";
 @import "_blocks/main-page/categories";
 @import "_blocks/main-page/categories-list-wrapper";

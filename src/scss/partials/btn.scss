@@ -11,7 +11,6 @@
     font-size: 16px;
     line-height: $line-height-base;
     text-transform: uppercase;
-    min-height: 40px;
     max-width: 280px;
     padding: 9px 22px;
 
@@ -19,6 +18,7 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    min-height: 40px;
     */
 
     transition: background 400ms ease-in;
