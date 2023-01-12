@@ -2,8 +2,7 @@
     @include no-list;
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     margin: 0 0 7px;
     transform: translate(0, 0);
     transition: transform 0.5s ease;

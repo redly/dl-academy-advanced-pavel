@@ -19,8 +19,7 @@
         @include no-list;
 
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
     }
 
     &__item {
@@ -38,10 +37,10 @@
         }
 
         &:nth-child(3n+3) {
-            margin: 0 0 20px 0;
+            margin: 0 0 20px;
 
             @media (max-width: $max-width-tablet) {
-                margin: 0 0 10px 0;
+                margin: 0 0 10px;
             }
 
             @media (max-width: $max-width-mobile) {
@@ -51,7 +50,7 @@
 
         &:nth-child(2n+2) {
             @media (max-width: $max-width-mobile) {
-                margin: 0 0 10px 0;
+                margin: 0 0 10px;
             }
         }
 
@@ -65,7 +64,7 @@
             text-transform: uppercase;
             text-decoration: none;
             cursor: pointer;
-            background: rgba(229, 234, 248, 0.6);
+            background: rgba(229, 234, 248, 60%);
             width: 207px;
             height: 207px;
             padding-top: 82px;

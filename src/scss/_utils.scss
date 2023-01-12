@@ -6,6 +6,7 @@
     display: none !important;
 }
 
+/* stylelint-disable selector-not-notation */
 .visually-hidden:not(:focus):not(:active) {
     border: 0;
     clip: rect(0 0 0 0);
@@ -17,6 +18,7 @@
     width: 1px;
     white-space: nowrap;
 }
+/* stylelint-enable selector-not-notation */
 
 .u-invisible {
     visibility: hidden;

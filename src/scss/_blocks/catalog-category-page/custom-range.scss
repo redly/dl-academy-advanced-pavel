@@ -1,5 +1,5 @@
 .custom-range {
-    -webkit-appearance: none;
+    appearance: none;
     width: 193px;
     background: transparent;
     position: relative;
@@ -89,7 +89,14 @@
 .custom-range::-webkit-slider-runnable-track {
     @include range-track;
 
-    background: linear-gradient(to right, $color-custom-filters 0, $color-custom-filters var(--slider-position), #666 var(--slider-position), #666 100%);
+    background:
+        linear-gradient(
+            to right,
+            $color-custom-filters 0,
+            $color-custom-filters var(--slider-position),
+            #666 var(--slider-position),
+            #666 100%
+        );
     width: 100%;
     transition: background 450ms ease-in;
 }
@@ -128,11 +135,6 @@
 
 .custom-range:focus::-ms-fill-lower {
     background: $color-custom-filters;
-
-    /*
-        Собрать ли эти похожие стили в один
-        или оставить?
-    */
 }
 
 .custom-range:focus::-ms-fill-upper {

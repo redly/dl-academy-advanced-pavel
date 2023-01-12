@@ -20,7 +20,7 @@
     &__btn {
         @include btn-reset;
 
-        background-color: rgba(112, 187, 220, 0.2);
+        background-color: rgba(112, 187, 220, 20%);
         background-repeat: no-repeat;
         background-position: 50% 50%;
         width: 37px;

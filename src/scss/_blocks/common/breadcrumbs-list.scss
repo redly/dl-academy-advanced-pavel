@@ -29,7 +29,7 @@
         }
 
         &:not(:last-child)::after {
-            content: url('../img/svg/stroke-next.svg');
+            content: url("../img/svg/stroke-next.svg");
             align-items: center;
             margin: 0 20px;
 
@@ -38,7 +38,7 @@
             }
 
             @media (max-width: $max-width-mobile) {
-                content: url('../img/svg/stroke-next-mobile.svg');
+                content: url("../img/svg/stroke-next-mobile.svg");
                 margin: 0 12px;
             }
         }
