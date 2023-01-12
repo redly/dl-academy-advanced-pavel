@@ -25,21 +25,21 @@
 }
 /* montserrat-light */
 @font-face {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   font-weight: 300;
   font-display: swap;
   src: url("../fonts/montserrat/montserrat-light.woff2") format("woff2"), url("../fonts/montserrat/montserrat-light.woff") format("woff");
 }
 /* montserrat-semi-bold */
 @font-face {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   font-weight: 600;
   font-display: swap;
   src: url("../fonts/montserrat/montserrat-semi-bold.woff2") format("woff2"), url("../fonts/montserrat/montserrat-semi-bold.woff") format("woff");
 }
 /* montserrat-bold */
 @font-face {
-  font-family: "Montserrat";
+  font-family: Montserrat;
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/montserrat/montserrat-bold.woff2") format("woff2"), url("../fonts/montserrat/montserrat-bold.woff") format("woff");
@@ -71,10 +71,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /*  Sections
@@ -109,12 +107,9 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
 }
 
 /**
@@ -122,10 +117,8 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /*  Text-level semantics
@@ -142,13 +135,10 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-  /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -166,10 +156,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
 }
 
 /**
@@ -219,14 +207,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
 }
 
 /**
@@ -234,8 +218,7 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input {
-  /* 1 */
+input { /* 1 */
   overflow: visible;
 }
 
@@ -244,8 +227,7 @@ input {
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select {
-  /* 1 */
+select { /* 1 */
   text-transform: none;
 }
 
@@ -294,18 +276,12 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
 }
 
 /**
@@ -328,10 +304,8 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
 }
 
 /**
@@ -347,10 +321,8 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
 }
 
 /**
@@ -365,10 +337,8 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
 }
 
 /*  Interactive
@@ -403,6 +373,59 @@ template {
   display: none;
 }
 
+.swiper {
+  max-height: 500px;
+}
+@media (max-width: 1023px) {
+  .swiper {
+    max-height: 411px;
+  }
+}
+@media (max-width: 666px) {
+  .swiper {
+    max-height: 492px;
+  }
+}
+
+.swiper-vertical > .swiper-pagination-bullets {
+  left: 51px;
+  top: 220px;
+}
+@media (max-width: 1023px) {
+  .swiper-vertical > .swiper-pagination-bullets {
+    top: 110px;
+    left: 60px;
+  }
+}
+@media (max-width: 666px) {
+  .swiper-vertical > .swiper-pagination-bullets {
+    top: 87px;
+    left: auto;
+    right: 20px;
+  }
+}
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  background: rgb(214, 202, 194);
+  border-radius: 0;
+  border-top: 1px;
+  opacity: 1;
+  width: 31px;
+  height: 3px;
+  margin: 0 0 11px;
+}
+@media (max-width: 1023px) {
+  .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 27px;
+    margin: 0 0 10px;
+  }
+}
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet:hover {
+  background: rgba(30, 6, 6, 0.4);
+}
+.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background: rgba(30, 6, 6, 0.6);
+}
+
 /*
     Import utils classes and base styles
 */
@@ -414,6 +437,7 @@ template {
   display: none !important;
 }
 
+/* stylelint-disable selector-not-notation */
 .visually-hidden:not(:focus):not(:active) {
   border: 0;
   clip: rect(0 0 0 0);
@@ -426,6 +450,7 @@ template {
   white-space: nowrap;
 }
 
+/* stylelint-enable selector-not-notation */
 .u-invisible {
   visibility: hidden;
 }
@@ -433,6 +458,8 @@ template {
 html {
   box-sizing: border-box;
   -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -446,7 +473,7 @@ body {
   color: #1e0606;
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  line-height: calc(22 / 16);
+  line-height: 1.375;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -469,15 +496,15 @@ body {
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
   font-size: 16px;
-  line-height: calc(22 / 16);
+  line-height: 1.375;
   text-transform: uppercase;
-  min-height: 40px;
   max-width: 280px;
   padding: 9px 22px;
   /*
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  min-height: 40px;
   */
   transition: background 400ms ease-in;
 }
@@ -500,10 +527,10 @@ body {
 }
 
 .title-h1 {
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
   font-size: 40px;
-  line-height: calc(49 / 40);
+  line-height: 1.225;
   text-transform: uppercase;
   margin: 0;
 }
@@ -526,39 +553,39 @@ body {
 .title-h2,
 .title-h2 a {
   color: #1e0606;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
   font-size: 38px;
-  line-height: calc(47 / 38);
+  line-height: 1.2368421053;
   text-decoration: none;
   text-transform: uppercase;
   margin: 0;
 }
 @media (max-width: 1023px) {
   .title-h2,
-.title-h2 a {
+  .title-h2 a {
     font-size: 36px;
   }
 }
 @media (max-width: 666px) {
   .title-h2,
-.title-h2 a {
+  .title-h2 a {
     font-size: 24px;
   }
 }
 @media (max-width: 320px) {
   .title-h2,
-.title-h2 a {
+  .title-h2 a {
     font-size: 18px;
   }
 }
 
 .title-h3 {
   color: #fff;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 26px;
   font-weight: 700;
-  line-height: calc(32 / 26);
+  line-height: 1.2307692308;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
@@ -637,7 +664,7 @@ body {
   .header__burger {
     display: block;
     font-size: 14px;
-    line-height: calc(19 / 14);
+    line-height: 1.3571428571;
     text-transform: uppercase;
     margin: 50px 0 0;
     position: fixed;
@@ -705,7 +732,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 102px 0 0 0;
+    margin: 102px 0 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -714,7 +741,7 @@ body {
 }
 @media (max-width: 666px) {
   .header__burger.is-active + .header-nav {
-    margin: 73px 0 0 0;
+    margin: 73px 0 0;
   }
 }
 
@@ -782,7 +809,7 @@ a.header-logo:hover {
 }
 .header-nav__item {
   font-size: 14px;
-  line-height: calc(19 / 14);
+  line-height: 1.3571428571;
   text-transform: uppercase;
   margin: 0 10px;
 }
@@ -906,7 +933,7 @@ a.header-logo:hover {
 .footer-col__title {
   color: #aaa;
   font-weight: 400;
-  line-height: calc(22 / 16);
+  line-height: 1.375;
   white-space: nowrap;
   text-align: left;
   border-bottom: 1px solid #666;
@@ -986,9 +1013,6 @@ a.header-logo:hover {
   }
 }
 .footer-col__input::-moz-placeholder {
-  color: #ebebeb;
-}
-.footer-col__input:-ms-input-placeholder {
   color: #ebebeb;
 }
 .footer-col__input::placeholder {
@@ -1205,9 +1229,9 @@ a.header-logo:hover {
   margin: 0 auto;
 }
 .content-pagination__item {
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
-  line-height: calc(20 / 16);
+  line-height: 1.25;
   margin: 0 33px;
 }
 @media (max-width: 666px) {
@@ -1221,17 +1245,19 @@ a.header-logo:hover {
     margin: 0 22px;
   }
 }
-.content-pagination__span {
-  color: #c29974;
-}
 .content-pagination__link {
   color: #1e0606;
   text-decoration: none;
 }
-.content-pagination__link:hover {
+.content-pagination__link--is-active {
+  color: #c29974;
+  cursor: default;
+  pointer-events: none;
+}
+.content-pagination__link:hover:not(.content-pagination__link--is-active) {
   opacity: 0.5;
 }
-.content-pagination__link:active {
+.content-pagination__link:active:not(.content-pagination__link--is-active) {
   opacity: 0.25;
 }
 
@@ -1258,7 +1284,7 @@ a.header-logo:hover {
   font-family: "Crimson Text", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
   font-size: 20px;
   font-style: italic;
-  line-height: calc(25 / 20);
+  line-height: 1.25;
 }
 @media (max-width: 666px) {
   .breadcrumbs-list__item {
@@ -1326,11 +1352,11 @@ a.header-logo:hover {
   }
 }
 .slider__notification {
-  background: #c29974;
+  background: rgb(194, 153, 116);
   color: #fff;
   font-size: 12px;
   font-weight: 700;
-  line-height: calc(16 / 12);
+  line-height: 1.3333333333;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
@@ -1343,56 +1369,6 @@ a.header-logo:hover {
   .slider__notification {
     padding: 11px 20px;
   }
-}
-
-.slider-nav {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 190px;
-  left: 31px;
-  z-index: 4;
-}
-@media (max-width: 1023px) {
-  .slider-nav {
-    top: 80px;
-    left: 0;
-  }
-}
-@media (max-width: 666px) {
-  .slider-nav {
-    top: 87px;
-    left: auto;
-    right: 20px;
-  }
-}
-.slider-nav__item {
-  line-height: 0;
-}
-.slider-nav__btn {
-  border: none;
-  border-radius: 0;
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-flex;
-  background: #d6cac2;
-  border-top: 3px;
-  width: 31px;
-  min-height: 3px;
-  margin: 0 0 11px;
-}
-@media (max-width: 1023px) {
-  .slider-nav__btn {
-    width: 27px;
-    margin: 0 0 10px;
-  }
-}
-.slider-nav__btn--is-active {
-  background: rgba(30, 6, 6, 0.6);
-}
-.slider-nav__btn:hover {
-  background: rgba(30, 6, 6, 0.6);
 }
 
 .slide {
@@ -1415,17 +1391,17 @@ a.header-logo:hover {
   .slide__wrapper {
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding: 0 20px 0;
+    padding: 0 20px;
   }
 }
 .slide__wrapper::before {
   counter-increment: slide-counter;
   content: "0" counter(slide-counter);
   color: rgba(30, 6, 6, 0.05);
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 60px;
   font-weight: 300;
-  line-height: calc(73 / 60);
+  line-height: 1.2166666667;
   margin: 106px 22px 0 28px;
   z-index: 3;
 }
@@ -1437,7 +1413,7 @@ a.header-logo:hover {
 }
 @media (max-width: 666px) {
   .slide__wrapper::before {
-    margin: 20px 0 0;
+    margin: 0 35px 30px 0;
   }
 }
 .slide__info {
@@ -1456,10 +1432,10 @@ a.header-logo:hover {
 }
 .slide__title {
   display: block;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 700;
   font-size: 40px;
-  line-height: calc(44 / 40);
+  line-height: 1.1;
   text-transform: uppercase;
   max-width: 307px;
   margin: 0 0 20px;
@@ -1480,7 +1456,7 @@ a.header-logo:hover {
   font-family: "Crimson Text", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
   font-size: 20px;
   font-style: italic;
-  line-height: calc(25 / 20);
+  line-height: 1.25;
   margin: 0 0 20px;
 }
 @media (max-width: 666px) {
@@ -1581,8 +1557,7 @@ a.header-logo:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   margin: 0 0 7px;
   transform: translate(0, 0);
   transition: transform 0.5s ease;
@@ -1836,7 +1811,7 @@ a.header-logo:hover {
   font-family: "Crimson Text", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif;
   font-size: 26px;
   font-style: italic;
-  line-height: calc(32 / 26);
+  line-height: 1.2307692308;
   text-decoration: none;
   width: 100%;
   min-height: 55px;
@@ -1919,15 +1894,14 @@ a.header-logo:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   min-height: 61px;
 }
 .partners-row__item {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   /* Оставил на случай переполнения */
   /* &:last-child {
       margin-right: auto;
@@ -2017,7 +1991,7 @@ a.header-logo:hover {
   .main-bottom-col {
     max-width: 100%;
     padding: 0 20px;
-    margin: 0 0 50px 0;
+    margin: 0 0 50px;
   }
 }
 .main-bottom-col:nth-child(2) {
@@ -2043,7 +2017,7 @@ a.header-logo:hover {
   font-size: 26px;
   font-style: italic;
   font-weight: normal;
-  line-height: calc(33 / 26);
+  line-height: 1.2692307692;
   margin: 0;
 }
 .main-bottom-col__text {
@@ -2331,7 +2305,7 @@ a.header-logo:hover {
   color: #1e0606;
   flex-shrink: 0;
   font-size: 16px;
-  line-height: calc(22 / 16);
+  line-height: 1.375;
   min-width: calc(15% - 50px);
   margin: 0 60px 0 0;
 }
@@ -2413,7 +2387,7 @@ a.header-logo:hover {
   display: block;
   flex-shrink: 0;
   text-align: center;
-  line-height: calc(35 / 16);
+  line-height: 2.1875;
   cursor: pointer;
   min-width: 80px;
 }
@@ -2568,6 +2542,8 @@ a.header-logo:hover {
 
 .custom-range {
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 193px;
   background: transparent;
   position: relative;
@@ -2711,10 +2687,6 @@ a.header-logo:hover {
 
 .custom-range:focus::-ms-fill-lower {
   background: #c29974;
-  /*
-      Собрать ли эти похожие стили в один
-      или оставить?
-  */
 }
 
 .custom-range:focus::-ms-fill-upper {
@@ -2744,8 +2716,7 @@ a.header-logo:hover {
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 .product-cards__item {
   text-align: center;
@@ -2764,11 +2735,11 @@ a.header-logo:hover {
   }
 }
 .product-cards__item:nth-child(3n+3) {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 @media (max-width: 1023px) {
   .product-cards__item:nth-child(3n+3) {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
   }
 }
 @media (max-width: 666px) {
@@ -2778,7 +2749,7 @@ a.header-logo:hover {
 }
 @media (max-width: 666px) {
   .product-cards__item:nth-child(2n+2) {
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
   }
 }
 .product-cards__item--is-active {
@@ -2843,7 +2814,7 @@ a.header-logo:hover {
   font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: normal;
   font-size: 14px;
-  line-height: calc(20 / 14);
+  line-height: 1.4285714286;
   text-transform: uppercase;
   margin: 0 0 15px;
 }
@@ -2929,10 +2900,10 @@ a.header-logo:hover {
   }
 }
 .blog-article__title {
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: bold;
   font-size: 24px;
-  line-height: calc(31 / 24);
+  line-height: 1.2916666667;
   margin: 9px 0 15px;
 }
 @media (max-width: 1023px) {
@@ -2952,7 +2923,7 @@ a.header-logo:hover {
 }
 .blog-article__text {
   font-size: 18px;
-  line-height: calc(25 / 18);
+  line-height: 1.3888888889;
   margin: 0 0 20px;
 }
 @media (max-width: 666px) {
@@ -2985,8 +2956,7 @@ a.header-logo:hover {
 }
 .blog-articles__wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 
 .contact-us {
@@ -3043,10 +3013,10 @@ a.header-logo:hover {
 }
 .contact-us__col-title {
   color: #c29974;
-  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Montserrat, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 600;
   font-size: 26px;
-  line-height: calc(32 / 26);
+  line-height: 1.2307692308;
   text-transform: uppercase;
   padding: 0;
   margin: 0 0 20px;
@@ -3111,7 +3081,7 @@ a.header-logo:hover {
 .contacts-form__label {
   display: block;
   font-size: 14px;
-  line-height: calc(19 / 14);
+  line-height: 1.3571428571;
   margin-bottom: 4px;
 }
 .contacts-form__field {
@@ -3130,9 +3100,6 @@ a.header-logo:hover {
   }
 }
 .contacts-form__field::-moz-placeholder {
-  color: #1e0606;
-}
-.contacts-form__field:-ms-input-placeholder {
   color: #1e0606;
 }
 .contacts-form__field::placeholder {

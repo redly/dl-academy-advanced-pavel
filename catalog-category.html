@@ -100,7 +100,7 @@
 
         <section class="filters">
             <h2 class="visually-hidden">Filters</h2>
-            <form class="filters-form container" action="https://echo.htmlacademy.ru/" method="get">
+            <form name="filter" class="filters-form container">
                 <div class="filters-form__col">
                     <div class="filters-form__col-title">Cost</div>
                     <input class="custom-range" type="range" id="input-range" name="cost" value="100" min="0" max="500">
@@ -279,16 +279,16 @@
                     </a>
                     <ul class="content-pagination__list">
                         <li class="content-pagination__item">
-                            <span class="content-pagination__span">1</span>
+                            <a class="content-pagination__link" href="?Page=1" title="To page 1">1</a>
                         </li>
                         <li class="content-pagination__item">
-                            <a class="content-pagination__link" href="#" title="To page 2">2</a>
+                            <a class="content-pagination__link" href="?Page=2" title="To page 2">2</a>
                         </li>
                         <li class="content-pagination__item">
-                            <a class="content-pagination__link" href="#" title="To page 3">3</a>
+                            <a class="content-pagination__link" href="?Page=3" title="To page 3">3</a>
                         </li>
                         <li class="content-pagination__item">
-                            <a class="content-pagination__link" href="#" title="To page 4">4</a>
+                            <a class="content-pagination__link" href="?Page=4" title="To page 4">4</a>
                         </li>
                     </ul>
                     <a class="content-pagination__arrow" href="#">

@@ -13,6 +13,7 @@
     <link rel="preload" href="fonts/open-sans/open-sans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="fonts/montserrat/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Design Life Kids | Not your average lifestyle store</title>
@@ -85,9 +86,9 @@
         </div>
     </header>
     <main class="content-main">
-        <div class="container container--no-padding">
-            <div class="slider">
-                <div class="slide" id="slide-1">
+        <div class="swiper container container--no-padding">
+            <div class="swiper-wrapper slider">
+                <div class="swiper-slide slide">
                     <div class="slide__wrapper">
                         <div class="slide__info">
                             <h2 class="slide__title">The ooh noo collection</h2>
@@ -108,10 +109,14 @@
                                 <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" width="636" height="489" alt="Picture with a soft toy on a wooden cart">
                             </picture>
                         </div>
+
+                        <div class="slider__notification">
+                            Free (continental) USA shipping on all orders of $100 USD or more!
+                        </div>
                     </div>
                 </div>
 
-                <div class="slide slide--bg--green visually-hidden" id="slide-2">
+                <div class="swiper-slide slide slide--bg--green">
                     <div class="slide__wrapper">
                         <div class="slide__info">
                             <h2 class="slide__title">The summer collection</h2>
@@ -132,10 +137,14 @@
                                 <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" width="636" height="489" alt="Picture with a soft toy on a wooden cart">
                             </picture>
                         </div>
+
+                        <div class="slider__notification">
+                            Free (continental) USA shipping on all orders of $100 USD or more!
+                        </div>
                     </div>
                 </div>
 
-                <div class="slide slide--bg--violet visually-hidden" id="slide-3">
+                <div class="swiper-slide slide slide--bg--violet">
                     <div class="slide__wrapper">
                         <div class="slide__info">
                             <h2 class="slide__title">The sleep collection</h2>
@@ -156,10 +165,14 @@
                                 <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" width="636" height="489" alt="Picture with a soft toy on a wooden cart">
                             </picture>
                         </div>
+
+                        <div class="slider__notification">
+                            Free (continental) USA shipping on all orders of $100 USD or more!
+                        </div>
                     </div>
                 </div>
 
-                <div class="slide slide--bg--pink visually-hidden" id="slide-4">
+                <div class="swiper-slide slide slide--bg--pink">
                     <div class="slide__wrapper">
                         <div class="slide__info">
                             <h2 class="slide__title">The pets collection</h2>
@@ -180,36 +193,15 @@
                                 <img src="img/soft-toy-desktop.png" srcset="img/soft-toy-desktop@2x.png 2x" width="636" height="489" alt="Picture with a soft toy on a wooden cart">
                             </picture>
                         </div>
+
+                        <div class="slider__notification">
+                            Free (continental) USA shipping on all orders of $100 USD or more!
+                        </div>
                     </div>
                 </div>
-
-                <div class="slider__notification">
-                    Free (continental) USA shipping on all orders of $100 USD or more!
-                </div>
-
-                <ul class="slider-nav">
-                    <li class="slider-nav__item">
-                        <a class="slider-nav__btn slider-nav__btn--is-active" href="#slide-1">
-                            <span class="visually-hidden">Go to slide 01</span>
-                        </a>
-                    </li>
-                    <li class="slider-nav__item">
-                        <a class="slider-nav__btn" href="#slide-2">
-                            <span class="visually-hidden">Go to slide 02</span>
-                        </a>
-                    </li>
-                    <li class="slider-nav__item">
-                        <a class="slider-nav__btn" href="#slide-3">
-                            <span class="visually-hidden">Go to slide 03</span>
-                        </a>
-                    </li>
-                    <li class="slider-nav__item">
-                        <a class="slider-nav__btn" href="#slide-4">
-                            <span class="visually-hidden">Go to slide 04</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
+
+            <div class="swiper-pagination"></div>
         </div>
 
         <section class="categories">
@@ -648,6 +640,7 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
